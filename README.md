@@ -20,6 +20,7 @@ This folder packages the current production releases and shared models into one 
 - One folder for transfer/archive
 - All key EN + JA release assets together
 - Shared model dependencies colocated
+- Non-final temp/sweep artifacts were removed; remaining files are the report-cited and rerun-relevant assets.
 
 ## Git usage
 

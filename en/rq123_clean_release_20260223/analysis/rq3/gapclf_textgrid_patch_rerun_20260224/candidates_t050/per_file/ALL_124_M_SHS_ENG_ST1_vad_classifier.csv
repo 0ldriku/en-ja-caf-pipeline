@@ -1,8 +1,0 @@
-file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
-ALL_124_M_SHS_ENG_ST1,0,0,1.5,1.8,0.3,1.0,1,0.3,1.5,1.8,0.109745,0,
-ALL_124_M_SHS_ENG_ST1,1,-1,3.91,4.55,0.64,0.15,1,,,,,0,vad_occupancy_out_of_range
-ALL_124_M_SHS_ENG_ST1,2,-1,7.74,8.22,0.48,0.2,1,,,,,0,vad_occupancy_out_of_range
-ALL_124_M_SHS_ENG_ST1,3,0,9.94,10.61,0.67,1.0,1,0.67,9.94,10.61,0.389366,0,
-ALL_124_M_SHS_ENG_ST1,4,0,12.29,12.99,0.7,1.0,1,0.7,12.29,12.99,0.194163,0,
-ALL_124_M_SHS_ENG_ST1,5,0,15.32,15.81,0.49,1.0,1,0.49,15.32,15.81,0.234636,0,
-ALL_124_M_SHS_ENG_ST1,6,0,18.67,18.851,0.181,1.0,1,0.181,18.67,18.851,0.137387,0,

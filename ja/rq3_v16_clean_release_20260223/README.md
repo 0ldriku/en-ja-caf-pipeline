@@ -26,11 +26,11 @@ This folder is a clean package of the files used for the Japanese RQ3 validity r
   - v16 clause-segmented ASR TextGrids.
 - `manual_clauses/`
   - Manual clause TextGrids produced by v16.
-- `manual_clauses_gold_v1/`
-  - First-pass manually corrected gold clauses.
 - `manual_clauses_gold_v2/`
   - Final manually corrected gold clauses used as reference.
   - Includes `clause_log.txt` when available.
+- Note:
+  - `manual_clauses_gold_v1` was a transient pre-fix backup in the original run and is intentionally omitted in this cleaned release.
 - `GOLD_V2_FIX_REPORT.md`
   - Manual gold v2 fix notes.
 
@@ -58,7 +58,6 @@ This folder is a clean package of the files used for the Japanese RQ3 validity r
 - `inputs/manual_word_textgrids/*.TextGrid`: 40
 - `auto_clauses/*.TextGrid`: 40
 - `manual_clauses/*.TextGrid`: 40
-- `manual_clauses_gold_v1/*.TextGrid`: 40
 - `manual_clauses_gold_v2/*.TextGrid`: 40
 
 ## ASR Provenance

@@ -62,14 +62,16 @@ ja/.venv_electra310/Scripts/python.exe ja/ja_clause_segmenter_v16.py \
   --model ja_ginza_electra
 ```
 
-### Step 3: Backup and gold_v2 fixes
+### Step 3: Gold_v2 fixes
 ```bash
-cp -r manual_clauses manual_clauses_gold_v1   # backup pre-fix
 cp -r manual_clauses manual_clauses_gold_v2   # working copy
 # Applied 9 manual fixes (see Gold V2 Fixes below)
 # Fixes applied via apply_gold_v2_fixes.py (praatio-based boundary adjustments)
 cp -r manual_clauses_gold_v2/* manual_clauses/ # replace for analysis
 ```
+Notes:
+- `manual_clauses_gold_v1` existed as a transient pre-fix backup during the original run.
+- This curated release keeps only `manual_clauses_gold_v2` (the final gold standard actually used in analysis).
 
 ### Step 4: CAF calculation
 ```bash
@@ -99,14 +101,12 @@ ja/.venv_electra310/Scripts/python.exe ja/analysis/correlation_from_caf_ja.py \
 ## Output Files
 - `auto_clauses/*.TextGrid` (40) - ASR clause-segmented TextGrids
 - `manual_clauses/*.TextGrid` (40) - Manual clause-segmented TextGrids (= gold_v2)
-- `manual_clauses_gold_v1/` (40) - Pre-fix backup
 - `manual_clauses_gold_v2/` (40) - Post-fix gold standard
 - `auto_caf_results.csv` - CAF measures for ASR
 - `manual_caf_results.csv` - CAF measures for manual
 - `rq3_concurrent_validity_ja.csv` - Full correlation/agreement statistics
 - `rq3_file_level_ja.csv` - Per-file CAF values
 - `auto_clauses/clause_log.txt` - Clause segmentation log (ASR)
-- `manual_clauses_gold_v1/clause_log.txt` - Clause segmentation log (manual, pre-fix)
 
 ## Gold V2 Fixes Applied (9 boundary fixes, 9 files)
 

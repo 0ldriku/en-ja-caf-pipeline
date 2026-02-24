@@ -3,9 +3,9 @@
 ## Folder Inventory
 
 - `en/rq123_clean_release_20260223`  
-  Files: 1099, Size: 0.394 GB
+  Files: 915, Size: 0.390 GB
 - `ja/rq3_v16_clean_release_20260223`  
-  Files: 732, Size: 0.167 GB
+  Files: 595, Size: 0.165 GB
 - `shared/disfluency_detector/model_v2/final`  
   Files: 7, Size: 1.054 GB
 - `shared/filler_classifier/model_podcastfillers_neural_v1_full`  
