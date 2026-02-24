@@ -6,7 +6,7 @@ This file records exactly which data folders were used for:
 - and correlation probe.
 
 ## Run folder
-- `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/`
+- `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_20260224/`
 
 ## Inputs
 

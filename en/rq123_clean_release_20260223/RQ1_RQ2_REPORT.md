@@ -467,9 +467,9 @@ Conclusion for EN:
 
 Fresh rerun from filler detection (2026-02-24):
 - A full fresh rerun (candidate extraction -> CAF -> probe) was executed in:
-  - `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/`
-  - `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/RUN_LOG.md`
-  - `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary.csv`
+  - `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_20260224/`
+  - `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_20260224/RUN_LOG.md`
+  - `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_20260224/probe/rq3_gaponly_neural_t050_probe_summary.csv`
 - The fresh rerun reproduced the same MCPD summary pattern:
   - Overall: `r 0.816 -> 0.895 -> 0.817`, `ICC 0.788 -> 0.881 -> 0.790`, `MAE 0.093 -> 0.070 -> 0.092`
   - ST1: `r 0.707 -> 0.842 -> 0.704`, `ICC 0.662 -> 0.832 -> 0.656`, `MAE 0.100 -> 0.070 -> 0.101`
