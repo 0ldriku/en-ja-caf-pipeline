@@ -1,0 +1,1181 @@
+File: CCH16-ST1.TextGrid
+Words: 253, Mora: 435
+Disfluent words: 17
+Clauses (Logical): 29
+Clauses (Aligned): 28
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 1, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 3, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 1, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | 朝ケンとマリはサンドイッチを作りました
+SUB_REL              | そして二人はさんどゆち
+SUB_ADVCL            | サンドイッチを作った間に
+SUB_REL              | 隣にいる犬は二人の動作ののぞみ
+SUB_ADVCL            | 臨みながらこの二人は何をしているのかと
+IND                  | 想像しています
+IND                  | 準備が終わりました
+fragment             | サンドイッチもあの食べ物も全部
+IND                  | バスケットの中に入りました
+CHAIN_TE             | 後で二人は地図を見て
+SUB_CCOMP            | 今日どこへ行くのかと
+SUB_ADVCL            | 考えながらの後
+SUB_ADVCL            | のた旅を楽しみにしていますけれども
+CHAIN_TE             | 隣の犬はバスケットを開けて
+SUB_ADVCL            | 中の物を全部食べちゃいましたので後は
+IND                  | 食べちゃいました
+IND                  | お腹がいっぱいになりました
+IND                  | そしてバケットを閉じてとなと
+CHAIN_TE             | あそこにパケットを閉じて
+IND                  | あの旅を待っています
+IND                  | 二人ととマリは二人てあの山に行きました
+SUB_REL              | そして朝準備した
+IND                  | バケットと食べ物も一緒に持ちました
+SUB_REL              | でもバケットは開けたとたんに
+IND                  | 犬はバケットの中から飛んでしまいました
+SUB_ADVCL            | 二人ともびっくりしましたけど
+IND                  | バケットの中には果物とサンドイッチしか残りません
+IND                  | 食べ残りのた二人はがっかりしていました
+IND                  | そして旅もそのままで終わりました
+
+File: CCH16-ST2.TextGrid
+Words: 213, Mora: 330
+Disfluent words: 22
+Clauses (Logical): 26
+Clauses (Aligned): 25
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 2, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 2, 'type_relabel_advcl_to_ind': 2, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 1, 'v15_ind_to_sub_advcl_subordinator_final': 5, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | 夜の仕事が終わってケンは自分の家にとります
+SUB_ADVCL            | そして自分の鍵が忘れましたので
+CHAIN_TE             | どうやって
+IND                  | 家に入る
+IND                  | のか困っています
+SUB_ADVCL            | その時マリが部屋にマリが家にいて
+SUB_CCOMP            | 今はたぶん呼んでたら開けてくれると
+IND                  | 思います
+SUB_ADVCL            | 夜中十二時になりますので
+SUB_ADVCL            | マリは今寝ていますから
+CHAIN_TE             | どうして呼んでもマリは
+SUB_ADVCL            | 起きてくれませんから
+IND                  | ケンは梯子を持っ
+SUB_CCOMP            | 二階の窓から自分の家に入りたいと
+SUB_ADVCL            | 思っていますけど
+IND                  | その時警察が彼の動作を見
+IND                  | たぶんこの人がなんか不審だと思ってい
+IND                  | ケンを呼んでいました
+SUB_ADVCL            | 二人がなんか話しているうちに
+IND                  | マリも起きました
+SUB_ADVCL            | ちゃんと説明をし
+IND                  | 警察を離れてしまっ
+IND                  | ケンも自分の部屋に入りました
+
+File: CCM35-ST1.TextGrid
+Words: 208, Mora: 366
+Disfluent words: 36
+Clauses (Logical): 23
+Clauses (Aligned): 21
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 1, 'type_relabel_advcl_to_ind': 2, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 2, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | 二人とも楽しくてえのこれから
+IND                  | のピクニックを楽しみにしています
+IND                  | 二人はかいた
+IND                  | 犬があります
+CHAIN_TE             | 犬はそのピクニックのピクニックに用意して
+IND                  | サンドイッチに目を付けて
+IND                  | 食べたがる
+IND                  | 様子をしています
+IND                  | 二人はどこに行くかってえち
+SUB_ADVCL            | 地図を見ているうちにケンは
+SUB_ADVCL            | 二人を気づかないように
+IND                  | こっそりとバスケットに入りました
+IND                  | それからケンとケンさんとマリさんは手を握っ
+IND                  | 楽しくでピクニックに行きました
+IND                  | えとえ午後昼になる
+IND                  | と二人はお腹がすいすいすきました
+SUB_ADVCL            | バスケットを開けたら
+IND                  | ケンは飛び出してきた二人は二人ともびっくりしました
+IND                  | よくバスケットの中を見ます
+IND                  | とんと準備していた
+IND                  | サンドイッチやりんごなども全部ケンちゃんにぇ犬ちゃんにわんちゃんに食べられました
+
+File: CCM35-ST2.TextGrid
+Words: 292, Mora: 496
+Disfluent words: 33
+Clauses (Logical): 25
+Clauses (Aligned): 27
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 2, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 1, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 2, 'v15_fragment_to_ind_predicate_recovery': 1, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 2, 'v16_sub_rel_to_ind_topic_predicate': 2, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | ケンはその日残業で遅くまで残業しました
+IND                  | あいにくケンさんはうちの鍵を持っていませんでした
+SUB_ADVCL            | 家に帰ると
+IND                  | 電気もすでに消してしまいました
+SUB_CCOMP            | 誰かいないかと
+MINOR                | 思って叫んだらマリさんはもう十二時ですからマリさんもう熟睡しました
+SUB_ADVCL            | どんなにさけびてどんなに叫んでも
+IND                  | マリさんはなかなか起きてくれなかった
+IND                  | ケンさんはなかなかいい方法を見つからなく
+IND                  | 隣に梯子を置いてありました
+IND                  | ケンさんはその梯子を持っ
+CHAIN_TE             | その梯子を利用して
+SUB_CCOMP            | 屋根までん上りたいと
+MINOR                | 思います
+IND                  | えでもその時は通り過ぎた
+IND                  | 警察お巡りさんに見つかられ
+IND                  | てしまいました
+IND                  | あなたは何をしているんです
+IND                  | かって叱られてケンさんは私はこの家の持ち主ですって答えたらお巡りさんはなかなか
+IND                  | 信じてくれん
+IND                  | はマリさんはちょうど起きた
+IND                  | そのおえっとうんマリさんは二人の喧嘩でえっと目覚めました
+SUB_ADVCL            | えっと彼女はえ窓からえ言った
+SUB_ADVCL            | そう言った彼は私のご主人ですから
+SUB_CCOMP            | おおなるほどと
+IND                  | おおまりさんにお巡りさんな言った
+IND                  | うんまお巡りさんとケンさんもあ二人とも笑いました
+
+File: CCS09-ST1.TextGrid
+Words: 177, Mora: 310
+Disfluent words: 34
+Clauses (Logical): 18
+Clauses (Aligned): 11
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 2, 'dropped_no_pred_type': 1, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 2, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 3, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 1, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | 朝ケンとマリはサンドイッチを作りました
+IND                  | そしてケンとケンとマリは今日のぴくに今日のピクニックの道をかく
+SUB_REL              | 地図でと確認する時にうち
+fragment             | バスケットの中にあかに
+IND                  | 入り込みそのままでケンと一緒にぴマリケンと一緒に行ってしまいました
+SUB_REL              | そしてピクニックの場所に着いた
+SUB_ADVCL            | ほほについ着くと
+SUB_ADVCL            | 二人はばす二人はバスケットを開けると
+IND                  | 犬が犬がとびで飛んできて二人は大びっくりしました
+SUB_ADVCL            | そして中を見ると
+IND                  | すべての食べ物はに犬にたべら食べられてしまいました
+IND                  | 二人はとかなそれは悲しくてしょうがなくてうちへ帰りました
+
+File: CCS09-ST2.TextGrid
+Words: 231, Mora: 355
+Disfluent words: 61
+Clauses (Logical): 23
+Clauses (Aligned): 21
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 1, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 2, 'dropped_no_pred_type': 1, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 6, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 3, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | 持っん持っていませんから
+SUB_ADVCL            | ケンはうちに入りませんでし
+fragment             | 外でケンは外で大声で
+IND                  | 呼んでみて呼んでみ
+SUB_REL              | 寝ているマリを起こそうと
+SUB_ADVCL            | しそうとしておとそうとするけど
+IND                  | けど返事はなかった
+IND                  | ケンはしかたがなく
+CHAIN_TE             | 梯子を持ってきてを
+IND                  | 持ってい
+SUB_ADVCL            | 二階からうちにはいり
+IND                  | ろうとする時通りかかった
+CHAIN_TE             | 警察に発見されて
+IND                  | 泥棒と泥棒して逮捕される
+SUB_REL              | されるとたんにマリは
+CHAIN_TE             | 車の音聞いてを聞いて
+IND                  | 起き
+CHAIN_TE             | 窓を開けてみる
+IND                  | とえとケンと警察は二人がやり
+CHAIN_TE             | そしてとそれでケンはせいけ警官さんに自分は鍵を持っていないと
+CHAIN_TE             | 説明して理解を得て
+SUB_ADVCL            | それで無事に済みまし
+
+File: CCS45-ST1.TextGrid
+Words: 170, Mora: 296
+Disfluent words: 24
+Clauses (Logical): 18
+Clauses (Aligned): 18
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 1, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 1, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | 二人は今日は遠足に行きます
+IND                  | で二人は犬をかいてます
+IND                  | 二人はその犬をとてもかわいがっ
+CHAIN_TE             | 一緒に連れて
+IND                  | いきたいで一緒に遠足に行きました
+IND                  | 二人は地図バスケットを持っ
+IND                  | で地図とバスケットを持って
+SUB_ADVCL            | それから犬をバスケットの中に入れてで
+IND                  | 一緒に遠足に行きます
+IND                  | 天気はとても良いです
+IND                  | 草がとても草が緑色で空気が清々しくて二人は
+IND                  | 山へ行きました
+IND                  | そしてその場を着きました
+SUB_CCOMP            | ちょうどちょうどちょうど十二時頃二人はそろそろお腹をすいてきたと
+SUB_ADVCL            | 思いまし
+IND                  | バスケットを開け
+IND                  | わんちゃんがサンドイッチとりんごを食べ切れました
+IND                  | なんととてもショックでした
+
+File: CCS45-ST2.TextGrid
+Words: 223, Mora: 359
+Disfluent words: 13
+Clauses (Logical): 33
+Clauses (Aligned): 32
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 3, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 1, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 1, 'v15_fragment_to_ind_predicate_recovery': 2, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 2, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | ドアを開けようと
+IND                  | 家に入ろうと
+SUB_ADVCL            | 鍵は持っていなくてどうしても
+IND                  | 入れなくてとても困っていました
+IND                  | 仕方なく
+IND                  | 窓の外で妻のマリを呼ぼうとしました
+SUB_ADVCL            | で零時なのでマリはもう深く
+IND                  | 寝てました
+IND                  | どんなに呼ぼうとマリは
+SUB_REL              | 起きる
+IND                  | 気はありませんでした
+IND                  | どうしようと
+IND                  | ケンはとても困っています
+IND                  | 仕方なく
+IND                  | はしこを持っ
+IND                  | 登っ
+SUB_CCOMP            | 窓で家に入ろうと
+MINOR                | 思います
+SUB_ADVCL            | でしてるうちに
+IND                  | ちょうど警官が回ってきました
+IND                  | 何してるんですかと
+IND                  | 警官は聞きました
+IND                  | 私はこの家の主人ですでケンは答えました
+SUB_ADVCL            | うそですで警官はまたはんぱくし
+IND                  | ました良かった
+IND                  | 大騒ぎのせいでマリは起きました
+IND                  | ケンさんどうしてここにほら見ろ
+SUB_REL              | うちの妻でケンさんは警官に
+IND                  | 警官はそっか鍵を忘れました
+IND                  | か次は気を付け
+IND                  | はいごめんなさいでしたで
+IND                  | ハッピーエンディング
+
+File: CCT15-ST1.TextGrid
+Words: 363, Mora: 629
+Disfluent words: 21
+Clauses (Logical): 33
+Clauses (Aligned): 37
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 2, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 3, 'type_relabel_advcl_to_ind': 2, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 1, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | その日はすごく天気の良い日でした
+SUB_REL              | 二人ともやっぱりピクニックする
+SUB_CCOMP            | 日の一番いい選択だと
+SUB_REL              | 思いましたのでそのピクニックのスケジュールを
+IND                  | 作りました
+IND                  | でその後では一匹のペット彼らたちが飼っていた
+IND                  | ペットの犬ちゃんが不注意に彼らのバスケットの中に入ってました
+CHAIN_TE             | でその後二人はやっぱり真剣にぢ
+SUB_ADVCL            | つを見ながら
+SUB_REL              | どこにピクニックした
+SUB_REL              | ほうがいいんですかってゆう
+CHAIN_TE             | ことで討論して
+SUB_ADVCL            | 盛り上がったのでその犬のことをあんまりわからないですが
+SUB_ADVCL            | だからその犬がバスケットの中にあるのは
+IND                  | 全然知らなたんです
+IND                  | その後二人共にすごく楽しく
+IND                  | 美しいところに丘の丘
+IND                  | ところでそして木もすごくきれいに
+IND                  | 育ってすごく
+IND                  | きれいに
+SUB_REL              | 植えたところに行きた
+IND                  | 着きました
+SUB_ADVCL            | で歌を歌いながら
+IND                  | そして気軽いに歩きました
+IND                  | でその後でおっっとびっくりした
+IND                  | 私たちの犬ちゃんがバスケットの中にいます
+IND                  | それはどういうことでしたかってすごく
+CHAIN_TE             | あの驚いてでいってその状況を見
+IND                  | やばい
+IND                  | やっぱりバスケットの中のしょくものは全部食べ切ったの
+IND                  | かってことでたまらなく
+SUB_REL              | でその後あっほんとにこのバスケットの中のしょくものはもう半分しか残っていないんで
+IND                  | あ二人はちょっと残念
+IND                  | 気分でことにあの悔しくてあのまた次のピクニックに楽しみにしてきました
+
+File: CCT15-ST2.TextGrid
+Words: 421, Mora: 697
+Disfluent words: 17
+Clauses (Logical): 43
+Clauses (Aligned): 43
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 3, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 9, 'type_relabel_advcl_to_ind': 3, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 1, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 1, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | その時はあの日ケンさんは仕事がすごく遅くなったので
+IND                  | 留守番のなんか留守番はマリさんだけでやっぱり残念
+IND                  | ことは鍵を忘れてしまいました
+IND                  | でそのことについてはもう部屋に入らない
+IND                  | はいらなくなってきましたで
+IND                  | その後はやっぱり何度もマリさんを呼んで
+CHAIN_TE             | マリーがこのドアを開けてほしいて
+IND                  | ゆうおこえでマリの名前を叫びましたで
+SUB_ADVCL            | も全然マリさんはぐずっと寝ているから
+IND                  | その声を全然聞こえませんでした
+SUB_ADVCL            | その後はしょうがないのでやっぱり何の方法で家に入る
+IND                  | のかしらってことを真剣に考えるとは
+IND                  | ゆうしごを用い
+SUB_REL              | その二階の寝ている
+SUB_REL              | ところに入りたいとゆう気持ちが強烈なのでこっそり
+SUB_ADVCL            | 入るのかしらてゆうことを考えながら
+IND                  | やっぱりそう決めましたで
+CHAIN_TE             | このはしごをたぶん隣の部屋に借りてで
+SUB_REL              | こっそりと入りたくてその時はもう警察が
+SUB_REL              | そうゆう状況を見ました
+IND                  | で厳しい叱りましたで
+IND                  | あなたはえ君は泥棒ですかってゆう
+CHAIN_TE             | 強烈な質問をしたところで
+CHAIN_TE             | やっぱりちょっと緊張して
+CHAIN_TE             | ち緊張してもしょうがなくて
+IND                  | そして事実を警察官に伝えましたで
+CHAIN_TE             | やっぱり入れなかったんで
+CHAIN_TE             | あの梯子を用いて
+IND                  | 部屋に入りたい
+fragment             | ってゆう
+IND                  | ことを全部警察官に警官に話しました
+IND                  | その後は警官がことですかってゆう
+IND                  | 答えてあのすごく親切で何かの手伝いができませ
+IND                  | んかってゆう
+IND                  | あの温かい
+CHAIN_TE             | あの挨拶で何のえっとあーケンさんがうん良かったら私の妻さんを私の奥さんをあの呼んでいただけないんです
+IND                  | かってことで警官に頼みました
+CHAIN_TE             | その後はマリさんがおこって
+IND                  | あのケンさんはやっと無事に
+IND                  | 部屋に入りました
+
+File: EAU18-ST1.TextGrid
+Words: 235, Mora: 397
+Disfluent words: 13
+Clauses (Logical): 27
+Clauses (Aligned): 29
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 2, 'type_relabel_advcl_to_ind': 2, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | それで全部ピクピキニックバスケットに入れ
+IND                  | とてもいいかわをしました
+SUB_ADVCL            | 今日は何をし
+IND                  | どこへ行けばいいです
+IND                  | じゃああの公園で散歩に行きましょう
+IND                  | ケンとマリさんはちずを開け
+IND                  | 見てて相談しました
+SUB_ADVCL            | 地図を見ている間に
+IND                  | ケンとマリの小さな犬
+IND                  | がバスケットに入りました
+IND                  | ケンとマリはそれを気づかなかったんで
+IND                  | ドライブに行っ
+IND                  | 公園に行きました
+SUB_ADVCL            | 公園に届いた時
+IND                  | ケンとマリさんは景色はきれいですねと
+CHAIN_TE             | 二人と手をつながって
+IND                  | 歩いていました
+SUB_ADVCL            | それできれいなスポットを見つけった時に
+IND                  | ケンとマリさんは座っていました
+IND                  | でその時にバスケットを開け
+IND                  | ケンとマリの犬が飛んできました
+SUB_ADVCL            | ケンとマリさんがとってもびっくりし
+IND                  | きゃとしました
+IND                  | で最後にはケンとマリの作った
+IND                  | サンドイッチとりん全部犬に食べてしまいました
+IND                  | 残念ですが今日の
+IND                  | ピクニックはもうできなくなりました
+
+File: EAU18-ST2.TextGrid
+Words: 237, Mora: 364
+Disfluent words: 11
+Clauses (Logical): 21
+Clauses (Aligned): 23
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 5, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 1, 'v15_ind_to_sub_advcl_subordinator_final': 4, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 1, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | それは時だけ見つけました
+IND                  | でその時ケンさんは大きいごえで
+SUB_REL              | 妻のマリさんに起きていますかと
+SUB_ADVCL            | 窓に話しましたんだけど
+IND                  | マリさんはその時にもう寝ちゃっていました
+IND                  | それはもう夜十二時だったのでケンさんは思っていた
+SUB_CCOMP            | どうしようかなと時に
+IND                  | 警察さんに電話をかけました
+IND                  | それで警官さんが来てっ
+IND                  | ケンさんが手伝いに来ました
+IND                  | ケンさんが梯子を持ってったで
+IND                  | うちの前に残しました
+SUB_ADVCL            | 思っていたので
+IND                  | 大きいごえで何をします
+IND                  | でケンさんはびっくりしたで
+IND                  | 反応しました
+SUB_REL              | がその時に警官さんの大きいごえのことを聞いた
+IND                  | マリさんは起きてしまいました
+SUB_ADVCL            | それでマリさんが窓を開けた時に
+SUB_ADVCL            | そうですかとやっとわかったように
+SUB_CCOMP            | 説明をわかりましたと
+SUB_ADVCL            | いうことになったので
+
+File: ENZ20-ST1.TextGrid
+Words: 141, Mora: 247
+Disfluent words: 14
+Clauses (Logical): 17
+Clauses (Aligned): 14
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 2, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 0, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+CHAIN_TE             | ケンたちの犬がそのピクニックバスケットを見て
+SUB_CCOMP            | 入りたいなと思って入りました
+IND                  | ケンとマリさんは地図を見ていました
+IND                  | その時に犬が入ってしまいました
+IND                  | その後でケンさんとマリさんが公園に散歩をしました
+CHAIN_TE             | バスケットを連れて
+IND                  | いき持っていきました
+SUB_ADVCL            | でもピクニックを始める時に
+IND                  | 犬が出しました
+IND                  | 犬がピクニックバスケットから出ました
+IND                  | ケンさんとマリさんはすごくびっくりしました
+IND                  | ケンさんとマリさんのピクニックが全部食べてしまいました
+IND                  | 犬がそのりんごとかサンドイッチを全部食べ
+IND                  | 残念でした
+
+File: ENZ20-ST2.TextGrid
+Words: 96, Mora: 141
+Disfluent words: 3
+Clauses (Logical): 11
+Clauses (Aligned): 13
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 3, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | うちは鍵をかけています
+SUB_ADVCL            | がケンが鍵を忘れたから
+IND                  | 入れなかったです
+SUB_ADVCL            | とマリさんが寝ていますから
+IND                  | ドアを開けませんでした
+IND                  | だからケンさんが梯子を使っ
+IND                  | 窓に上りました
+SUB_ADVCL            | ケンさんが上っている間に警官が来
+SUB_CCOMP            | 何していますかと
+IND                  | 言いました
+IND                  | でもケンさんが説明しました
+SUB_ADVCL            | マリさんが家にいましたから
+IND                  | 大丈夫でした
+
+File: ENZ31-ST1.TextGrid
+Words: 102, Mora: 196
+Disfluent words: 3
+Clauses (Logical): 14
+Clauses (Aligned): 13
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 1, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | 楽しみにしていたピクニックの日なのでふたりどもわくわくしながら
+IND                  | サンドイッチを作りました
+SUB_REL              | 地図を見てる間犬が
+IND                  | バスケットに飛び込んでしまいました
+SUB_REL              | それに気づかなかった
+IND                  | ケンとマリはわくわくしてピクニックの場所へ行きました
+CHAIN_TE             | しかしピクニックの場所に着いて
+SUB_ADVCL            | バスケットを開けてみたら
+IND                  | 犬が飛び出してしまった
+SUB_REL              | 中を見ると犬はサンドイッチや
+IND                  | りんごなどを食べてしまいました
+IND                  | ピクニックはできなくなりました
+IND                  | 残念です
+
+File: ENZ31-ST2.TextGrid
+Words: 118, Mora: 184
+Disfluent words: 3
+Clauses (Logical): 15
+Clauses (Aligned): 16
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 1, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 4, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | 残業から帰っ
+SUB_ADVCL            | 鍵を持っていないので
+IND                  | 家に入れません
+IND                  | マリはもう寝てしまいました
+IND                  | ケンは聞こえません
+SUB_ADVCL            | ケンは思いまし
+IND                  | たが警官に見られてしまいました
+SUB_ADVCL            | 警官は怒ってケンのことを泥棒と言っていましたが
+SUB_REL              | それを聞こえた
+SUB_ADVCL            | マリが起きてし
+SUB_ADVCL            | ケンを見たら
+IND                  | 警察が事情がわかって謝りました
+IND                  | ケンは寝ることができました
+
+File: EUS11-ST1.TextGrid
+Words: 177, Mora: 315
+Disfluent words: 20
+Clauses (Logical): 19
+Clauses (Aligned): 18
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 3, 'dropped_short_no_pred': 1, 'dropped_particles_only': 1, 'dropped_meta': 0, 'dropped_no_pred_lt10': 3, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | さんとマリさんは兄弟にいます
+IND                  | しそれから犬もいます
+IND                  | サンドイッチを作っ
+IND                  | テーブルの上にりんごとバスケット
+IND                  | とパンがあります
+IND                  | ケンさんとマリさんはちずを読みます
+IND                  | 犬はバスケットに入ります
+IND                  | そしてーケンさんとマリさん
+IND                  | は公園に行きます
+IND                  | 犬はバスケットに入っています
+IND                  | ですケンさんも嬉しそうです
+IND                  | 天気はいい天気は良さそうです
+IND                  | それから犬はバスケットからバスケットを出ます
+IND                  | ケンさんとマリさんはびっくりします
+IND                  | 犬は全部のピクニックの食べ物を食べました
+IND                  | 犬は嬉しそうです
+IND                  | ケンさんとそしてケンさんとマリさんは悲しそうです
+IND                  | 犬は全部のりんごとサンドイッチを食べました
+
+File: EUS11-ST2.TextGrid
+Words: 117, Mora: 187
+Disfluent words: 13
+Clauses (Logical): 11
+Clauses (Aligned): 12
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 2, 'dropped_short_no_pred': 0, 'dropped_particles_only': 1, 'dropped_meta': 0, 'dropped_no_pred_lt10': 3, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 3, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | はうちに入ろうとしましたが
+IND                  | 鍵を忘れました
+IND                  | あの夜のようですそしてケン
+IND                  | さんは大きな声で
+SUB_ADVCL            | マリさんとはなしようとしましたが
+IND                  | マリさんはます寝ていました
+IND                  | そして警官が来ました
+IND                  | ケンさんは梯子にいます
+SUB_ADVCL            | 警官さんはケンさんと話し
+IND                  | は起きました
+IND                  | 警官さんは帽子を脱いで
+IND                  | ケンさんはうちに入るかもしれません
+
+File: EUS32-ST1.TextGrid
+Words: 147, Mora: 248
+Disfluent words: 10
+Clauses (Logical): 17
+Clauses (Aligned): 17
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 1, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 0, 'v15_ind_to_minor_stance_recovery': 1, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | そしてぴっくにっくの箱に入れた
+SUB_CCOMP            | ぴっくにっくしようと思いました
+SUB_CCOMP            | そしてぴっくにっくのどこにーピクニックをどこにするかなと
+MINOR                | 思って地図を見ました
+SUB_ADVCL            | でも地図をよくみてった時
+IND                  | 犬はそのピクニックの箱に入りました
+SUB_ADVCL            | それからケンとマリはどっこにするを
+IND                  | 選んで
+IND                  | ピクニックへしに行きました
+SUB_REL              | 公園に着いて箱を
+SUB_ADVCL            | 開けた時に
+IND                  | あぬね犬が出ました
+IND                  | 突然にそして犬がもう食べ物を全部食べました
+IND                  | 食べ物もなくなりました
+IND                  | マリさんはほんとにびっくりしました
+IND                  | そしてもうピクニックできませ
+IND                  | んになりました
+
+File: EUS32-ST2.TextGrid
+Words: 185, Mora: 306
+Disfluent words: 11
+Clauses (Logical): 21
+Clauses (Aligned): 21
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 1, 'dropped_meta': 0, 'dropped_no_pred_lt10': 5, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 2, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | そして夜遅くに家に帰りました
+SUB_ADVCL            | でも鍵を持ってなかったから
+IND                  | 家にもちろん入れなかったです
+IND                  | 二階のベッドに寝ていました
+IND                  | ケンは大きい声で
+SUB_ADVCL            | マリーと言いましたけど
+IND                  | マリーは起きなかったです
+IND                  | ケンはマリーを起こせなかったです
+SUB_REL              | を取って梯子で
+IND                  | 二階の窓へ上りました
+SUB_REL              | でもねそんな時に警官が来てケンをみって
+IND                  | なんかおかしいと思いました
+IND                  | 警官はケンに何をしています
+IND                  | って言いました
+IND                  | ケンは説明しようと
+IND                  | おかしいた
+IND                  | でもねそれからマリは起き
+IND                  | 窓にいられました
+IND                  | 現れました
+IND                  | ケンは私の旦那さんって教えました
+IND                  | 喜びでこの問題をとくにしました
+
+File: IID15-ST1.TextGrid
+Words: 133, Mora: 250
+Disfluent words: 19
+Clauses (Logical): 10
+Clauses (Aligned): 12
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 2, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | そしてマリさんとケンさんはピクニッをするつもりです
+SUB_ADVCL            | マリさんとケンさんは地図を見る時に
+IND                  | 犬さんがバスケットに入ります
+IND                  | そしてマリさんとケンさんはピクニックをします
+IND                  | それでマリさんとケンさんは散歩して楽しくします
+IND                  | でも突然に犬さんはバスケッの中から飛びます
+IND                  | 飛んで出します
+SUB_ADVCL            | マリさんとケンさんはびっくりし
+IND                  | バスケットの中を見
+IND                  | やばいと言いました
+IND                  | それはなぜですかバスケットの中にある
+IND                  | 食べ物は犬さんが食べられてしまいました
+
+File: IID15-ST2.TextGrid
+Words: 188, Mora: 321
+Disfluent words: 26
+Clauses (Logical): 20
+Clauses (Aligned): 19
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 4, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 1, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 2, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 1, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | あっ言いました
+IND                  | あとそしてケンはマリさんを呼びます
+SUB_ADVCL            | と言いましたでも
+IND                  | マリさんはもう寝てしまいました
+SUB_ADVCL            | ケンさんはうちに入りたいですから
+IND                  | はし梯子でいいですかと
+SUB_ADVCL            | 思いましたでも
+SUB_ADVCL            | 梯子でつ使った時に
+IND                  | 警官が来てしまいました
+IND                  | 警官さんは泥棒ですかと言いました
+IND                  | そしてケンさんはびっくりしました
+SUB_REL              | ケンさんは警官さんと話してそれはマリさんが
+IND                  | もおく送るようになりました
+IND                  | マリさんそれは私の妻です
+IND                  | ケンさんは警官さんと説明します
+IND                  | ですからケンさんは警官は
+IND                  | うちにそれは泥棒じゃありませんと言いました
+
+File: IID22-ST1.TextGrid
+Words: 212, Mora: 395
+Disfluent words: 36
+Clauses (Logical): 16
+Clauses (Aligned): 17
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 1, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 1, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 1, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 1, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | それでりんごとかパンをバスケットに入り
+IND                  | はい入っ入ってます
+SUB_ADVCL            | マリとケンさんの地図を見る時
+IND                  | 思わずあしマリさんとケンさんを知らぬ
+IND                  | 犬がバスケットに入ってしまいました
+IND                  | まそれはマリとケンさんはピクニック続け
+IND                  | でも犬さんはバスケの中に知りません
+IND                  | しるししら知らず知らなかったんです
+SUB_ADVCL            | まそれでケンとケンさんとマリさんは楽しみにピクニックし
+IND                  | 突然あの犬はバスケットの中からとび飛び出してしまいました
+SUB_ADVCL            | マリさんとケンさんはほんとにびっくりしましたけど
+SUB_CCOMP            | どうしようかなと
+IND                  | ケンさんと言いました
+fragment             | 食べ物なバスケットの食べ物の中にりんごとかパンとか他の食べ物も
+IND                  | てもうなくなってしまいました
+IND                  | ばらになってしまいました
+IND                  | どうしよう
+IND                  | ってわかりませんけどそうです
+
+File: IID22-ST2.TextGrid
+Words: 275, Mora: 476
+Disfluent words: 58
+Clauses (Logical): 25
+Clauses (Aligned): 21
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 3, 'dropped_short_no_pred': 4, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 3, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 1, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 4, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 1, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | マリさんケンさんはマリさんのところにマリさん私助けてくれと
+IND                  | 叫びましたで
+SUB_ADVCL            | もマリさんはもう寝てしまいましたから
+CHAIN_TE             | ケンさんに助けてくれなかっ
+IND                  | と助けてくれなく
+IND                  | くれなくてしまいました
+SUB_ADVCL            | それで警官は急に来てしまいましたけど
+IND                  | ケンさんは梯子に使っ
+IND                  | ケンさんは時警官は来てしまいました
+IND                  | 警官はケンさんのことを泥棒に考えてしまいました
+SUB_REL              | でなんかケンでもなんかそれでマリさんは起きて
+IND                  | 警官さんケンの人は私のおとだ
+IND                  | 夫だよと言われました
+IND                  | 人は私の妻だよと言われました
+IND                  | すいませんとあすいません
+CHAIN_TE             | えっと間違ってしまいましたと
+IND                  | えっとケンさんケンさんとと言われました
+IND                  | まあそれでんまあ警官はもうなんかえっとうしなわ
+SUB_ADVCL            | えっあ警官はもうあすいませんと
+IND                  | おやすみと言われました
+
+File: IID35-ST1.TextGrid
+Words: 262, Mora: 414
+Disfluent words: 49
+Clauses (Logical): 24
+Clauses (Aligned): 21
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 2, 'dropped_short_no_pred': 1, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 7, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 3, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 0, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | マリさんはパンを切りますた
+IND                  | ケンさんはマリさんに手伝ってもらいました
+SUB_REL              | おサンドイッチを作った時ん
+IND                  | 犬が来ました
+SUB_ADVCL            | ょピクニックに行く前に
+IND                  | ケンさんとマリさんは地図を見ました
+SUB_ADVCL            | ケンさんとマリさんは地図を見た時
+IND                  | サンドイッチをかばんのなか鞄の中のサンドイッチを取りました
+IND                  | でもケンさんとマリさんは気が付きません
+IND                  | とそれから彼らは旅行に行きました
+IND                  | かばんバスケットを持ちました
+IND                  | 彼らは楽しみに行きました
+IND                  | 彼らは山のようなま山に行きました
+SUB_ADVCL            | ケンさんとマリさんはえ山についた時
+IND                  | バスケットを開けました
+IND                  | りんごなどや半分になりました
+IND                  | え彼らはびっくりしました
+IND                  | 食べ物をう取ってのを気が付きました
+IND                  | 彼らはええ彼らは悲しい
+IND                  | に見えます
+IND                  | 見ました
+
+File: IID35-ST2.TextGrid
+Words: 254, Mora: 383
+Disfluent words: 65
+Clauses (Logical): 23
+Clauses (Aligned): 19
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 2, 'dropped_short_no_pred': 1, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 8, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 5, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 3, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 2, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | その日ケンさんはうちに帰りました
+IND                  | を忘れたのをん
+IND                  | 気が付きました
+IND                  | それからケンさんはマリさんマリさんを呼びました
+IND                  | でもその時マリさんは寝ていました
+IND                  | 何度もマリさんんよび
+IND                  | マリさんは起きませんでした
+IND                  | でも仕方なくてしかたがなくて
+IND                  | ケンさんはえとん
+IND                  | 方法を探しました
+IND                  | 階段に階段階段で二階をんみてみました
+SUB_REL              | 階段に乗る時警察が
+IND                  | 彼のうちにとりました
+SUB_ADVCL            | それから警察のほうがケンさんにえとん
+SUB_ADVCL            | 泥棒と思いましたけど
+SUB_ADVCL            | ケンさんは警察にて説明し
+IND                  | マリさんは起きました
+SUB_ADVCL            | ケンさんは警察にえ説明し
+IND                  | 警察があわかるようになりました
+
+File: IID40-ST1.TextGrid
+Words: 74, Mora: 133
+Disfluent words: 12
+Clauses (Logical): 8
+Clauses (Aligned): 9
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 0, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | でも地図を見る時
+IND                  | ついてないは
+IND                  | 犬さんはバスケットを入りました
+IND                  | そしてマリさんとケンと一緒にピクニックを行きます
+SUB_ADVCL            | そしてピクニックをところまでバスケットを開ける時
+IND                  | 犬が出ます
+IND                  | それはびっくりしました
+IND                  | 残念ことは全部の食べ物が
+IND                  | もう残りませんでした
+
+File: IID40-ST2.TextGrid
+Words: 118, Mora: 188
+Disfluent words: 14
+Clauses (Logical): 11
+Clauses (Aligned): 12
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | ある日んこの今夜はケンさんは鍵を持っていませんでし
+IND                  | 忘れてからです
+SUB_ADVCL            | 忘れてますから
+IND                  | マリさんはもう寝ていました
+IND                  | 外からケンさんはマリさんと呼んでいました
+IND                  | そしてしかたがないは梯子を持って
+IND                  | あの泥棒どろぼみたいに泥棒みたい
+IND                  | 梯子でうちは入り見ています
+IND                  | そして警官さんがいます
+IND                  | 警官さんは何をしてるのと
+IND                  | 言いました
+IND                  | そしてマリさんは入ってその事故を説明しました
+
+File: IID41-ST1.TextGrid
+Words: 155, Mora: 284
+Disfluent words: 35
+Clauses (Logical): 20
+Clauses (Aligned): 12
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 2, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 6, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | サンドウィッチはバスケットに入りました
+IND                  | マリさんとケンさんは地図を見ます
+SUB_ADVCL            | んマリとケンはお地図を見る時
+IND                  | に入ります
+IND                  | ケンとマリはその犬を入る
+IND                  | とんきが気がついません
+IND                  | おピクニックの場所へお持っていきます
+SUB_ADVCL            | 開けると
+IND                  | ジャンプします
+IND                  | ジャンプしまいました
+IND                  | ケンさんとマリさんはとてもびっくりしました
+IND                  | そのサンドウィッチとお他のおべんとはおそのお弁当ん食べないになりますた
+
+File: IID41-ST2.TextGrid
+Words: 185, Mora: 276
+Disfluent words: 46
+Clauses (Logical): 16
+Clauses (Aligned): 15
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 2, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 5, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 2, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | ん仕事をしご
+SUB_ADVCL            | 仕事を終わった時
+IND                  | んケンちゃんは家に帰ります
+IND                  | でもうちの前にと来た
+fragment             | 来た時ん鍵
+IND                  | 鍵はないと
+IND                  | 思わず
+IND                  | と気がつます
+IND                  | 気が付きます
+IND                  | そして何何回もマリさんに呼ぶ
+IND                  | 大きい声で呼びます
+IND                  | でもマリさんは寝てしまいました
+IND                  | 家のにだい二階の家に梯子を上がります
+SUB_ADVCL            | ケンさんにケンさんは警官にん説明しましたし
+IND                  | マリはマリさんはマリさんは起きます
+IND                  | 起きになりました
+
+File: KKD19-ST1.TextGrid
+Words: 163, Mora: 288
+Disfluent words: 20
+Clauses (Logical): 16
+Clauses (Aligned): 15
+Fragments: 2
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 1, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 1, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 3, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | んマリちゃんとケン君はサンドイッチをつくりました
+IND                  | そして犬もいる
+fragment             | マリちゃんとケンちゃんが
+SUB_REL              | サンドイッチをちゅつくる
+SUB_ADVCL            | ことを終わりした時
+IND                  | 犬がバスケットをはい入りました
+SUB_ADVCL            | これをマリちゃんとケンちゃんは全然し
+IND                  | らしなくて知らなく
+SUB_ADVCL            | ちずなぜならちじを見ましたから
+fragment             | このシチュエーションは全然
+IND                  | 見ませんでした
+IND                  | 後でマリちゃんとケンちゃんはピクニックを行きました
+SUB_ADVCL            | なんか公園に到着した時
+IND                  | マリちゃんはケンちゃんもびっくりしました
+IND                  | サンドイッチとりんごとぜんんぶ食べ
+IND                  | 出てきました
+IND                  | マリちゃんとケンちゃんはなんか気持ちがなんか悪い
+
+File: KKD19-ST2.TextGrid
+Words: 236, Mora: 385
+Disfluent words: 42
+Clauses (Logical): 27
+Clauses (Aligned): 26
+Fragments: 2
+Methodology Rules: {'dropped_fragment_lt3': 4, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 3, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 2, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 2, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 2, 'v16_fragment_predicate_relabel': 2, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | ケン君がうちに到着した時
+SUB_ADVCL            | ケンちゃんは仕事のために遅く
+SUB_ADVCL            | てうちに帰りました
+IND                  | ケンちゃんの奥さんも寝
+IND                  | ケンちゃんもかきを持っ
+SUB_ADVCL            | うちに入るのがたが全然
+IND                  | ないです
+IND                  | ケン君はマリコちゃんを呼びます
+SUB_ADVCL            | でもマリちゃんは寝ているから
+IND                  | 全然聞こえないです
+SUB_CCOMP            | ケンちゃんはどうするかなと
+MINOR                | 思いました
+fragment             | なんかいい
+IND                  | ことが思いできました
+IND                  | 思い出した
+IND                  | はしっこを持っ
+SUB_CCOMP            | うちの二階におごるおごると
+MINOR                | 思いました
+fragment             | でもが来
+IND                  | 警官が来
+SUB_CCOMP            | 何をしていますかと
+IND                  | 聞きました
+IND                  | ケン君はこのシチュエーションを警官に説明しました
+SUB_ADVCL            | 奥さんじゃわか私のワイプが寝ていますから
+SUB_ADVCL            | 私寝ていましたから
+IND                  | うちに入ることができませんで
+IND                  | これをしました
+IND                  | ごめんなさいとはい寝てました
+
+File: KKD27-ST1.TextGrid
+Words: 153, Mora: 279
+Disfluent words: 11
+Clauses (Logical): 19
+Clauses (Aligned): 18
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 4, 'type_relabel_advcl_to_ind': 2, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | さんマリがサンドイッチを作り
+CHAIN_TE             | ケンがそれを運んで
+IND                  | ピクニックボックスの中に入れますで
+SUB_ADVCL            | この家庭には犬が一匹おりますけど
+SUB_REL              | その二人がピクニックに行く
+SUB_REL              | 場所ーを検討する
+SUB_ADVCL            | ため地図を見てる際に
+IND                  | ピクニックバスケットの中に犬がこっそり入ってしまったんです
+CHAIN_TE             | でそのあと二人で楽しくピクニックの場所に向かいまして
+CHAIN_TE             | そこに着いて
+IND                  | 楽しくしゃべって
+SUB_ADVCL            | あとからピクニックボックスからバスケットを開けた時に
+SUB_REL              | 隠れてた
+SUB_ADVCL            | 犬が飛び出し
+SUB_REL              | てきてそれにびっくりする場面です
+CHAIN_TE             | あとケンさんがそのバスケットの中を見てみる
+SUB_REL              | と犬がもうすべてのお弁当を食べてしまった
+IND                  | まって残念な話です
+
+File: KKD27-ST2.TextGrid
+Words: 159, Mora: 248
+Disfluent words: 11
+Clauses (Logical): 19
+Clauses (Aligned): 18
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 3, 'type_relabel_advcl_to_ind': 1, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 0, 'v15_ind_to_minor_stance_recovery': 1, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_REL              | ケンが夜中鍵を持ってない
+SUB_ADVCL            | ままへ家に帰りましたけど
+SUB_ADVCL            | チャイムを鳴らしても
+SUB_REL              | 誰も出てこないってゆう状況です
+IND                  | ねその時妻であるマリ
+IND                  | さんは状況でおきないです
+CHAIN_TE             | でそれに梯子近くのとこで梯子を持って
+IND                  | 二階のマリさんの部屋にはい上がろうと
+SUB_REL              | してると警官が不審者
+CHAIN_TE             | 扱いして忠告ってゆう
+SUB_REL              | かこう何してあるんですかみたい
+IND                  | 感じのこと言ってます
+IND                  | ねでその際マリさんがその音に起きて
+CHAIN_TE             | 実は自分の夫ですみたいな感じのことゆうて
+IND                  | 警察官も納得してはったってゆう
+MINOR                | 話だと思います
+
+File: KKD46-ST1.TextGrid
+Words: 238, Mora: 404
+Disfluent words: 19
+Clauses (Logical): 35
+Clauses (Aligned): 33
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 1, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 2, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+CHAIN_TE             | さんちゅを作って
+IND                  | バスケットの中にサンドイッチを入れました
+SUB_ADVCL            | そしてその後二人は地図を見ながら
+IND                  | どこに行こうかと
+SUB_REL              | おお話し合う
+SUB_ADVCL            | 地図を見ながら
+IND                  | 話を話し合っていました
+IND                  | その時お犬が現れバスケットの中に入りました
+SUB_ADVCL            | 二人はそれをおみよし見落とし
+IND                  | バスケットを持っ
+SUB_REL              | を地図で探した
+IND                  | 公園ちが家の近くの公園にピクニックを行きました
+IND                  | お二人が公園であるきて歩い
+SUB_REL              | 楽しんだ後
+IND                  | お腹すい
+CHAIN_TE             | お席を探して
+SUB_REL              | はいお食事をする
+SUB_REL              | 席を探した後
+SUB_REL              | バスケットの中にある
+IND                  | センドッチを食べる
+SUB_ADVCL            | ためにバスケットを歩いたら
+IND                  | そこから犬が現れ
+IND                  | 出てきました
+SUB_ADVCL            | バスケットの中から外へ出
+SUB_REL              | びっくりした二人は
+SUB_REL              | バスケットの中を見ました
+SUB_REL              | がそこのその中にあった
+IND                  | サンドイッチはもう犬が食ってしまいました
+fragment             | 食ってし
+IND                  | 食って
+IND                  | ひとかけらもなかったです
+IND                  | 二人は何も食べずに
+IND                  | けっこう結局二人は何も食べずに
+IND                  | を終わらせてしまいました
+
+File: KKD46-ST2.TextGrid
+Words: 303, Mora: 451
+Disfluent words: 31
+Clauses (Logical): 27
+Clauses (Aligned): 30
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 2, 'dropped_short_no_pred': 1, 'dropped_particles_only': 1, 'dropped_meta': 0, 'dropped_no_pred_lt10': 1, 'dropped_no_pred_type': 1, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 2, 'type_relabel_advcl_to_ind': 2, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | ケンはお鍵を持っていませんでしたから
+IND                  | 家にかえうちに入られなかったのです
+IND                  | だからお上を家の窓があけけられ
+IND                  | ことを見
+IND                  | マリを大声で呼んでいました
+SUB_ADVCL            | よなかだったから
+IND                  | おゆっくり寝ていました
+SUB_REL              | ケンが呼んでいる声を
+IND                  | きかない聞かれなくて
+IND                  | お目を覚めなかったのです
+IND                  | おどうしようもない
+IND                  | ケンは仕方なく
+SUB_ADVCL            | しょうこから梯子を持っ
+IND                  | お開けられている
+CHAIN_TE             | 窓を通して
+IND                  | 家に入ろうと
+IND                  | その時警察は警官が現れ
+IND                  | みケンを泥棒と誤解をしてしまいました
+SUB_REL              | いろいろ話なふたけい警官がケンを泥棒と誤解して
+IND                  | ケンは誤解をとうしました
+IND                  | たその周りがさわし騒がしいの
+IND                  | を聞いてマリがおきまお起きてしまい
+CHAIN_TE             | 窓の外を見てたら警官とケンが
+CHAIN_TE             | お話をしているのを
+IND                  | い発見しました
+IND                  | それでマリは二人を呼んで
+IND                  | お誤解をなんに何のことだろう
+IND                  | と聞いてし聞いて聞いてました
+SUB_REL              | それで二人はそれでんケンと警官とマリがおはお話をして
+IND                  | ケンおーケンの誤解を解きました
+
+File: KKR24-ST1.TextGrid
+Words: 168, Mora: 284
+Disfluent words: 23
+Clauses (Logical): 16
+Clauses (Aligned): 21
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 0, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 1, 'type_relabel_advcl_to_ind': 0, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 0, 'v15_fragment_to_ind_predicate_recovery': 4, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_REL              | それしいんか飼っている
+IND                  | 犬がこっそりとバスケットに入り込んで
+IND                  | もマリとケンのカップルの立場にか入り込んでしまっ
+SUB_REL              | そうゆう形に
+SUB_ADVCL            | それを知らないうちに
+SUB_REL              | くすの犬がせんサンドイッチを食べた
+IND                  | わけなんですよそれで
+IND                  | 丘に行く
+CHAIN_TE             | とバスケットを何てゆう
+SUB_ADVCL            | か開けたら
+IND                  | せんどサンドイッチがなく
+IND                  | 犬が犬が出てしまいました
+IND                  | ねそうですそしてサンドイッチはもう
+IND                  | 食べてない
+IND                  | 状況に至りました
+IND                  | それでケンとマリのカップルはがっかりして幸せ
+IND                  | ハッピーエンドなんです
+SUB_ADVCL            | 私かカップルじゃないんだから
+IND                  | すごくいい結末なんです
+IND                  | ねがっかりしたんです
+
+File: KKR24-ST2.TextGrid
+Words: 235, Mora: 362
+Disfluent words: 38
+Clauses (Logical): 26
+Clauses (Aligned): 26
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 4, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 2, 'type_relabel_advcl_to_ind': 1, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 1, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 2, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 0, 'v16_fragment_predicate_relabel': 1, 'v16_sub_rel_to_ind_topic_predicate': 1, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_CCOMP            | なのに夜遅くまでたぶん酒をのんだと
+MINOR                | 思っています
+IND                  | 夜遅くうちに帰っ
+IND                  | マリはそこに怒ったのです
+CHAIN_TE             | それでわざとね寝た
+IND                  | ふりをしています
+IND                  | ふりをしていて
+fragment             | うちに入る
+SUB_ADVCL            | こと入るように
+IND                  | してと叫ん
+SUB_ADVCL            | 叫んだりしましたが
+IND                  | マリはふりをしています
+SUB_REL              | それでなんか結局ケンが使っ
+IND                  | て窓からはい入ろうとしていました
+SUB_REL              | がそれをたまたま見た
+MINOR                | 警官が泥棒かと泥棒かと思っ
+SUB_REL              | それを制する
+IND                  | かことが見えますねせ制しようとしました
+IND                  | がさすがにこれはちょっととゆう
+IND                  | 感じがした
+SUB_ADVCL            | マリが一応は配偶者なんだから
+IND                  | 救出してあげないと
+IND                  | だめなんだとゆう
+CHAIN_TE             | 考えで事情の説明を警官にして
+IND                  | 幸せな結末に至る
+
+File: KKR40-ST1.TextGrid
+Words: 188, Mora: 313
+Disfluent words: 24
+Clauses (Logical): 21
+Clauses (Aligned): 18
+Fragments: 0
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 0, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 1, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 0, 'type_relabel_advcl_to_ind': 1, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 0, 'type_relabel_no_pred_to_fragment': 0, 'v15_ind_to_sub_advcl_subordinator_final': 2, 'v15_ind_to_minor_stance_recovery': 1, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 2, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 0, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+SUB_ADVCL            | ケンとマリはサンドイッチを作りながら犬の世話
+IND                  | を見ました
+IND                  | んどいっちを入れといた
+IND                  | バスケットにつきで
+SUB_ADVCL            | ん台無しになるかもしれせんでし たがよくそれを止め
+IND                  | 良かったです
+IND                  | ケンとマリは一緒にちずを見て
+IND                  | んどこに行くかを決めました
+SUB_REL              | 犬がよく家にちゃんといるのかを確認し
+SUB_CCOMP            | ってなんか出ようと
+SUB_ADVCL            | 思いましたが
+SUB_ADVCL            | ピクニックの場所に行く途中に
+SUB_REL              | 犬がぜんのバスケットの中に入ってしまった
+IND                  | ことをきづききずいて驚きました
+IND                  | せっかく作りました
+IND                  | サンドイッチとの果物が犬に食べちゃいました
+MINOR                | がそれもしょうがないと思い
+IND                  | さんってケンとマリと犬は一緒にピクニックの場所で遊びました
+
+File: KKR40-ST2.TextGrid
+Words: 282, Mora: 449
+Disfluent words: 28
+Clauses (Logical): 34
+Clauses (Aligned): 32
+Fragments: 1
+Methodology Rules: {'dropped_fragment_lt3': 1, 'dropped_short_no_pred': 1, 'dropped_particles_only': 0, 'dropped_meta': 0, 'dropped_no_pred_lt10': 0, 'dropped_no_pred_type': 0, 'dropped_bare_te': 0, 'type_relabel_chain_te_to_advcl': 0, 'type_relabel_chain_te_to_ind': 0, 'type_relabel_advcl_to_chain_te': 4, 'type_relabel_advcl_to_ind': 3, 'type_relabel_minor_to_ind': 0, 'type_relabel_ind_no_pred_to_fragment': 1, 'type_relabel_no_pred_to_fragment': 1, 'v15_ind_to_sub_advcl_subordinator_final': 1, 'v15_ind_to_minor_stance_recovery': 1, 'v15_fragment_to_ind_predicate_recovery': 0, 'v15_sub_rel_to_sub_advcl_toki': 1, 'v16_fragment_predicate_relabel': 0, 'v16_sub_rel_to_ind_topic_predicate': 1, 'v15_orphan_merge': 0, 'stripped_discourse_tail': 0, 'truncated_long': 0}
+--------------------------------------------------------------------------------
+IND                  | ケンは仕事が終わって家に帰りました
+SUB_ADVCL            | でも家の玄関ドアに着いた時
+SUB_REL              | 自分が持っていた
+SUB_REL              | 鍵を探しましたけど鍵が
+IND                  | 見つかりまして見つかりませんでした
+IND                  | んおどろくて
+CHAIN_TE             | 驚いてマリを大声で呼んでみました
+SUB_CCOMP            | が答えがなく確かにたぶんマリは寝ていると
+MINOR                | 思いました
+SUB_REL              | そしてあの家の裏にある
+IND                  | 梯子を梯子に考えが付き
+CHAIN_TE             | 裏に行って
+SUB_ADVCL            | 梯子を持ってから
+CHAIN_TE             | 玄関の前に置いて
+SUB_CCOMP            | 二階に上ろうと
+SUB_ADVCL            | 思いましたけど
+fragment             | その途中に警官の見回りの
+IND                  | 車がそれをみつけみこれを見つけて
+IND                  | あの警官がそっちに到着いたしました
+SUB_CCOMP            | そして何をしているのかと
+IND                  | 聞かれて
+IND                  | ケンは驚いて何もはなはなせじゅにそのまま下りてしまいました
+IND                  | 警官にしかれ
+SUB_ADVCL            | しかれる途中にマリは目を覚まして
+IND                  | そのそそのくけこっけいけい光景を見てん
+IND                  | その人は私の主人ですって言いました
+IND                  | そして警官もそれを聞い
+CHAIN_TE             | てあそうゆうことそうゆうことかと思い
+IND                  | あのケンさんとよく話してん
+IND                  | ん幸いに
+SUB_ADVCL            | あの大きな問題にならなななななら
+IND                  | なく終わりました

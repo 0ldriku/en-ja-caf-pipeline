@@ -1,0 +1,7 @@
+file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
+IID15-ST2,0,0,59.9,60.83,0.93,1.0,1,0.93,59.9,60.83,,1,manual_review
+IID15-ST2,1,0,61.35,62.2,0.85,1.0,1,0.85,61.35,62.2,,1,manual_review
+IID15-ST2,2,0,84.81,85.61,0.8,1.0,1,0.8,84.81,85.61,,1,manual_review
+IID15-ST2,3,0,86.17,86.78,0.61,1.0,1,0.61,86.17,86.78,,1,manual_review
+IID15-ST2,4,0,99.37,100.16,0.79,1.0,1,0.79,99.37,100.16,,1,manual_review
+IID15-ST2,5,0,101.95,102.91,0.96,1.0,1,0.96,101.95,102.91,,1,manual_review

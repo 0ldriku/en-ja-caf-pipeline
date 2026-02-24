@@ -1,0 +1,7 @@
+file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
+ALL_047_M_FAR_ENG_ST2,0,0,4.64,5.37,0.73,1.0,1,0.73,4.64,5.37,,1,manual_review
+ALL_047_M_FAR_ENG_ST2,1,0,45.14,45.89,0.75,1.0,1,0.75,45.14,45.89,,1,manual_review
+ALL_047_M_FAR_ENG_ST2,2,0,67.92,68.52,0.6,1.0,1,0.6,67.92,68.52,,1,manual_review
+ALL_047_M_FAR_ENG_ST2,3,0,73.14,73.87,0.73,1.0,1,0.73,73.14,73.87,,1,manual_review
+ALL_047_M_FAR_ENG_ST2,4,0,88.81,89.41,0.6,1.0,1,0.6,88.81,89.41,,1,manual_review
+ALL_047_M_FAR_ENG_ST2,5,0,92.48,93.319,0.839,1.0,1,0.839,92.48,93.319,,1,manual_review

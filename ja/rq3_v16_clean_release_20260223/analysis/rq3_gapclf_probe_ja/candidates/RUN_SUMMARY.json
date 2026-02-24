@@ -1,0 +1,20 @@
+{
+  "n_requested_files": 40,
+  "n_success_files": 40,
+  "n_failed_files": 0,
+  "total_gap_candidates": 1767,
+  "total_scored": 1750,
+  "total_pred_fillers": 43,
+  "mean_pred_fillers_per_file": 1.075,
+  "failed": [],
+  "params": {
+    "min_gap": 0.12,
+    "max_gap": 1.2,
+    "vad_top_db": 30.0,
+    "vad_min_voiced": 0.08,
+    "vad_merge_gap": 0.06,
+    "min_occupancy": 0.2,
+    "max_occupancy": 1.01,
+    "threshold": 0.5
+  }
+}

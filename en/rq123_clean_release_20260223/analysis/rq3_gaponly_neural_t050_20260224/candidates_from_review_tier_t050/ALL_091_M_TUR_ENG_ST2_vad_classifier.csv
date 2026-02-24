@@ -1,0 +1,4 @@
+file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
+ALL_091_M_TUR_ENG_ST2,0,0,2.84,4.02,1.18,1.0,1,1.18,2.84,4.02,,1,manual_review
+ALL_091_M_TUR_ENG_ST2,1,0,5.47,6.13,0.66,1.0,1,0.66,5.47,6.13,,1,manual_review
+ALL_091_M_TUR_ENG_ST2,2,0,38.48,39.36,0.88,1.0,1,0.88,38.48,39.36,,1,manual_review

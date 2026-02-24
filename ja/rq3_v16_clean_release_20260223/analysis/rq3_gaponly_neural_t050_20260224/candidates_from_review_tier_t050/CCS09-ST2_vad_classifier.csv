@@ -1,0 +1,2 @@
+file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
+CCS09-ST2,0,0,64.35,65.33,0.98,1.0,1,0.98,64.35,65.33,,1,manual_review

@@ -1,0 +1,4 @@
+file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
+CCS45-ST1,0,0,22.55,23.23,0.68,1.0,1,0.68,22.55,23.23,,1,manual_review
+CCS45-ST1,1,0,90.67,91.82,1.15,1.0,1,1.15,90.67,91.82,,1,manual_review
+CCS45-ST1,2,0,123.44,124.41,0.97,1.0,1,0.97,123.44,124.41,,1,manual_review

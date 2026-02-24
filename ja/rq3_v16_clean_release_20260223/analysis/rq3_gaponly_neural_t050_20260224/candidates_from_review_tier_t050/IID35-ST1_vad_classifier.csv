@@ -1,0 +1,2 @@
+file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
+IID35-ST1,0,0,37.33,37.85,0.52,1.0,1,0.52,37.33,37.85,,1,manual_review

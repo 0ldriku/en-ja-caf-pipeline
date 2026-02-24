@@ -1,0 +1,28 @@
+{
+  "n_requested_files": 40,
+  "n_success_files": 40,
+  "n_failed_files": 0,
+  "total_gap_candidates": 2039,
+  "total_scored": 1990,
+  "total_pred_fillers": 31,
+  "mean_pred_fillers_per_file": 0.775,
+  "failed": [],
+  "textgrid_patch": {
+    "enabled": true,
+    "source_dir": "en\\results\\qwen3_filler_mfa_beam100\\clauses",
+    "output_dir": "en\\rq123_clean_release_20260223\\analysis\\rq3\\gapclf_textgrid_patch_rerun_20260224\\patched_textgrids_t050",
+    "filler_label": "<filler_speech>",
+    "files_patched": 40,
+    "inserted_intervals_total": 31
+  },
+  "params": {
+    "min_gap": 0.12,
+    "max_gap": 1.2,
+    "vad_top_db": 30.0,
+    "vad_min_voiced": 0.08,
+    "vad_merge_gap": 0.06,
+    "min_occupancy": 0.2,
+    "max_occupancy": 1.01,
+    "threshold": 0.5
+  }
+}

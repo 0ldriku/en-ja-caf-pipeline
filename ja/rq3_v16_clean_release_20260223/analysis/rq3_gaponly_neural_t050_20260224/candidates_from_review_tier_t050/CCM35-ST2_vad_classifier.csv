@@ -1,0 +1,8 @@
+file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
+CCM35-ST2,0,0,31.21,31.73,0.52,1.0,1,0.52,31.21,31.73,,1,manual_review
+CCM35-ST2,1,0,37.2,37.78,0.58,1.0,1,0.58,37.2,37.78,,1,manual_review
+CCM35-ST2,2,0,77.32,77.95,0.63,1.0,1,0.63,77.32,77.95,,1,manual_review
+CCM35-ST2,3,0,105.11,106.01,0.9,1.0,1,0.9,105.11,106.01,,1,manual_review
+CCM35-ST2,4,0,107.02,108.17,1.15,1.0,1,1.15,107.02,108.17,,1,manual_review
+CCM35-ST2,5,0,116.44,117.05,0.61,1.0,1,0.61,116.44,117.05,,1,manual_review
+CCM35-ST2,6,0,138.71,139.91,1.2,1.0,1,1.2,138.71,139.91,,1,manual_review

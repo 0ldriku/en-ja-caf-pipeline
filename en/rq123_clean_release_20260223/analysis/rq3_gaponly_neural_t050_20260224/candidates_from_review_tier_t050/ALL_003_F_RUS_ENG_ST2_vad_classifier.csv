@@ -1,0 +1,5 @@
+file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
+ALL_003_F_RUS_ENG_ST2,0,0,16.31,17.17,0.86,1.0,1,0.86,16.31,17.17,,1,manual_review
+ALL_003_F_RUS_ENG_ST2,1,0,34.49,35.63,1.14,1.0,1,1.14,34.49,35.63,,1,manual_review
+ALL_003_F_RUS_ENG_ST2,2,0,159.96,160.65,0.69,1.0,1,0.69,159.96,160.65,,1,manual_review
+ALL_003_F_RUS_ENG_ST2,3,0,280.6,281.28,0.68,1.0,1,0.68,280.6,281.28,,1,manual_review

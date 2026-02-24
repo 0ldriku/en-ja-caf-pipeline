@@ -1,0 +1,64 @@
+{
+  "validation": {
+    "accuracy": 0.9445145018915511,
+    "precision_pos": 0.9686346863468634,
+    "recall_pos": 0.9146341463414634,
+    "f1_pos": 0.9408602150537635,
+    "auc": 0.9798066499290965,
+    "confusion_matrix": [
+      [
+        1197,
+        34
+      ],
+      [
+        98,
+        1050
+      ]
+    ],
+    "n": 2379,
+    "n_pos": 1148,
+    "n_neg": 1231
+  },
+  "test": {
+    "accuracy": 0.9296042216358839,
+    "precision_pos": 0.9489230769230769,
+    "recall_pos": 0.9171292624900872,
+    "f1_pos": 0.932755318076419,
+    "auc": 0.9796474616245466,
+    "confusion_matrix": [
+      [
+        4182,
+        249
+      ],
+      [
+        418,
+        4626
+      ]
+    ],
+    "n": 9475,
+    "n_pos": 5044,
+    "n_neg": 4431
+  },
+  "extract_stats": {
+    "metadata_events_requested": 76689,
+    "episodes_requested": 199,
+    "episodes_matched": 199,
+    "episode_decode_fail": 0,
+    "event_bounds_fail": 0,
+    "feature_fail": 0,
+    "events_extracted": 76689
+  },
+  "split_counts": {
+    "train": 64835,
+    "validation": 2379,
+    "test": 9475
+  },
+  "class_balance": {
+    "train_pos_rate": 0.44409655278784604,
+    "validation_pos_rate": 0.48255569567044976,
+    "test_pos_rate": 0.5323482849604222
+  },
+  "best_epoch": 10,
+  "best_val_auc": 0.9798066499290965,
+  "device": "cuda"
+}
