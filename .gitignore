@@ -2,3 +2,9 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Audio data — place files listed in FILES.txt in each folder
+en/data/**/*.wav
+ja/data/**/*.wav
+ja/data/**/*.mp3
+validation_run/
