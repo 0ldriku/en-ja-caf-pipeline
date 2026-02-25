@@ -17,6 +17,7 @@ RELEASE = Path(__file__).parent.resolve()
 PYTHON  = str(RELEASE / "envs/venv/Scripts/python.exe")
 EN      = "en/rq123_clean_release_20260223"
 OUT     = "validation_run/en"
+OUT_ASR = "validation_run_asr/en"
 # ───────────────────────────────────────────────────────────────────────────────
 
 
@@ -33,7 +34,7 @@ with open(f"{EN}/annotation/selected_files.json", "r") as f:
     file_list = json.load(f)["all_selected"]
 
 # Create temp dir with only gold files for step 3
-TG_CLEAN = RELEASE / EN / "results/qwen3_filler_mfa_beam100/textgrids_clean"
+TG_CLEAN = RELEASE / OUT_ASR / "textgrids_clean"
 TG_GOLD40 = RELEASE / OUT / "textgrids_gold40"
 TG_GOLD40.mkdir(parents=True, exist_ok=True)
 for fname in file_list:
@@ -52,7 +53,7 @@ run([PYTHON, "shared/postprocess_vad_filler_classifier_en.py",
      "--file-list-json", f"{EN}/annotation/selected_files.json",
      "--file-list-key", "all_selected",
      "--audio-dir", "en/data/allsstar_full_manual/wav",
-     "--asr-json-dir", f"{EN}/results/qwen3_filler_mfa_beam100/json",
+     "--asr-json-dir", f"{OUT_ASR}/json",
      "--model-path", "shared/filler_classifier/model_podcastfillers_neural_v1_full/model.pt",
      "--threshold", "0.50",
      "--gap-only",

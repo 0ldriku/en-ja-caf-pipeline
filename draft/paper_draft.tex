@@ -1,0 +1,409 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+
+\title{A Reproducible Cross-Lingual Pipeline for Automatic Clause-Based Fluency Annotation in L2 Speech:\\
+Completed Evidence from English and Japanese Concurrent Validity}
+\author{Author names and affiliations to be inserted}
+\date{Draft dated February 25, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Automatic fluency annotation from L2 speech is attractive for scalability, but validity depends on reliable temporal annotation and transparent evaluation. We report the current state of a shared English--Japanese release pipeline that computes nine clause-based fluency (CAF) measures from audio via ASR timing, clause segmentation, gap-only neural filler candidate scoring, and CAF calculation. We frame six language-specific research questions (three per language): pause-location agreement, clause-segmentation agreement, and concurrent validity.
+
+At this release stage, all three English questions are complete and Japanese concurrent validity is complete. For English, automatic clause boundaries show strong agreement with gold boundaries (micro $F1=.845$, $\kappa=.816$, 40 files), and pause-location classification (MCP vs ECP) shows almost perfect agreement ($\kappa=.840$, accuracy $=.921$, 1{,}902 pauses). English RQ3 starts from the 40-file gold cohort and excludes one file (\texttt{ALL\_139\_M\_PBR\_ENG\_ST1}) for manual preamble mismatch, yielding quality-filtered N=39 with strong correlations across all nine CAF measures (Pearson $r=.821$ to $.988$). Japanese concurrent validity is likewise strong on all 40 files (Pearson $r=.903$ to $.992$). Japanese pause-location and clause-segmentation agreement analyses are currently in progress and are specified as prespecified ongoing work.
+
+The paper contributes a script-level reproducible methodology, cross-lingual validity evidence for measure-level outcomes, and a transparent staged roadmap to complete all six research questions.
+\end{abstract}
+
+\noindent\textbf{Keywords:} L2 speech, utterance fluency, automatic annotation, clause segmentation, ASR, English, Japanese
+
+\section{Introduction}
+Objective fluency measurement is central in second language (L2) speech research, but manual timing and boundary annotation remains labor-intensive. Recent machine-learning pipelines can automate temporal annotation, yet robustness and validity remain empirical, not assumed, and should be tested across tasks and cohorts \citep{Matsuura2025}. In particular, measure-level correlation alone is insufficient when underlying clause boundaries and pause labels are uncertain.
+
+This study advances a shared English--Japanese release bundle for automatic clause-based fluency annotation. The design follows three principles. First, clause identification is grounded in a broad clause framework that includes finite and relevant non-finite constructions \citep{VercellottiHall2024}, implemented via language-specific segmenters. Second, evaluation is staged from component-level agreement (boundaries and pause location) to measure-level concurrent validity. Third, all reported results are tied to explicit scripts and release artifacts.
+
+The current release is intentionally staged: English RQ1--RQ3 are complete; Japanese RQ3 is complete; Japanese RQ1--RQ2 are ongoing. We report completed evidence without overstating unfinished components.
+
+\section{Research Questions}
+For each language, we evaluate three questions.
+\begin{description}[leftmargin=2.2cm]
+\item[RQ1] Pause-location agreement: To what extent do MCP/ECP pause labels agree between automatic and manual/gold references?
+\item[RQ2] Clause-segmentation agreement: To what extent do automatically generated clause boundaries agree with human-annotated clause boundaries?
+\item[RQ3] Concurrent validity: To what extent do automatically computed CAF measures correlate with manually referenced CAF measures?
+\end{description}
+
+Table~\ref{tab:rq_status} summarizes completion status in this release.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lll}
+\toprule
+Language & Question & Status in this draft \\
+\midrule
+English & RQ1 (pause-location agreement) & Complete \\
+English & RQ2 (clause-segmentation agreement) & Complete \\
+English & RQ3 (concurrent validity) & Complete \\
+Japanese & RQ1 (pause-location agreement) & In progress \\
+Japanese & RQ2 (clause-segmentation agreement) & In progress \\
+Japanese & RQ3 (concurrent validity) & Complete \\
+\bottomrule
+\end{tabular}
+\caption{Current completion status of the six language-specific research questions.}
+\label{tab:rq_status}
+\end{table}
+
+\paragraph{Naming note.}
+Repository script names for English use \texttt{rq1} for clause-boundary agreement and \texttt{rq2} for pause-location agreement. In this manuscript, RQ labels follow the conceptual question definitions above.
+
+\section{Data and Cohorts}
+\subsection{English cohort}
+English analyses start from 40 selected files (20 ST1, 20 ST2) listed in \texttt{en/rq123\_clean\_release\_20260223/annotation/selected\_files.json}.
+
+\subsection{English gold-reference construction (applies to EN RQ1--RQ3)}
+The English gold references were constructed with an LLM-assisted workflow adapted from \citet{MorinLarsson2025} and documented in \texttt{en/rq123\_clean\_release\_20260223/RQ1\_RQ2\_REPORT.md}. The same 40-file gold set is the reference for English RQ1 and RQ2 and the starting cohort for English RQ3.
+\begin{enumerate}[leftmargin=*]
+\item Two trained coders independently annotated clause boundaries on 10 blind files.
+\item Disagreements were adjudicated to finalize gold boundaries for those 10 files.
+\item A Claude model was trained on that adjudicated set and evaluated on 5 locked test files (micro $F1=.929$, $\kappa=.914$).
+\item The model annotated 30 production files, and these outputs were manually reviewed and accepted as gold.
+\end{enumerate}
+This yielded 40 gold files (20 ST1, 20 ST2). For RQ3, one file (\texttt{ALL\_139\_M\_PBR\_ENG\_ST1}) is excluded due to manual preamble mismatch, yielding quality-filtered N=39 (ST1=19, ST2=20).
+
+\subsection{Japanese cohort}
+Japanese RQ3 analyses use 40 files (20 ST1, 20 ST2) specified in \texttt{ja/rq3\_v16\_clean\_release\_20260223/analysis/rq3\_gaponly\_neural\_t050\_freshrun\_20260224/file\_list\_40.json}.
+
+\section{Pipeline and Implementation}
+\subsection{Shared architecture}
+The shared release architecture is:
+\begin{center}
+Audio $\rightarrow$ ASR word timing $\rightarrow$ disfluency-aware clause segmentation $\rightarrow$ gap-only filler scoring $\rightarrow$ CAF computation $\rightarrow$ agreement/correlation analysis
+\end{center}
+
+Both languages compute the same nine CAF measures: AR, SR, MLR, MCPR, ECPR, PR, MCPD, ECPD, MPD. English rates are syllable-normalized; Japanese rates are mora-normalized.
+
+\subsection{Design rationale for the stack}
+Three constraints determined the implementation. First, pause- and clause-based CAF measures require precise word timing, not only accurate transcript text. Second, we required one open stack usable in both English and Japanese in the same release. Third, clause coding had to be explicit and reproducible, following a published framework \citep{VercellottiHall2024}.
+
+At this release point we use Qwen3-ASR (1.7B) plus the Qwen3 forced aligner (0.6B) as the main multilingual ASR front end, selected as an open-source SOTA-tier option available at build time. We then run Montreal Forced Aligner (MFA) to improve timestamp precision. Alternative pipelines (e.g., WhisperX or CrisperWhisper derivatives) were considered; however, many off-the-shelf alignment recipes are English-centric, whereas this study requires one stable EN+JA stack. The English ASR script keeps an optional comparison hook to CrisperWhisper outputs, but the production bundle standardizes on the Qwen3+MFA path for cross-language consistency.
+
+\subsection{Stage 1: ASR and word-time alignment scripts}
+\paragraph{English ASR/alignment script.}
+\texttt{en/rq123\_clean\_release\_20260223/scripts/asr/asr\_qwen3\_mfa\_en.py} performs a three-step process.
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Rough ASR timestamps.} It loads \texttt{Qwen/Qwen3-ASR-1.7B} with \texttt{Qwen/Qwen3-ForcedAligner-0.6B}, runs transcription with a disfluency-preserving prompt, and stores rough word-level timestamps.
+\item \textbf{Filler-augmented MFA realignment.} It inserts placeholder filler tokens (\texttt{uh}) into detected inter-word gaps (formula parameterization: \texttt{GAP\_MIN=0.4}, \texttt{GAP\_OFFSET=0.35}, \texttt{GAP\_STEP=0.55}, \texttt{FILLER\_MAX=3}), then runs MFA with high beam (\texttt{--beam 100 --retry\_beam 400}) using \texttt{english\_us\_arpa}. Injected fillers are consumed and discarded after alignment.
+\item \textbf{Output assembly.} It writes long-format TextGrids (words + pause tier) and JSON with alignment provenance (\texttt{mfa} vs \texttt{rough} fallback counts).
+\end{enumerate}
+
+\paragraph{Japanese ASR/alignment script.}
+\texttt{ja/rq3\_v16\_clean\_release\_20260223/scripts/asr/asr\_qwen3\_mfa\_ja\_v2\_spanfix\_b.py} mirrors the same high-level design but adds Japanese-specific controls.
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Qwen3 ASR with disfluency-preserving context} and rough timestamps.
+\item \textbf{MeCab re-tokenization} (\texttt{fugashi}) before MFA to split merged tokens and stabilize downstream mapping.
+\item \textbf{Filler-augmented MFA} with \texttt{japanese\_mfa}, high beam, and deterministic short/medium/long Japanese filler token pools; unlike English, this script can inject fillers into leading and trailing edge gaps as well.
+\item \textbf{Robust map-back} from MFA tokens to ASR tokens with greedy concatenation (up to five MFA tokens per original token) to handle Japanese tokenization mismatch.
+\end{enumerate}
+
+\paragraph{Dataset-specific span correction (JA only).}
+\texttt{ja/rq3\_v16\_clean\_release\_20260223/scripts/asr/make\_beginning\_removed\_by\_manual.py} blanks ASR labels before the manual first non-blank word (optional full-span mode also blanks after manual end) while preserving original timeline boundaries. This is a corpus-compatibility correction for the present Japanese manual coverage mismatch, not a general deployment step.
+
+\subsection{Stage 2: Disfluency detector integration}
+Both clause segmenters load a shared neural disfluency model from \texttt{shared/disfluency\_detector/model\_v2/final} before clause parsing.
+\begin{itemize}[leftmargin=*]
+\item \texttt{en/rq123\_clean\_release\_20260223/scripts/textgrid\_caf\_segmenter\_v3.py}
+\item \texttt{ja/rq3\_v16\_clean\_release\_20260223/scripts/ja\_clause\_segmenter\_v16.py}
+\end{itemize}
+The bundled model config specifies \texttt{XLMRobertaForTokenClassification} (2 labels: fluent/disfluent). Segmenters perform token-level detection and suppress disfluent tokens before or during clause assembly; both can also write disfluency tiers to TextGrid output.
+
+The Japanese segmenter adds deterministic post-rules after neural prediction (e.g., repeated-token collapse, elongated-form handling, split-repetition fixes), which improves robustness on Japanese conversational artifacts.
+
+\paragraph{Training provenance note.}
+This release bundle includes local disfluency training scripts and documentation under \texttt{shared/disfluency\_detector/}. The training pipeline is scriptized as \texttt{download\_source\_data.py}, \texttt{inject\_english.py}, \texttt{inject\_japanese.py}, \texttt{prepare\_labels.py}, \texttt{download\_switchboard.py}, and \texttt{train.py}. The production \texttt{model\_v2} configuration uses \texttt{xlm-roberta-base} token classification (2 labels) and combines real English Switchboard data with synthetic EN/JA disfluency data (88.5K training sentences total, per project documentation), with exported training arguments including \texttt{num\_train\_epochs=3}, \texttt{learning\_rate=2e-5}, and batch size 16. Methodologically, the synthetic-data design for low-resource disfluency patterns follows the approach family described by \citet{Kundu2022}.
+
+\subsection{Stage 3: Clause segmentation scripts and rules}
+\paragraph{English clause segmentation.}
+\texttt{textgrid\_caf\_segmenter\_v3.py} applies a rule layer over spaCy dependencies (custom L2 English transformer path when available; otherwise fallback) and explicitly operationalizes Vercellotti-style ``verb + element'' clause logic \citep{VercellottiHall2024}. It classifies independent and subordinate structures (e.g., \texttt{advcl}, \texttt{ccomp}, \texttt{acl}, \texttt{xcomp}, coordinated VPs, stance/minor constructions), then aligns clause spans back to TextGrid word intervals.
+
+\paragraph{Japanese clause segmentation.}
+\texttt{ja\_clause\_segmenter\_v16.py} uses \texttt{ja\_ginza\_electra} and a Japanese UD rule layer adapted to the same theoretical principle. It includes explicit handling for Japanese-specific structures (e.g., te-form and tari-form chain decisions, subordinate re-labeling, csubj support, boundary repair passes) and optional methodology post-rules enabled by default.
+
+\paragraph{Why this rule-based layer is necessary.}
+Prior L2 fluency studies often under-specify operational clause decisions. We therefore expose implementation rules at script level to improve reproducibility and to align all downstream pause/CAF measures with an inspectable clause standard \citep{VercellottiHall2024}.
+
+\subsection{Stage 4: Filler candidate scoring and model training}
+\paragraph{Runtime scoring script.}
+\texttt{shared/postprocess\_vad\_filler\_classifier\_en.py} reads ASR JSON timing + audio, derives ASR gaps, and scores each candidate with \texttt{shared/filler\_classifier/filler\_model\_inference.py}. In the reported EN and JA runs we use \texttt{--gap-only --threshold 0.50}, so each accepted ASR gap is treated as one candidate island. Predicted filler islands can optionally be inserted into TextGrids as \texttt{<filler\_speech>}.
+
+\paragraph{Why this stage is needed.}
+Modern ASR often omits low-energy fillers/disfluencies. If omitted, those regions can be over-counted as pure silence, which biases pause metrics. We therefore add a post-ASR acoustic filler detector and use its outputs to split or suppress pause intervals before CAF computation.
+
+\paragraph{Filler model training script and data.}
+\texttt{shared/filler\_classifier/train\_podcastfillers\_neural\_classifier.py} trains the released neural model (\texttt{model\_podcastfillers\_neural\_v1\_full/model.pt}) on PodcastFillers metadata plus HuggingFace audio (\texttt{ylacombe/podcast\_fillers\_by\_license}). The architecture is TC-ResNet8-style temporal CNN over per-clip normalized log-mel inputs (1$\times$64$\times$101). Labeling is binary for deployment: positive=\{Uh, Um\}, negative=\{Words, Breath, Laughter, Music\}. The run log reports best epoch 10, validation F1=.9409, and test F1=.9328. The data source and candidate-generation paradigm follow \citet{ZhuEtAl2022}.
+
+\subsection{Stage 5: CAF computation and validity scripts}
+\paragraph{CAF calculators.}
+\begin{itemize}[leftmargin=*]
+\item EN auto + classifier refinement: \texttt{en/rq123\_clean\_release\_20260223/scripts/caf\_calculator\_vad\_classifier.py}
+\item JA auto + classifier refinement: \texttt{ja/rq3\_v16\_clean\_release\_20260223/scripts/caf\_calculator\_ja\_gap\_classifier.py}
+\item EN manual reference: \texttt{en/rq123\_clean\_release\_20260223/scripts/caf\_calculator.py}
+\item JA manual reference: \texttt{ja/rq3\_v16\_clean\_release\_20260223/scripts/caf\_calculator\_ja.py}
+\end{itemize}
+Classifier-guided calculators split pauses when predicted filler speech overlaps pause intervals, then reclassify MCP/ECP using clause boundaries (150 ms end-clause tolerance). English uses syllable counts (phone tier if available, otherwise heuristic), and Japanese uses mora counts.
+
+\paragraph{Correlation scripts.}
+\begin{itemize}[leftmargin=*]
+\item EN: \texttt{en/rq123\_clean\_release\_20260223/scripts/run\_rq3\_vad\_classifier\_correlation\_en.py}
+\item JA: \texttt{ja/rq3\_v16\_clean\_release\_20260223/scripts/run\_rq3\_vad\_classifier\_correlation\_ja.py}
+\end{itemize}
+Both compute Pearson $r$, Spearman $\rho$, ICC(2,1), bias, and MAE for each CAF measure, with task-wise splits (ST1/ST2).
+
+\subsection{Component-level agreement scripts (English complete)}
+\begin{itemize}[leftmargin=*]
+\item Clause boundaries: \texttt{en/rq123\_clean\_release\_20260223/analysis/rq1/run\_rq1\_gold.py}
+\item Pause location: \texttt{en/rq123\_clean\_release\_20260223/analysis/rq2/run\_rq2\_gold.py}
+\end{itemize}
+These scripts evaluate boundary and pause-location agreement under explicit edit-distance alignment between manual/canonical and ASR token streams, preventing optimistic matches through substitution-heavy stretches.
+
+\section{Evaluation Methods}
+\subsection{English RQ2: clause-segmentation agreement}
+Clause agreement is computed as per-word binary boundary classification after minimum-edit-distance alignment between canonical (manual transcript) and ASR token sequences. Alignment operations are explicitly handled:
+\begin{itemize}[leftmargin=*]
+\item Correct/Substitution: compare gold and auto boundary labels at aligned positions.
+\item Deletion (manual-only word): auto label set to 0.
+\item Insertion (ASR-only word): gold label set to 0.
+\end{itemize}
+This follows a stricter speech-evaluation alignment logic than longest-common-subsequence matching and avoids optimistic "healing" at substitution sites. Metrics: micro and macro precision, recall, F1, and Cohen's $\kappa$.
+
+\subsection{English RQ1: pause-location agreement}
+Pauses are extracted from the auto words tier with minimum duration 250 ms. Each pause is classified as MCP or ECP in two systems:
+\begin{enumerate}[leftmargin=*]
+\item Automatic label from auto clauses.
+\item Gold label from gold clause boundaries mapped into auto timing via edit-distance word alignment.
+\end{enumerate}
+A pause is treated as end-clause if pause onset is within 150 ms of clause offset; otherwise it is mid-clause. Metrics: Cohen's $\kappa$, accuracy, and class-specific precision/recall/F1.
+
+\subsection{RQ3: concurrent validity (English and Japanese)}
+For each CAF measure we compute Pearson $r$, Spearman $\rho$, ICC(2,1), bias, and MAE between automatic and manual outputs. English uses the quality-filtered N=39 cohort; Japanese uses N=40.
+
+\section{Results}
+\subsection{English RQ1: pause-location agreement (complete)}
+\begin{table}[ht]
+\centering
+\begin{tabular}{lcccccc}
+\toprule
+Subset & Files & Pauses & $\kappa$ & Accuracy & MCP F1 & ECP F1 \\
+\midrule
+Overall & 40 & 1{,}902 & .840 & .921 & .929 & .912 \\
+ST1 & 20 & 822 & .873 & .937 & .941 & .932 \\
+ST2 & 20 & 1{,}080 & .815 & .909 & .920 & .894 \\
+\bottomrule
+\end{tabular}
+\caption{English RQ1 pause-location agreement (automatic vs gold MCP/ECP labels).}
+\label{tab:en_rq1}
+\end{table}
+
+English pause-location agreement is high overall and remains strong in both tasks, with expected degradation in ST2.
+
+\subsection{English RQ2: clause-segmentation agreement (complete)}
+\begin{table}[ht]
+\centering
+\begin{tabular}{lcccccc}
+\toprule
+Subset & Files & Gold boundaries & Precision & Recall & F1 (micro) & $\kappa$ (micro) \\
+\midrule
+Overall & 40 & 1{,}131 & .848 & .842 & .845 & .816 \\
+ST1 & 20 & 496 & .882 & .857 & .869 & .845 \\
+ST2 & 20 & 635 & .822 & .830 & .826 & .795 \\
+\bottomrule
+\end{tabular}
+\caption{English RQ2 clause-boundary agreement (automatic vs gold).}
+\label{tab:en_rq2}
+\end{table}
+
+Macro means were F1=.846 and $\kappa=.819$. Mean alignment WER between canonical and ASR clause text was .121.
+
+\subsection{English RQ3: concurrent validity (complete, N=39)}
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+Measure & Pearson $r$ & Spearman $\rho$ & ICC(2,1) & MAE \\
+\midrule
+AR & .956 & .911 & .953 & 0.157 \\
+SR & .988 & .978 & .984 & 0.082 \\
+MLR & .971 & .968 & .965 & 0.454 \\
+MCPR & .966 & .981 & .962 & 0.011 \\
+ECPR & .864 & .889 & .866 & 0.008 \\
+PR & .961 & .965 & .958 & 0.014 \\
+MCPD & .821 & .808 & .799 & 0.090 \\
+ECPD & .938 & .912 & .935 & 0.115 \\
+MPD & .957 & .908 & .944 & 0.074 \\
+\bottomrule
+\end{tabular}
+\caption{English RQ3 overall concurrent validity (quality-filtered cohort, N=39).}
+\label{tab:en_rq3}
+\end{table}
+
+Overall English correlations span .821--.988 (mean .936). By task, ST1 is most challenging for MCPD ($r=.713$, ICC=.669, MAE=0.097; N=19), while ST2 remains strong across measures (minimum $r=.910$; N=20).
+
+\subsection{Japanese RQ3: concurrent validity (complete, N=40)}
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{lcccc}
+\toprule
+Measure & Pearson $r$ & Spearman $\rho$ & ICC(2,1) & MAE \\
+\midrule
+AR & .947 & .935 & .903 & 0.242 \\
+SR & .992 & .988 & .982 & 0.116 \\
+MLR & .991 & .987 & .975 & 0.460 \\
+MCPR & .912 & .933 & .913 & 0.009 \\
+ECPR & .903 & .883 & .898 & 0.008 \\
+PR & .984 & .978 & .978 & 0.009 \\
+MCPD & .955 & .902 & .878 & 0.151 \\
+ECPD & .942 & .902 & .884 & 0.231 \\
+MPD & .948 & .876 & .880 & 0.184 \\
+\bottomrule
+\end{tabular}
+\caption{Japanese RQ3 overall concurrent validity (N=40).}
+\label{tab:ja_rq3}
+\end{table}
+
+Japanese overall correlations span .903--.992 (mean .953). ST1 and ST2 are both strong; the weakest task-specific Pearson value is ECPR in ST1 ($r=.872$).
+
+\subsection{Japanese RQ1 and RQ2 (ongoing)}
+Japanese pause-location and clause-boundary agreement analyses are in progress and therefore not reported as completed outcomes in this manuscript version.
+
+\section{Discussion}
+The completed evidence supports three core conclusions.
+
+First, English component-level agreement is strong at both boundary and pause-label levels, reducing the risk that high measure-level correlations are driven by weak intermediate annotation quality.
+
+Second, concurrent validity is strong in both languages for the current release cohorts. Across languages, speed and composite pause-frequency measures are the most stable; pause-duration measures remain comparatively more sensitive, especially English MCPD in ST1.
+
+Third, the shared architecture appears transportable across languages with explicit language-specific adaptations: English and Japanese use the same high-level processing logic, while Japanese includes mora-based rate computation and a dataset-specific span-blanking correction when manual/ASR coverage mismatches are known.
+
+\section{Implications for Fluency Research and Assessment}
+The present pipeline can reduce annotation cost while preserving strong agreement and correlation on the evaluated cohorts. Practically, this makes clause-based CAF analyses feasible at larger scales and supports transparent hybrid workflows where component-level validation is reported alongside measure-level validity. Methodologically, the staged design aligns with recommendations to test automatic systems under realistic error propagation constraints \citep{Knill2018,Knill2019}.
+
+\section{Limitations}
+Five limitations should guide interpretation.
+\begin{enumerate}[leftmargin=*]
+\item Japanese RQ1 and RQ2 are unfinished at this release stage.
+\item Cohorts remain moderate in size (EN N=39 for RQ3; JA N=40), limiting subgroup precision.
+\item English gold boundaries use an LLM-assisted stage (validated on locked test files at micro $F1=.929$, $\kappa=.914$, then manually reviewed), so residual model-shaped annotation bias relative to fully double-human coding remains possible.
+\item External-corpus generalization is not yet established; current claims are release- and cohort-specific.
+\item Disfluency detector evaluation is strongest on synthetic EN/JA test sets and one real-English benchmark; a comparable real Japanese disfluency benchmark is still limited.
+\end{enumerate}
+
+\section{Roadmap to Full Six-RQ Completion}
+To finalize a submission-grade six-RQ manuscript, the next steps are:
+\begin{enumerate}[leftmargin=*]
+\item Complete Japanese RQ1 (pause-location agreement) with the same metric suite used in English.
+\item Complete Japanese RQ2 (clause-boundary agreement) using explicit alignment-based evaluation.
+\item Integrate cross-lingual comparative analyses (task effects, measure-level sensitivity patterns, and uncertainty reporting).
+\item Add robustness analyses by error profile and potential cohort covariates.
+\end{enumerate}
+
+\section{Reproducibility and Artifact Trace}
+All claims in this draft are traceable to release artifacts.
+\begin{itemize}[leftmargin=*]
+\item Project-level pipeline and package structure: \texttt{README.md}
+\item EN ASR+MFA script (filler injection + high-beam alignment): \texttt{en/rq123\_clean\_release\_20260223/scripts/asr/asr\_qwen3\_mfa\_en.py}
+\item JA ASR+MFA script (MeCab retokenization + span-fix variant): \texttt{ja/rq3\_v16\_clean\_release\_20260223/scripts/asr/asr\_qwen3\_mfa\_ja\_v2\_spanfix\_b.py}
+\item JA dataset span-blanking script: \texttt{ja/rq3\_v16\_clean\_release\_20260223/scripts/asr/make\_beginning\_removed\_by\_manual.py}
+\item EN/JA clause segmenters: \texttt{en/.../textgrid\_caf\_segmenter\_v3.py}, \texttt{ja/.../ja\_clause\_segmenter\_v16.py}
+\item Shared filler postprocess and inference: \texttt{shared/postprocess\_vad\_filler\_classifier\_en.py}, \texttt{shared/filler\_classifier/filler\_model\_inference.py}
+\item Filler training code and run artifacts: \texttt{shared/filler\_classifier/train\_podcastfillers\_neural\_classifier.py}, \texttt{shared/filler\_classifier/model\_podcastfillers\_neural\_v1\_full/}
+\item Disfluency training docs and scripts: \texttt{shared/disfluency\_detector/READMEold.md}, \texttt{shared/disfluency\_detector/scripts/*.py}
+\item Disfluency runtime model and metadata: \texttt{shared/disfluency\_detector/model\_v2/final/config.json}, \texttt{shared/disfluency\_detector/model\_v2/final/training\_args.bin}
+\item Clause methodology reference notes: \texttt{docs/CLAUSE\_SEGMENTATION\_METHODOLOGY.md}
+\item English results report: \texttt{en/rq123\_clean\_release\_20260223/RQ1\_RQ2\_REPORT.md}
+\item Japanese RQ3 report: \texttt{ja/rq3\_v16\_clean\_release\_20260223/RQ3\_VALIDITY\_REPORT\_JA.md}
+\item English clause agreement outputs: \texttt{en/.../analysis/rq1/rq1\_clause\_boundary\_gold.csv}
+\item English pause agreement outputs: \texttt{en/.../analysis/rq2/rq2\_pause\_location\_gold.csv}
+\item English RQ3 taskwise outputs: \texttt{analysis\_final\_taskwise\_correlations\_20260224/en/*.csv}
+\item Japanese RQ3 taskwise outputs: \texttt{analysis\_final\_taskwise\_correlations\_20260224/ja/*.csv}
+\item EN and JA run logs: \texttt{en/.../RUN\_LOG.md}, \texttt{ja/.../RUN\_LOG.md}
+\item Validation wrappers: \texttt{validate\_pipeline\_en.py}, \texttt{validate\_pipeline\_ja.py}
+\end{itemize}
+
+\section{Conclusion}
+This release establishes strong completed evidence for English RQ1--RQ3 and Japanese RQ3 within a shared, script-level reproducible cross-lingual pipeline. The immediate publication milestone is completion of Japanese RQ1--RQ2 and final integration of all six questions into one inferential narrative.
+
+\begin{thebibliography}{99}
+
+\bibitem[Chen and Yoon(2011)]{ChenYoon2011}
+Chen, L., and S.-Y. Yoon. 2011.
+Detecting structural events for assessing non-native speech.
+In \textit{Proceedings of the Sixth Workshop on Innovative Use of NLP for Building Educational Applications}, 38--45.
+
+\bibitem[Chen and Yoon(2012)]{ChenYoon2012}
+Chen, L., and S.-Y. Yoon. 2012.
+Application of structural events detected on ASR outputs for automated speaking assessment.
+In \textit{Proceedings of Interspeech 2012}, 767--770.
+
+\bibitem[Donner and Eliasziw(1987)]{DonnerEliasziw1987}
+Donner, A., and M. Eliasziw. 1987.
+Sample size requirements for reliability studies.
+\textit{Statistics in Medicine} 6(4): 441--448.
+
+\bibitem[Knill et~al.(2018)]{Knill2018}
+Knill, K. M., M. J. F. Gales, K. Kyriakopoulos, A. Malinin, A. Ragni, Y. Wang, and A. Caines. 2018.
+Impact of ASR performance on free speaking language assessment.
+In \textit{Proceedings of Interspeech 2018}, 1641--1645.
+
+\bibitem[Knill et~al.(2019)]{Knill2019}
+Knill, K. M., M. J. F. Gales, P. P. Manakul, and A. P. Caines. 2019.
+Automatic grammatical error detection of non-native spoken learner English.
+In \textit{Proceedings of ICASSP 2019}, 8127--8131.
+
+\bibitem[Landis and Koch(1977)]{LandisKoch1977}
+Landis, J. R., and G. G. Koch. 1977.
+The measurement of observer agreement for categorical data.
+\textit{Biometrics} 33(1): 159--174.
+
+\bibitem[Matsuura et~al.(2025)]{Matsuura2025}
+Matsuura, R., S. Suzuki, K. Takizawa, M. Saeki, and Y. Matsuyama. 2025.
+Gauging the validity of machine learning-based temporal feature annotation to measure fluency in speech automatically.
+\textit{Research Methods in Applied Linguistics} 4: 100177.
+
+\bibitem[Morin and Marttinen Larsson(2025)]{MorinLarsson2025}
+Morin, C., and M. Marttinen Larsson. 2025.
+Large corpora and large language models: a replicable method for automating grammatical annotation.
+\textit{Linguistics Vanguard} 11(1): 501--510.
+
+\bibitem[Kundu et~al.(2022)]{Kundu2022}
+Kundu, R., P. Jyothi, and P. Bhattacharyya. 2022.
+Zero-shot disfluency detection for Indian languages.
+In \textit{Proceedings of the 29th International Conference on Computational Linguistics}, 4442--4453.
+
+\bibitem[Vercellotti and Hall(2024)]{VercellottiHall2024}
+Vercellotti, M. L., and S. Hall. 2024.
+Coding all clauses in L2 data: A call for consistency.
+\textit{Research Methods in Applied Linguistics} 3: 100132.
+
+\bibitem[Zhu et~al.(2022)]{ZhuEtAl2022}
+Zhu, G., J.-P. Caceres, and J. Salamon. 2022.
+Filler word detection and classification: A dataset and benchmark.
+In \textit{Proceedings of ICASSP 2022}, 2202--2206.
+
+\end{thebibliography}
+
+\end{document}

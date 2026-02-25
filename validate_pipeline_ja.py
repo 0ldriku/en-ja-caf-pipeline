@@ -18,6 +18,7 @@ PYTHON_ASR = str(RELEASE / "envs/venv/Scripts/python.exe")             # filler 
 PYTHON_JA  = str(RELEASE / "envs/venv_electra310/Scripts/python.exe") # clause/CAF
 JA         = "ja/rq3_v16_clean_release_20260223"
 OUT        = "validation_run/ja"
+OUT_ASR    = "validation_run_asr/ja"
 # ───────────────────────────────────────────────────────────────────────────────
 
 
@@ -34,7 +35,7 @@ with open(f"{JA}/analysis/rq3_gaponly_neural_t050_freshrun_20260224/file_list_40
     file_list = json.load(f)["all_selected"]
 
 # Create temp dir with only gold files for step 3
-TG_CLEAN = RELEASE / JA / "results/qwen3_filler_mfa_ja_v2_spanfix_b_l1_focus20/textgrids_clean_beginning_removed_by_manual"
+TG_CLEAN = RELEASE / OUT_ASR / "textgrids_clean_beginning_removed_by_manual"
 TG_GOLD40 = RELEASE / OUT / "textgrids_gold40"
 TG_GOLD40.mkdir(parents=True, exist_ok=True)
 for fname in file_list:
@@ -57,7 +58,7 @@ run([PYTHON_ASR, "shared/postprocess_vad_filler_classifier_en.py",
      "--file-list-json", f"{JA}/analysis/rq3_gaponly_neural_t050_freshrun_20260224/file_list_40.json",
      "--file-list-key", "all_selected",
      "--audio-dir", "ja/data/manual20_0220_2",
-     "--asr-json-dir", f"{JA}/results/qwen3_filler_mfa_ja_v2_spanfix_b_l1_focus20/json",
+     "--asr-json-dir", f"{OUT_ASR}/json",
      "--model-path", "shared/filler_classifier/model_podcastfillers_neural_v1_full/model.pt",
      "--threshold", "0.50",
      "--gap-only",

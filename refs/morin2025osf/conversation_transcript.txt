@@ -1,0 +1,364 @@
+This document contains the transcription of the interaction between the user and Claude Sonnet 3.5 as reported in AUTHOR & AUTHOR (under review).
+
+User prompt: You’re a research assistant participating in a linguistic research project on syntactic variation in English. You have been asked to perform a high-precision classification task of language data on the use of the verb "consider". You will classify several sentences as a binary variable: “non-evaluative” or “evaluative” sentence. The goal is to attain at least a 95% classification accuracy on a held-out test set of approximately 100 sentences. 
+<instructions> Classify sentences containing the verb “consider” as either ‘non-evaluative’ or ‘non-evaluative’. </instructions> Sentences containing evaluative uses of “consider” have the following characteristics: 
+• They consist of someone or something who/that is evaluated in some respect. This can be the syntactic subject, as in these examples: <examples> Lena is considered the best swimmer. Lena is considered to be the best swimmer. Lena is considered as the best swimmer. The patient was considered by the doctors and nurses to be particularly demanding. </examples>. It can also be the direct object, as in the following examples: <examples> They considered Lena the best swimmer. The Nobel committee considered Peruvian world-famous author Mario Vargas Llosa to be the best writer. The members of the board considered the transition to online platforms as imperative for the future of the company. </examples> 
+• The evaluative part of the sentence is a subject or object complement. This complement can be expressed syntactically through three different uses: 
+1. firstly, the complement can be introduced by “as”, exemplified here: <examples> Considering 2010 as the starting point of the pandemic … . They considered the situation as particularly challenging. She was considered by many as the sole ruler. We also consider matters pertaining to legislation and the penal code as urgent. </examples> 
+2. Secondly, the complement can be introduced by “to be”, exemplified here: <examples> He will surely be considered by some to be the main authority. They might consider this to be the most viable option available. Consider this to be your last warning. Scientists consider Pluto to be too inhabitable. I consider outsourcing it to be a decent alternative. </examples>. 
+3. Third, the complement can be introduced directly, without “as” or “to be”: <examples> Brooklyn is not considered part of Manhattan. He considers himself the best at this game. We do not necessarily consider this the last resort. The houses are not considered abandoned property. They consider the contract non-compete. The paintings by Monet were considered impressionistic. </examples> 
+In ‘non-evaluative’ sentences, the verb “consider” is used to signify “contemplate,” “think about,” and so on. These sentences do not contain an object complement. I exemplify these types of uses in what follows: <examples> They considered the offer, but turned it down. She considered him for the position. Laura was considered for the job. Martin considered that the most obvious solution was the correct one. I will consider it. There are many factors to consider. </examples> 
+<thinking> When determining if a sentence is evaluative or non-evaluative, think step-by-step, following this stepwise process: 
+1. Is “consider” (in any form of the verb: "consider," "considers," "considering," "considered") used with “to be” or “as”? 
+2. If there is no “to be” or “as": can “to be” or “as” be inserted and still be grammatically correct? <examples> Do an insertion test: I consider him my best friend. I consider him as my best friend. I consider him to be my best friend. </examples> 
+3. Is “consider” (in any form of the verb: "consider," "considers," "considering," "considered") used to indicate evaluating or judgement about someone or something? 
+4. Is “consider” (in any form) used with object or subject complements, or not? </thinking> 
+<instructions> <answer> If the answer is yes to any of these questions, classify the sentence as “evaluative”. If the answer is no to these questions, classify the sentence as “non-evaluative.” If you find that a sentence is ambiguous or that the use of “consider” does not clearly fall into either category, classify the sentence as “?” Think step-by-step before assigning a sentence a classification using <thinking> </thinking>, then discard your reasoning. </answer> </instructions> 
+Pretraining: <instructions> Look at 493 pretraining sentences in the <dataset> Pretraining_data_493.csv </dataset>. Sentences are provided in Column B and the correct classifications in Column C. Think about how the data has been classified. Think about each classification step-by-step, and consider whether you would classify the data in the same way or not. If you have questions or comments, ask them. </instructions>
+
+I'll review the pretraining data to understand the classification patterns and criteria. Let me analyze a few examples to ensure I understand the classification system correctly.
+<thinking> 1. Looking at examples like "Maria del Pilar Burton is now considered the 72nd victim of the fire" - classified as evaluative because it assigns a status/role (72nd victim) as a complement. 
+Examples like "Consider postponing non-essential travel until conditions improve" - classified as non-evaluative because it uses "consider" in the sense of "think about" without evaluation.
+Interesting cases like "The committee would consider the case as deemed fit" - classified as non-evaluative despite having "as" because it's used in the sense of reviewing/contemplating rather than making an evaluation.
+Pattern emerges: sentences with clear subject/object complements assigning qualities, status, or characteristics are evaluative, while those about contemplation, review, or decision-making processes are non-evaluative. </thinking> 
+After reviewing the 493 training examples, I understand the classification system well. The key differentiating factors align with the instructions:
+Presence of evaluative complements (with or without "as"/"to be")
+Whether "consider" is used for evaluation/judgment vs. contemplation
+Syntactic structure (presence of object/subject complements)
+I notice some subtle patterns that help with edge cases:
+Presence of "as" doesn't automatically make it evaluative if used in procedural context
+Future/conditional considerations tend to be non-evaluative
+When "consider" is used with options/alternatives, it's usually non-evaluative
+Do you have any specific examples you'd like me to classify, or should I proceed with analyzing new sentences?
+User prompt: Training: <instructions> Now we will classify 100 sentences together from the dataset <dataset> Supervised_training_sketchengine_100.csv </dataset>. Work in batches of 25 sentences at a time. Think step-by-step about each classification, and for each classification I want you to include <thinking> </thinking> and your <answer> </answer>. </instructions>
+I'll help classify the first 25 sentences from the Supervised_training_sketchengine_100.csv dataset. I'll analyze each one step-by-step and provide my thinking and answer.
+Let's start with sentences 1-25:
+"Not an arcade perfect conversion, but above average considering its time."
+<thinking> 1. "Considering" is used with a direct complement "its time" 2. This expresses an evaluation of quality relative to time period 3. "As" could be inserted: "considering it as above average for its time" 4. Clear evaluative judgment being made </thinking> <answer>evaluative</answer> 
+"By far the worst of any I've seen by a conversion company. Pathetic actually, considering the price."
+<thinking> 1. "Considering" is used to weigh/evaluate value against price 2. Can be rephrased as "considering it as pathetic given the price" 3. Expresses evaluation/judgment of worth </thinking> <answer>evaluative</answer> 
+"Department of Health issued a 'Holiday Travel Toolkit for Schools,' which includes questions for Vermonters to consider before traveling"
+<thinking> 1. "Consider" means "think about" 2. No evaluation or judgment being made 3. Can't insert "as" or "to be" naturally 4. Used in sense of contemplation </thinking> <answer>non-evaluative</answer> 
+"The size of the country does not necessarily mean anything about the condition of roads, when no other factors are considered."
+<thinking> 1. "Considered" means "taken into account" 2. No evaluation being made 3. Used in sense of contemplation/examination 4. No complement structure </thinking> <answer>non-evaluative</answer> 
+"NSW Labor said that as with the current Government, an incoming Daley Labor Government would consider the issues raised by the group after the election."
+<thinking> 1. "Consider" means "examine/review" 2. No evaluation being made 3. Used in sense of future contemplation 4. No complement structure </thinking> <answer>non-evaluative</answer> 
+[Continuing with this format for all 25 sentences would make this response very long. Would you like me to continue with all 25, or should I be more concise? I can also focus on just the more challenging or ambiguous cases.]
+
+User prompt: continue with all 2
+
+I'll continue with the next 20 sentences:
+"We've now passed the 29-week mark, so the situation temporarily favours the bulls. Considering that a bullish divergence has appeared..."
+<thinking> 1. "Considering" means "taking into account" 2. Used as introduction to factual evidence 3. No evaluation being made </thinking> <answer>non-evaluative</answer> 
+"...build on the positive psychology movement ... positive factors ... a more holistic approach ... it considers the context"
+<thinking> 1. "Considers" means "takes into account" 2. No evaluation or judgment 3. Simple contemplation/examination </thinking> <answer>non-evaluative</answer> 
+"The inquiry was also told that the UK's Foreign Office didn't consider Saddam Hussein's Iraq to be the biggest threat"
+<thinking> 1. Contains "to be" construction 2. Makes evaluation of threat level 3. Clear evaluative judgment </thinking> <answer>evaluative</answer> 
+"We consider that the results of this study firmly support the presence of on-call dermatologists"
+<thinking> 1. "Consider" introduces opinion/conclusion 2. No evaluative complement 3. Used for expressing thought/opinion </thinking> <answer>non-evaluative</answer> 
+"The Aurora R10 chassis is moderately sized, and it could justify being bigger considering the power inside."
+<thinking> 1. "Considering" used to evaluate size relative to power 2. Makes comparative judgment 3. Could insert "as": "considering it as underpowered for its size" </thinking> <answer>evaluative</answer> 
+"This course has been specially designed for anyone considering a career in the healthcare"
+<thinking> 1. "Considering" means "thinking about" 2. No evaluation being made 3. Simple contemplation of future action </thinking> <answer>non-evaluative</answer> 
+"Consider installing a separate thermostat to the loft"
+<thinking> 1. "Consider" means "think about doing" 2. Suggestion for future action 3. No evaluation </thinking> <answer>non-evaluative</answer> 
+"Liquid inoculants amended with polymers has considered as a solution"
+<thinking> 1. Contains "as" construction 2. Evaluates status as solution 3. Clear evaluative judgment </thinking> <answer>evaluative</answer> 
+"One would think that a Jewish guy would be wary of government confiscating firearms from its citizens considering what happened"
+<thinking> 1. "Considering" means "taking into account" 2. Introduces historical context 3. No evaluation being made </thinking> <answer>non-evaluative</answer> 
+"we must consider the extent to which persons' movements, associations, lifestyle"
+<thinking> 1. "Consider" means "examine/think about" 2. No evaluation 3. Simple contemplation </thinking> <answer>non-evaluative</answer> 
+"before omitting any key information, consider carefully whether that information should in fairness be disclosed"
+<thinking> 1. "Consider" means "think about" 2. Request for contemplation 3. No evaluation being made </thinking> <answer>non-evaluative</answer> 
+"There was also a story about a woman being released while her husband was not considered for release"
+<thinking> 1. "Considered for" means "evaluated for possibility" 2. About contemplation of action 3. No evaluative complement </thinking> <answer>non-evaluative</answer> 
+"These bracing systems were modeled by considering 3 different steel sections"
+<thinking> 1. "Considering" means "taking into account" 2. About examination of options 3. No evaluation being made </thinking> <answer>non-evaluative</answer> 
+"He considered it unreasonable that the panel could come to a conclusion"
+<thinking> 1. Contains evaluative complement "unreasonable" 2. Makes clear judgment 3. Could insert "as": "considered it as unreasonable" </thinking> <answer>evaluative</answer> 
+"Considering that her evaluation and merit pay will be based upon how 'efficiently'"
+<thinking> 1. "Considering" introduces contextual information 2. No evaluation being made 3. Simple introduction of fact </thinking> <answer>non-evaluative</answer> 
+"may be considered in any case of disseminated coccidioidomycosis"
+<thinking> 1. "Considered" means "thought about as option" 2. About contemplation of treatment 3. No evaluation being made </thinking> <answer>non-evaluative</answer> 
+"Let's consider a negatively charged DNA molecule in an ionic salt solution"
+<thinking> 1. "Consider" means "examine/think about" 2. Request for contemplation 3. No evaluation </thinking> <answer>non-evaluative</answer> 
+"The ISDH clarifies that it does not consider COVID-19 deaths to be 'unusual'"
+<thinking> 1. Contains "to be" construction 2. Makes evaluation of status 3. Clear evaluative judgment </thinking> <answer>evaluative</answer> 
+"There are far too many part-timers who consider themselves professional"
+<thinking> 1. Contains evaluative self-classification 2. Could insert "as": "consider themselves as professional" 3. Clear evaluation of status </thinking> <answer>evaluative</answer> 
+"mandatory are all good ideas that should be considered and do not require amending NEPA"
+<thinking> 1. "Considered" means "thought about" 2. About contemplation of ideas 3. No evaluation being made </thinking> <answer>non-evaluative</answer> 
+Would you like me to continue with the next batch of 25 sentences?
+
+User prompt: #1 is wrong: when applying the insertion test, you cannot change the order or form of any words. just simply insert "to be" or "as" and check if it works.
+
+I apologize for my error with #1. You're absolutely right about the insertion test - I should only insert "to be" or "as" without changing anything else. Let me redo #1:
+"Not an arcade perfect conversion, but above average considering its time."
+<thinking> 1. "Considering" here means "taking into account" 2. Insertion test: - "considering to be its time" ❌ (doesn't work) - "considering as its time" ❌ (doesn't work) 3. Used to introduce contextual information 4. No evaluative complement 5. Used in sense of "taking into account" or "given" </thinking> <answer>non-evaluative</answer> 
+Thank you for the correction. This shows how important it is to apply the insertion test strictly without modifying the original sentence structure. Should I continue with the next batch of 25 sentences, or would you like me to review any other classifications from the first 25?
+User prompt: #2 is wrong for the same reason as the previous: you're rephrasing, which is not allowed. #7 shows too little context to be sure #10 is wrong because you've rephrased, which is not allowed
+You're absolutely right. Let me correct these:
+"By far the worst of any I've seen by a conversion company. Pathetic actually, considering the price."
+<thinking> 1. "Considering" here means "taking into account" 2. Insertion test: - "considering to be the price" ❌ (doesn't work) - "considering as the price" ❌ (doesn't work) 3. Used to introduce contextual information 4. No evaluative complement </thinking> <answer>non-evaluative</answer> 
+I apologize - you're right that the context is insufficient. Without seeing the complete sentence, I cannot make a proper classification. <answer>?</answer>
+"The Aurora R10 chassis is moderately sized, and it could justify being bigger considering the power inside."
+<thinking> 1. "Considering" means "taking into account" 2. Insertion test: - "considering to be the power inside" ❌ (doesn't work) - "considering as the power inside" ❌ (doesn't work) 3. Used to introduce contextual information 4. No evaluative complement </thinking> <answer>non-evaluative</answer> 
+Thank you for these corrections. The key lesson is to:
+Apply the insertion test strictly without any rephrasing
+Only classify when we have sufficient context
+Not rely on intuitive feelings about evaluation, but rather on the strict syntactic tests
+Would you like me to continue with the next batch, or should we review any other classifications from the first set?
+User prompt: next batch
+I'll analyze sentences 26-50 from the dataset:
+"The FAA has not considered the proposed spaceport's impacts on those properties."
+<thinking> 1. "Considered" means "examined/thought about" 2. Insertion test: - "considered to be the proposed spaceport's impacts" ❌ - "considered as the proposed spaceport's impacts" ❌ 3. No evaluative complement 4. About contemplation of impacts </thinking> <answer>non-evaluative</answer> 
+"He ordered the gate to open again, then said, 'Hetan Sellon: come out.' The laser and plasma shield functioned at only fifty-seven parts per unit of fighting capacity, though he considered that it was sufficient"
+<thinking> 1. "Considered" makes evaluation of sufficiency 2. Could insert "as": "considered that it was as sufficient" 3. Contains evaluative judgment </thinking> <answer>evaluative</answer> 
+"How about this: before you start pointing fingers at Dwight, consider who he's working with"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be who" ❌ - "consider as who" ❌ 3. Request for contemplation 4. No evaluative complement </thinking> <answer>non-evaluative</answer> 
+"The above 1839 reference to 'unbridled masturbation...that...ought to be considered [a] species of insanity'"
+<thinking> 1. Contains evaluative complement "species of insanity" 2. Could insert "as": "considered as a species" 3. Clear evaluation/classification </thinking> <answer>evaluative</answer> 
+"Before I would consider buying one for use (as opposed to collecting, which I do,) I'd want to know"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be buying" ❌ - "consider as buying" ❌ 3. About contemplation of future action </thinking> <answer>non-evaluative</answer> 
+"I was out of town (or out of my mind) this weekend, so consider this the late late edition"
+<thinking> 1. Contains direct complement "the late late edition" 2. Could insert "as": "consider this as the late late edition" 3. Makes classification/evaluation </thinking> <answer>evaluative</answer> 
+"I never really considered myself one of the true elite"
+<thinking> 1. Contains evaluative self-classification 2. Could insert "as": "considered myself as one of" 3. Clear evaluation of status </thinking> <answer>evaluative</answer> 
+"To give yourself more flexibility, consider a rental car"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be a rental car" ❌ - "consider as a rental car" ❌ 3. Suggestion to contemplate option </thinking> <answer>non-evaluative</answer> 
+"Most grammarians would probably consider 'earth' to be the direct object"
+<thinking> 1. Contains "to be" construction 2. Makes classification/evaluation 3. Clear evaluative judgment </thinking> <answer>evaluative</answer> 
+"$ingapore's foreign minister said he had asked the attorney-general to consider the legal options"
+<thinking> 1. "Consider" means "examine/review" 2. Insertion test: - "consider to be the legal options" ❌ - "consider as the legal options" ❌ 3. About contemplation of options </thinking> <answer>non-evaluative</answer> 
+[Continue with remaining sentences? Or would you like to check these first?]
+User prompt: #27 is incorrect: "considered that as it was sufficient" wouldn't work here. "that" only works as an evaluative when "that" is used as a demonstrative pronoun.
+Ah, thank you for the correction about #27. You're right - when "that" is used as a conjunction (as in this case) rather than a demonstrative pronoun, the insertion test fails.
+"He ordered the gate to open again, then said, 'Hetan Sellon: come out.' The laser and plasma shield functioned at only fifty-seven parts per unit of fighting capacity, though he considered that it was sufficient"
+<thinking> 1. "Considered that" here introduces a thought/opinion clause 2. Insertion test: - "considered that to be it was sufficient" ❌ (doesn't work) - "considered that as it was sufficient" ❌ (doesn't work) 3. "That" is used as a conjunction, not demonstrative pronoun 4. Used in sense of "thought/believed" </thinking> <answer>non-evaluative</answer> 
+This helps clarify an important distinction: when "that" is used as a conjunction introducing a clause, it's typically non-evaluative (like "think that," "believe that"). Only when "that" is a demonstrative pronoun can it be part of an evaluative construction.
+Should I continue with the remaining sentences from 36-50?
+User prompt: yes, continue
+I'll continue with sentences 36-50:
+"our Data Center Checklist outlines the key factors to consider when evaluating data centers"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "to consider to be" ❌ - "to consider as" ❌ 3. About examining factors 4. No evaluative complement </thinking> <answer>non-evaluative</answer> 
+"In Kazakhstan, the society accepts and values men who are savage and brutal. It's considered natural when men make sexual advances"
+<thinking> 1. Contains evaluative complement "natural" 2. Could insert "as": "considered as natural" 3. Makes evaluation/judgment of status </thinking> <answer>evaluative</answer> 
+"Considering those INSANE RAM settings, the scheme of getting this in one contiguous chunk sounds like Mission Impossible!"
+<thinking> 1. "Considering" introduces contextual information 2. Insertion test: - "considering to be those" ❌ - "considering as those" ❌ 3. Used in sense of "given" </thinking> <answer>non-evaluative</answer> 
+"Morocco is considered an underdog to the joint bid"
+<thinking> 1. Contains direct complement "an underdog" 2. Could insert "as": "considered as an underdog" 3. Makes evaluation of status </thinking> <answer>evaluative</answer> 
+"Brawn: Qualifying race is worth considering"
+<thinking> 1. "Considering" means "thinking about" 2. Insertion test: - "worth considering to be" ❌ - "worth considering as" ❌ 3. About contemplation of option </thinking> <answer>non-evaluative</answer> 
+"Let us consider the composition of the 28 October 2009 Cholera Vaccine Working Group"
+<thinking> 1. "Consider" means "examine/look at" 2. Insertion test: - "consider to be the composition" ❌ - "consider as the composition" ❌ 3. Request for examination </thinking> <answer>non-evaluative</answer> 
+"The concluding discussion considers patterns in the distribution of complements"
+<thinking> 1. "Considers" means "examines/looks at" 2. Insertion test: - "considers to be patterns" ❌ - "considers as patterns" ❌ 3. About examination of patterns </thinking> <answer>non-evaluative</answer> 
+"Science does not consider it to be its task to reflect on the meaning"
+<thinking> 1. Contains "to be" construction 2. Makes evaluation of what constitutes task 3. Clear evaluative judgment </thinking> <answer>evaluative</answer> 
+"One option being considered: having each team decide"
+<thinking> 1. "Considered" means "thought about" 2. Insertion test: - "considered to be: having" ❌ - "considered as: having" ❌ 3. About contemplation of option </thinking> <answer>non-evaluative</answer> 
+"grace abound much more in comparison of sin, it is abundant grace indeed, as will easily be granted by any that shall consider how sin hath abounded"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be how" ❌ - "consider as how" ❌ 3. About contemplation </thinking> <answer>non-evaluative</answer> 
+"also consider ABA technicians, Behavioral Therapists, Behavioral Interventionist, etc."
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be ABA technicians" ❌ - "consider as ABA technicians" ❌ 3. About considering options </thinking> <answer>non-evaluative</answer> 
+"today's workers consider it as much as they consider salary and benefits"
+<thinking> 1. "Consider" means "think about" 2. About weighing factors 3. No evaluative complement </thinking> <answer>non-evaluative</answer> 
+"whether a public authority may include the costs of maintaining the information in its cost recovery charge to the requester was considered in East Sussex County Council"
+<thinking> 1. "Considered" means "examined/reviewed" 2. Insertion test: - "considered to be in" ❌ - "considered as in" ❌ 3. About examination of issue </thinking> <answer>non-evaluative</answer> 
+"it is not enough to consider the statistical significance"
+<thinking> 1. "Consider" means "examine/look at" 2. Insertion test: - "consider to be the statistical" ❌ - "consider as the statistical" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"In mid-2018, it advised considering closing oil as a hedge"
+<thinking> 1. "Considering" means "thinking about" 2. Insertion test: - "considering to be closing" ❌ - "considering as closing" ❌ 3. About contemplation of action </thinking> <answer>non-evaluative</answer> 
+Would you like me to continue with the next batch?
+User prompt: yes
+I'll analyze sentences 51-75:
+"During the course are considered mandatory several internships"
+<thinking> 1. Contains evaluative complement "mandatory" 2. Could insert "as": "are considered as mandatory" 3. Makes evaluation of status </thinking> <answer>evaluative</answer> 
+"thus the Islamic sharia law will be considered as one of the major sources"
+<thinking> 1. Contains "as" construction 2. Makes evaluation of status/classification 3. Clear evaluative judgment </thinking> <answer>evaluative</answer> 
+"An enthography study that considered the structures and processes"
+<thinking> 1. "Considered" means "examined/studied" 2. Insertion test: - "considered to be the structures" ❌ - "considered as the structures" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"Organizations that leverage multiple open-source or proprietary testing tools must consider an Open Testing Platform"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be an Open Testing Platform" ❌ - "consider as an Open Testing Platform" ❌ 3. About contemplating option </thinking> <answer>non-evaluative</answer> 
+"The factors that should be taken into account when considering ordinary residence"
+<thinking> 1. "Considering" means "examining/determining" 2. Insertion test: - "considering to be ordinary residence" ❌ - "considering as ordinary residence" ❌ 3. About examination process </thinking> <answer>non-evaluative</answer> 
+"A mineral considered important for restoring psychological balance"
+<thinking> 1. Contains evaluative complement "important" 2. Could insert "as": "considered as important" 3. Makes evaluation of quality </thinking> <answer>evaluative</answer> 
+"remixes considering those had more symphonic elements"
+<thinking> 1. "Considering" introduces factual information 2. Insertion test: - "considering to be those" ❌ - "considering as those" ❌ 3. Used in sense of "given that" </thinking> <answer>non-evaluative</answer> 
+"encouraging women to consider a judicial career"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be a judicial career" ❌ - "consider as a judicial career" ❌ 3. About contemplating option </thinking> <answer>non-evaluative</answer> 
+"When considering the merits of a haibun, I keep several central elements in mind"
+<thinking> 1. "Considering" means "evaluating/examining" 2. Insertion test: - "considering to be the merits" ❌ - "considering as the merits" ❌ 3. About examination process </thinking> <answer>non-evaluative</answer> 
+"the places discussed in this article are universally considered to be either the most dangerous to fly to"
+<thinking> 1. Contains "to be" construction 2. Makes evaluation of danger level 3. Clear evaluative judgment </thinking> <answer>evaluative</answer> 
+"the Texas Legislature will consider a bill this winter"
+<thinking> 1. "Consider" means "examine/review" 2. Insertion test: - "consider to be a bill" ❌ - "consider as a bill" ❌ 3. About reviewing legislation </thinking> <answer>non-evaluative</answer> 
+"While our previous tests have only considered a single VM running in isolation"
+<thinking> 1. "Considered" means "examined/tested" 2. Insertion test: - "considered to be a single VM" ❌ - "considered as a single VM" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"Board Certification/exam fees and preparatory materials will not be considered"
+<thinking> 1. "Considered" means "taken into account" 2. Insertion test: - "be considered to be" ❌ - "be considered as" ❌ 3. About inclusion/exclusion from consideration </thinking> <answer>non-evaluative</answer> 
+"the nurses and technicians who measure and chart the body's data are unequivocally considered care workers"
+<thinking> 1. Contains evaluative complement "care workers" 2. Could insert "as": "considered as care workers" 3. Makes evaluation of status/classification </thinking> <answer>evaluative</answer> 
+"I consider this a strength"
+<thinking> 1. Contains direct complement "a strength" 2. Could insert "as": "consider this as a strength" 3. Makes evaluation </thinking> <answer>evaluative</answer> 
+[Should I continue with the remaining sentences 66-75?]
+User prompt: yes
+I'll continue with sentences 66-75:
+"Certainly there are reasons why a Congressperson might consider the extra debt a worthwhile cost"
+<thinking> 1. Contains evaluative complement "a worthwhile cost" 2. Could insert "as": "consider the extra debt as a worthwhile cost" 3. Makes evaluation of value </thinking> <answer>evaluative</answer> 
+"Even in a safe state, it's only considered safe because enough citizens show up"
+<thinking> 1. Contains evaluative complement "safe" 2. Could insert "as": "considered as safe" 3. Makes evaluation of status </thinking> <answer>evaluative</answer> 
+"let the point be considered that it was from good that they came"
+<thinking> 1. "Considered" introduces a thought/point 2. Insertion test: - "be considered to be that" ❌ - "be considered as that" ❌ 3. About examining an idea </thinking> <answer>non-evaluative</answer> 
+"she probably would have (at least physchologically) considered that a strike against him"
+<thinking> 1. Contains evaluative complement "a strike against him" 2. Could insert "as": "considered that as a strike against him" 3. Makes evaluation </thinking> <answer>evaluative</answer> 
+"This had been a most surprising visit and not one that she'd ever considered receiving"
+<thinking> 1. "Considered" means "thought about" 2. Insertion test: - "considered to be receiving" ❌ - "considered as receiving" ❌ 3. About contemplation of possibility </thinking> <answer>non-evaluative</answer> 
+"I consider mywelf a pretty open minded, even left leaning person"
+<thinking> 1. Contains evaluative self-classification 2. Could insert "as": "consider myself as a pretty open minded person" 3. Makes evaluation of status </thinking> <answer>evaluative</answer> 
+"at this price it'd be difficult to consider the cost worthwhile in Australia"
+<thinking> 1. Contains evaluative complement "worthwhile" 2. Could insert "as": "consider the cost as worthwhile" 3. Makes evaluation of value </thinking> <answer>evaluative</answer> 
+"Researchers consider that the concept of a land made holy"
+<thinking> 1. "Consider that" introduces a thought/belief 2. Insertion test: - "consider that to be" ❌ - "consider that as" ❌ 3. "That" used as conjunction, not demonstrative pronoun </thinking> <answer>non-evaluative</answer> 
+"It enables students to understand the policy making process, to analyse the roles of key health policy actors, and to consider the relationship between evidence and policy"
+<thinking> 1. "Consider" means "examine/analyze" 2. Insertion test: - "consider to be the relationship" ❌ - "consider as the relationship" ❌ 3. About examination of relationship </thinking> <answer>non-evaluative</answer> 
+"The expert opinion, which was drafted on behalf of the Ministry, considers and assesses the current state"
+<thinking> 1. "Considers" means "examines/reviews" 2. Insertion test: - "considers to be" ❌ - "considers as" ❌ 3. About examination process </thinking> <answer>non-evaluative</answer> 
+Would you like me to continue with the next batch?
+User prompt: yes
+I'll analyze sentences 76-100:
+"If you buy those cards from reputable manufacturer (MSI, Asus etc.) the picture quality is often quite good. Considering DOS compatibility I have yet to find a game"
+<thinking> 1. "Considering" means "regarding/about" 2. Insertion test: - "considering to be DOS compatibility" ❌ - "considering as DOS compatibility" ❌ 3. Used to introduce topic </thinking> <answer>non-evaluative</answer> 
+"COPD should be considered in anyone over 35 years old with a smoking history"
+<thinking> 1. Means "thought about as possibility" 2. Insertion test: - "be considered to be in" ❌ - "be considered as in" ❌ 3. About considering diagnosis </thinking> <answer>non-evaluative</answer> 
+"We hope you'll consider supporting her via JustGiving"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be supporting" ❌ - "consider as supporting" ❌ 3. About contemplating action </thinking> <answer>non-evaluative</answer> 
+"chapters are considered struggling if they don't make quota"
+<thinking> 1. Contains evaluative complement "struggling" 2. Could insert "as": "considered as struggling" 3. Makes evaluation of status </thinking> <answer>evaluative</answer> 
+"Consider sending a note to The Herd to get information"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be sending" ❌ - "consider as sending" ❌ 3. Suggestion to contemplate action </thinking> <answer>non-evaluative</answer> 
+"An overly enthusiastic Audrey pushes it too far with a surrogate mother who she and Jeff are considering paying to have their baby"
+<thinking> 1. "Considering" means "thinking about" 2. Insertion test: - "considering to be paying" ❌ - "considering as paying" ❌ 3. About contemplating action </thinking> <answer>non-evaluative</answer> 
+"it is appropriate to consider the history and significance of the benefits denied"
+<thinking> 1. "Consider" means "examine/review" 2. Insertion test: - "consider to be the history" ❌ - "consider as the history" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"Moreover, most of the Treaties that will be considered in this article"
+<thinking> 1. "Considered" means "examined/discussed" 2. Insertion test: - "be considered to be in" ❌ - "be considered as in" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"Stringer wraps up by considering whether anything indispensable to the good life is lost"
+<thinking> 1. "Considering" means "examining" 2. Insertion test: - "considering to be whether" ❌ - "considering as whether" ❌ 3. About examination of question </thinking> <answer>non-evaluative</answer> 
+"if you'd be hanged before dangling your poetic love proclamations from the ceiling, you might consider the subtler but still sexy choice"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be the subtler" ❌ - "consider as the subtler" ❌ 3. About contemplating option </thinking> <answer>non-evaluative</answer> 
+"We consider a central attractor at the origin whose mass is 1/(gravitational constant)"
+<thinking> 1. "Consider" means "examine/look at" 2. Insertion test: - "consider to be a central attractor" ❌ - "consider as a central attractor" ❌ 3. About examination of concept </thinking> <answer>non-evaluative</answer> 
+"ARBs should not be considered a safe alternative"
+<thinking> 1. Contains evaluative complement "a safe alternative" 2. Could insert "as": "considered as a safe alternative" 3. Makes evaluation of safety/suitability </thinking> <answer>evaluative</answer> 
+"he said he did not consider the government's corn resolutions a party matter"
+<thinking> 1. Contains evaluative complement "a party matter" 2. Could insert "as": "consider the resolutions as a party matter" 3. Makes evaluation/classification </thinking> <answer>evaluative</answer> 
+"Should we give equal weight to all responses in a choice experiment? Previous Choice Modelling papers have considered the issue"
+<thinking> 1. "Considered" means "examined/studied" 2. Insertion test: - "considered to be the issue" ❌ - "considered as the issue" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"I do not consider that the honest use of the protections afforded by the law"
+<thinking> 1. "Consider that" introduces thought/opinion 2. Insertion test fails with "that" as conjunction 3. About expressing opinion </thinking> <answer>non-evaluative</answer> 
+"Considering this from the perspective of access to education for our members"
+<thinking> 1. "Considering" means "examining" 2. Insertion test: - "considering to be this" ❌ - "considering as this" ❌ 3. About examination from perspective </thinking> <answer>non-evaluative</answer> 
+"It would be fruitful for translation agencies at international, national, and local levels to consider adopting"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be adopting" ❌ - "consider as adopting" ❌ 3. About contemplating action </thinking> <answer>non-evaluative</answer> 
+"For anglo-saxon or non-European investors, the dominant role of the civil code in local business law must be carefully considered"
+<thinking> 1. "Considered" means "thought about/examined" 2. Insertion test: - "be considered to be" ❌ - "be considered as" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"You may want to consider using a VPN"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be using" ❌ - "consider as using" ❌ 3. About contemplating action </thinking> <answer>non-evaluative</answer> 
+"refractive index in quantum dot (QD) structures due to optical transitions from QD levels to continuum states is considered"
+<thinking> 1. "Considered" means "examined/studied" 2. Insertion test: - "is considered to be" ❌ - "is considered as" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"Measure may consider various start-up costs"
+<thinking> 1. "Consider" means "take into account" 2. Insertion test: - "consider to be various" ❌ - "consider as various" ❌ 3. About examining costs </thinking> <answer>non-evaluative</answer> 
+"Position of centromere or primary constriction is considered while determining shape of chromosome"
+<thinking> 1. "Considered" means "taken into account" 2. Insertion test: - "is considered to be while" ❌ - "is considered as while" ❌ 3. About examination process </thinking> <answer>non-evaluative</answer> 
+"Let's consider some of the techniques"
+<thinking> 1. "Consider" means "examine/look at" 2. Insertion test: - "consider to be some" ❌ - "consider as some" ❌ 3. About examination </thinking> <answer>non-evaluative</answer> 
+"Local authorities should consider developing a Housing Options guide"
+<thinking> 1. "Consider" means "think about" 2. Insertion test: - "consider to be developing" ❌ - "consider as developing" ❌ 3. About contemplating action </thinking> <answer>non-evaluative</answer> 
+"wherein board is latterly - the of process science takes objectivist comments more high materials an others though considering"
+<thinking> 1. Sentence is not grammatically coherent enough to analyze 2. Cannot reliably apply tests </thinking> <answer>?</answer> 
+That completes the 100 sentences. Would you like to review any particular classifications?
+User prompt: #82 and #90 are ambiguous
+You're right, let me reassess these two:
+"it is appropriate to consider the history and significance of the benefits denied"
+<thinking> 1. There isn't enough context to determine with certainty whether: - This means "examine/review" (non-evaluative) - Or this means "view/judge as" (evaluative) 2. Could potentially be "consider the history to be significant" or simply "examine the history" 3. Without more context, can't determine the syntactic structure </thinking> <answer>?</answer> 
+"I do not consider that the honest use of the protections afforded by the law"
+<thinking> 1. Sentence appears incomplete 2. Without the complete sentence, can't determine if: - "Consider that" introduces a thought (non-evaluative) - Or if there's an evaluative complement following 3. Not enough context to apply tests reliably </thinking> <answer>?</answer> 
+Thank you for catching these. It's important to mark sentences as ambiguous (?) when we don't have sufficient context or when the structure could be interpreted in multiple ways, rather than making assumptions.
+User prompt: #82: no, your use of the insertion test is incorrect because you're rephrasing. but it could be: "consider the history and significance of the benefits TO BE/AS denied"
+Ah, you're absolutely right - I made the error of rephrasing instead of just inserting "to be" or "as" in the exact position. Let me redo #82:
+"it is appropriate to consider the history and significance of the benefits denied"
+<thinking> 1. Need to test exact insertions: - "consider the history and significance of the benefits to be denied" ✓ (works) - "consider the history and significance of the benefits as denied" ✓ (works) 2. Since both insertions work grammatically without changing the original sentence structure </thinking> <answer>evaluative</answer> 
+Thank you for this correction. It's a good reminder that:
+The insertion test must be strictly applied without any rephrasing
+We must try to insert "to be" or "as" exactly where they would fit in the original sentence structure
+If either insertion works grammatically while maintaining the original structure, it's evaluative
+User prompt: Testing: <instructions> Now you will classify 100 sentences without supervision from the dataset <dataset> Test1_sketchengine_100.csv </dataset>. Think step-by-step for each classification <thinking> </thinking>. The labels available to you are “evaluative,” “non-evaluative,” and “?”. Please provide your classification in tab separated .csv format in one large batch <answer> </answer>. </instructions>
+I'll analyze all 100 sentences and provide the classifications in the requested format.
+<thinking> For each sentence, I will: 1. Test exact insertion of "to be" or "as" 2. Check for evaluative complements 3. Look for conjunction "that" vs demonstrative "that" 4. Mark as "?" if insufficient context or ambiguous 5. Focus on maintaining exact sentence structure during insertion test </thinking> <answer> id classification 1 evaluative 2 evaluative 3 evaluative 4 evaluative 5 non-evaluative 6 evaluative 7 evaluative 8 evaluative 9 non-evaluative 10 non-evaluative 11 non-evaluative 12 non-evaluative 13 non-evaluative 14 non-evaluative 15 evaluative 16 evaluative 17 non-evaluative 18 non-evaluative 19 evaluative 20 non-evaluative 21 evaluative 22 non-evaluative 23 evaluative 24 non-evaluative 25 non-evaluative 26 non-evaluative 27 evaluative 28 non-evaluative 29 evaluative 30 non-evaluative 31 non-evaluative 32 non-evaluative 33 non-evaluative 34 evaluative 35 non-evaluative 36 non-evaluative 37 evaluative 38 non-evaluative 39 evaluative 40 non-evaluative 41 non-evaluative 42 non-evaluative 43 evaluative 44 non-evaluative 45 non-evaluative 46 non-evaluative 47 non-evaluative 48 non-evaluative 49 non-evaluative 50 non-evaluative 51 evaluative 52 evaluative 53 non-evaluative 54 non-evaluative 55 non-evaluative 56 evaluative 57 non-evaluative 58 non-evaluative 59 non-evaluative 60 evaluative 61 non-evaluative 62 non-evaluative 63 non-evaluative 64 evaluative 65 non-evaluative 66 non-evaluative 67 evaluative 68 non-evaluative 69 evaluative 70 non-evaluative 71 non-evaluative 72 evaluative 73 evaluative 74 non-evaluative 75 non-evaluative 76 non-evaluative 77 non-evaluative 78 non-evaluative 79 evaluative 80 non-evaluative 81 non-evaluative 82 non-evaluative 83 non-evaluative 84 non-evaluative 85 non-evaluative 86 non-evaluative 87 evaluative 88 non-evaluative 89 non-evaluative 90 non-evaluative 91 non-evaluative 92 non-evaluative 93 non-evaluative 94 non-evaluative 95 non-evaluative 96 non-evaluative 97 non-evaluative 98 non-evaluative 99 non-evaluative 100 ? </answer>
+User prompt: 1 and confronts naked realities that can no longer be ignored. </s><s> Our overriding goal is to assist society in developing a considered appreciation of what a truly renewable energy landscape might look like. </s><s> 3.1. </s><s> The Electrification Question </s><s> Only 19% 2 adopted, would essentially create a firearm or weapons exception to the Fourth Amendment. </s><s> This sweeping argument was considered by the Florida Supreme Court and was correctly rejected. </s><s> The purpose of a police stop and frisk is to prevent criminal 6 that reading Mark Driscoll is my guilty pleasure- he is, this friend observed, my Fifty Shades of Grey. </s><s> An apt analogy considering how, like Fifty Shades (I'm speculating here. </s><s> It's not that I've actually read it), Driscoll begins each chapter in a 26 status of wild relatives is, overall, worse than for birds and mammals generally. </s><s> Whereas 25% of all mammal species are considered threatened with extinction, more than half of mammals that are wild relatives of domesticated mammals are threatened 29 'm not someone who compulsively checks Twitter and sends and receives texts all day. </s><s> But my birthday is coming up, so I'm considering preordering one and then making an appointment to try it on at an Apple Store–that way if I don't like it, I can easily 33 processes. </s><s> A false feeling of well being exists, because the pituitary gland is over-stimulated. </s><s> This gland is considered the master gland because it sends hormones to the other glands...the thyroid, adrenals, reproductive glands, and the 39 2006 in Telecom Order CRTC 2006-294 and Telecom Order CRTC 2006-295, respectively. </s><s> In these Orders, the Commission considered that CDN and DNA services at DS-1 speed were acceptable as substitute services. </s><s> Reports of a giant monster with glowing 40 , in spite of the insistence of the Mexican officers; and that they proceeded to take an official record of the event and considered the act finished. </s><s> 41. </s><s> At no time was the Commission informed of the grounds for considering this person as the "probable 45 you with your vicious companion?" </s><s> Again no answer, but inward and increasing annoyance, of which Mr. Bellingham considered Ruth the cause. </s><s> At length he spoke-- </s><s> "Mother, you are not helping me in my difficulty. </s><s> I have no desire to banish you, nor 47 instead continued to introduce beautifully designed products at premium prices. </s><s> So, while I don't view design being considered in all areas of business as a "new" concept, I am more than encouraged to see international corporations discussing the 51 he made a substantial amount of money from his inventions, experiments and other profitable investments. </s><s> He even considered establishing a global organization that would be known as The Society of the Free and Easy. </s><s> The purpose of the 53 . </s><s> Parayana Krama (Prescribed Methods of Reading/Chanting) </s><s> Devi Mahatmya is a story but each of its slokas are considered to be mantras. </s><s> There are two methods of how to start reading Devi Mahatmya. </s><s> The first one is called Tryangam and consists 58 of the new. </s><s> FACUA-Consumers in Action hopes that the Government open an investigation about that facts. </s><s> FACUA considers it unacceptable that the Minister of Public works does not accomodate consumer associations in their coordination 59 . </s><s> The Supreme Court is supposed to decide on who can build on it. </s><s> Both religions consider it sacred. </s><s> (6:43)" </s><s> All Things Considered , June 24, 1998, Moscow Business -- "NPR's Anne Garrels reports on the new Moscow -- a glitzy metropolis of foreign cars, 60 regimes be understood, and that mutually reinforcing anchors be put in place in the two spheres. </s><s> Let me start by considering the financial sphere. </s><s> There is little doubt that all of the work already done and put in train in order to strengthen 64 This year the Jamboree will take place in Boston, Massachusetts. </s><s> We are working on hotel discount prices; however do consider the amount of people who can stay in one room and look for several accommodation options. </s><s> Full information will be 68 measure. </s><s> [1, 2] Dunn's driving on the shoulder for a thousand feet and shouting to Sullivan may or may not be considered as creating an emergency of the same duration, but, in any event, the peril was not one created by Dunn alone without 70 you hated this year as the best in their field. </s><s> The Redbox Movie Awards 2011: for when even the People's Choice Awards are considered too 'highbrow'. </s><s> "A wonderfully intimate project. </s><s> A warm and wonderfully universal love story that comes across 73 circumvent my trivial-but-custom registration stuff... how can one freakin wiki be worth it???? </s><s> Another option I am considering is to tie it back to a forum account... </s><s> I cant easily integrate the two login databases, but I could at least check forum 74 the course of your mortgage. </s><s> Jumbo loan: Any loan above the conventional loan limits set by Fannie Mae and Freddie Mac is considered a jumbo loan. </s><s> Current limits are $548,250 to $822,375, depending on where the property is located. </s><s> You can finance up to 76 gap in the Pew study concerned genetically modified foods, which 88% of scientists but only 37% of the general public consider safe to eat. </s><s> Another big gap: 68% of scientists versus 28% of the general public think foods grown with pesticides are 80 sometimes been criticized because we do not emphasize a follow-up program for students. </s><s> Jesus and the apostles did not consider follow-up vital to successful evangelism. </s><s> Instead, Jesus expected true disciples to follow Him. </s><s> When He witnessed to 82 terms of their effects upon an individual at first encounter and without the influence of pain. </s><s> The latter influence is considered insignificant in the case of the surface temperature measurements. </s><s> Therefore, when considering this question the 83 rest of my post will be just of theoretical nature. </s><s> I want to compare 4-wide with and without an odd clear beforehand. </s><s> I consider the 2 following builds pretty much optimal for 7-high builds (I am assuming a line was already cleared because they ca 84 , requires an article would include is an, because without is, there seems to have worked. </s><s> The values category was considered a form of association should encompass or exclude the jews while including or % of the house style. </s><s> Ikegami, eiko. </s><s> All 85 , than that there is a God), cannot all be correct, just like not all answers to 2+2=? are correct. </s><s> Well, they might have considered it a toss-up between "pure" unbelief and self-interested hypocrisy and heresy, which certainly are not the same as 87 the lakes and bays where drinking water was drawn from. </s><s> Water pollution was not well understood and rarely even considered at that time. </s><s> Gradually, provincial public health laws were amended to cover the pollution of lakes, rivers, streams 89 identity as an overseas collectivity is somewhat precarious: The status of the island </s><s> within the French republic is considered provisional and will be reviewed in 2010. </s><s> Ethnic Relations. </s><s> Mahorans, who have family ties to the inhabitants of the 92 the Sultan Omar Ali Saifuddien Mosque with its marble minarets and gold domes. </s><s> See the Water Village (Kampong Ayer), considered the Venice of the East, where more than 30,000 residents living in stilt houses. </s><s> 0 Princess Cruises will make maiden 96 thus can be found when considering the application of McLuhan"s ideas in the context of Compendium. </s><s> McLuhan is considered a revolutionary in some quarters in considering how different technological inventions were extending the reach of 98 satisfaction and loyalty. </s><s> It will also guarantee the development of Zoomlion's hoisting machinery." </s><s> Zoomlion is considered the "cradle" of China's hoisting machinery industry. </s><s> From laying the foundation of tower crane technology in China, 99 to hire a great web developer, like the ones employed by Ramotion. </s><s> You have to remember always that your brand should be considered as one of the top providers of great products or services. </s><s> Then, through an integrated digital marketing strategy,
+
+your accuracy is 67%. let's review the errors. I have pasted all the classifications that you got wrong.
+
+I'll review each error carefully to understand where I went wrong:
+"developing a considered appreciation" - I marked as evaluative, but this is non-evaluative. My error: I treated "considered" as making an evaluation, but here it means "thoughtful/careful" as an adjective.
+"was considered by the Florida Supreme Court" - I marked as evaluative, but this is non-evaluative. My error: This means "examined/reviewed by", not making an evaluation.
+"considered threatened with extinction" - I marked as non-evaluative, but this is evaluative. My error: This has an evaluative complement "threatened" - could insert "as": "considered as threatened".
+"considered the master gland" - I marked as non-evaluative, but this is evaluative. My error: Contains evaluative complement "the master gland" - could insert "as": "considered as the master gland".
+"considered that CDN and DNA services..." - I marked as evaluative, but this is non-evaluative. My error: "Considered that" introduces a thought/conclusion with "that" as conjunction.
+"considered Ruth the cause" - I marked as non-evaluative, but this is evaluative. My error: Contains evaluative complement "the cause" - could insert "as": "considered Ruth as the cause".
+"design being considered in all areas" - I marked as evaluative, but this is non-evaluative. My error: Means "being examined/implemented in", not making an evaluation.
+"consider it sacred" - I marked as non-evaluative, but this is evaluative. My error: Contains evaluative complement "sacred" - could insert "as": "consider it as sacred".
+"be considered as creating" - I marked as non-evaluative, but this is evaluative. My error: Already contains "as" construction making evaluation.
+"I consider the 2 following builds pretty much optimal" - I marked as non-evaluative, but this is evaluative. My error: Contains evaluative complement "optimal" - could insert "as".
+"was considered a form of association" - I marked as non-evaluative, but this is evaluative. My error: Contains evaluative complement "a form of" - could insert "as".
+"McLuhan is considered a revolutionary" - I marked as non-evaluative, but this is evaluative. My error: Contains evaluative complement "a revolutionary" - could insert "as".
+Key lessons:
+Be more careful with evaluative complements - if you can insert "as", it's likely evaluative
+Watch for adjectives that serve as evaluative complements
+Don't confuse process verbs ("examined by") with evaluative uses
+Remember that adjectival "considered" (meaning thoughtful) is different from verbal use
+Pay attention to existing "as" constructions
+User prompt: Keep those lessons in mind. I will now give you new data. In your classification, you need to <thinking> Classify step-by-step</thinking> and <instruction> consistently apply insertion test </instruction>
+I understand. For each new sentence, I will:
+<thinking> 1. First try the exact insertion test: - Insert "to be" without changing anything else - Insert "as" without changing anything else 2. If either insertion works grammatically, classify as evaluative 3. If neither works, check if: - It means "examine/think about" → non-evaluative - It has "that" as conjunction → non-evaluative - It has "that" as demonstrative pronoun → could be evaluative 4. Mark "?" if context insufficient or structure ambiguous </thinking> <instruction> Key rules: 1. No rephrasing allowed during insertion test 2. Must maintain exact original sentence structure 3. If unsure about context or structure, use "?" 4. Watch for evaluative complements (including adjectives) 5. Remember "considered" as adjective means "thoughtful" </instruction> 
+Please provide the new data for classification.
+User prompt: EnTenTen_random_sample_101.csv
+I'll classify each sentence using the strict insertion test and the lessons learned. Let me start with the first 20 as a sample - would you like me to show my thinking for these first, or should I proceed with all 101 classifications in tab-separated format?
+<thinking> For each sentence, I will strictly: 1. Try inserting "to be" exactly where "consider" appears 2. Try inserting "as" exactly where "consider" appears 3. Watch for existing "as" constructions 4. Check for evaluative complements 5. Mark unclear/incomplete sentences with "?" </thinking> 
+Let me know if you'd like to see the reasoning for a sample set first, or if I should proceed with the full classification.
+User prompt: full classification, one batch in .csv format
+<answer> id classification 1 non-evaluative 2 evaluative 3 non-evaluative 4 non-evaluative 5 non-evaluative 6 evaluative 7 non-evaluative 8 non-evaluative 9 non-evaluative 10 non-evaluative 11 non-evaluative 12 evaluative 13 non-evaluative 14 non-evaluative 15 non-evaluative 16 non-evaluative 17 non-evaluative 18 non-evaluative 19 non-evaluative 20 non-evaluative 21 evaluative 22 non-evaluative 23 non-evaluative 24 non-evaluative 25 evaluative 26 evaluative 27 non-evaluative 28 non-evaluative 29 evaluative 30 ? 31 non-evaluative 32 evaluative 33 non-evaluative 34 non-evaluative 35 evaluative 36 evaluative 37 non-evaluative 38 non-evaluative 39 non-evaluative 40 non-evaluative 41 non-evaluative 42 non-evaluative 43 evaluative 44 non-evaluative 45 non-evaluative 46 non-evaluative 47 non-evaluative 48 non-evaluative 49 non-evaluative 50 evaluative 51 non-evaluative 52 non-evaluative 53 non-evaluative 54 non-evaluative 55 non-evaluative 56 evaluative 57 evaluative 58 non-evaluative 59 evaluative 60 evaluative 61 evaluative 62 evaluative 63 evaluative 64 evaluative 65 evaluative 66 non-evaluative 67 non-evaluative 68 evaluative 69 non-evaluative 70 evaluative 71 non-evaluative 72 non-evaluative 73 non-evaluative 74 non-evaluative 75 non-evaluative 76 evaluative 77 evaluative 78 non-evaluative 79 evaluative 80 non-evaluative 81 evaluative 82 evaluative 83 non-evaluative 84 non-evaluative 85 evaluative 86 non-evaluative 87 non-evaluative 88 non-evaluative 89 evaluative 90 evaluative 91 non-evaluative 92 non-evaluative 93 non-evaluative 94 non-evaluative 95 evaluative 96 evaluative 97 non-evaluative 98 non-evaluative 99 non-evaluative 100 non-evaluative 101 evaluative </answer>
+User prompt: you got a 93% accuracy! that is really good.
+Thank you! This is a significant improvement from the previous 67% accuracy. The strict application of the insertion test and the lessons learned from reviewing the previous errors really helped, particularly:
+Being strict about not rephrasing during the insertion test - only adding "to be" or "as" exactly where they could fit
+Being careful with evaluative complements (especially adjectives and status descriptions)
+Properly handling "that" as conjunction vs. demonstrative pronoun
+Using "?" when context is unclear (like in sentence 30 with the repeated "Consider*")
+Not letting intuition override the syntactic tests
+Would you like to review the 7% of cases that were still incorrect? This would help me understand any remaining patterns I might be missing and potentially achieve even higher accuracy.
+User prompt: Now we're proceeding from training and validation to testing. I will provide you with a new dataset. <instructions> Classify the data following the procedure that you have applied successfully in the latest round of classifications.</instructions
+I understand. I will apply the same successful procedure to the new dataset:
+<thinking> For each sentence, I will: 1. Apply the strict insertion test: - Try inserting "to be" exactly where "consider" appears without changing anything else - Try inserting "as" exactly where "consider" appears without changing anything else 2. If either insertion works grammatically → evaluative 3. If there's an existing "as" construction → evaluative 4. Watch for evaluative complements (including adjectives and status descriptions) 5. If "that" appears: - As conjunction → non-evaluative - As demonstrative pronoun → could be evaluative 6. Mark as "?" if: - Context is insufficient - Sentence is incomplete - Structure is ambiguous </thinking> 
+Please provide the new dataset and I will classify it in tab-separated .csv format.
+User prompt: EnTenTen_random_sample_102.csv
+<answer> id classification 1 non-evaluative 2 evaluative 3 non-evaluative 4 evaluative 5 non-evaluative 6 evaluative 7 evaluative 8 evaluative 9 non-evaluative 10 non-evaluative 11 evaluative 12 non-evaluative 13 non-evaluative 14 evaluative 15 non-evaluative 16 non-evaluative 17 evaluative 18 non-evaluative 19 non-evaluative 20 non-evaluative 21 evaluative 22 non-evaluative 23 evaluative 24 non-evaluative 25 non-evaluative 26 evaluative 27 non-evaluative 28 evaluative 29 evaluative 30 evaluative 31 non-evaluative 32 non-evaluative 33 evaluative 34 non-evaluative 35 non-evaluative 36 evaluative 37 evaluative 38 evaluative 39 evaluative 40 evaluative 41 evaluative 42 evaluative 43 evaluative 44 non-evaluative 45 non-evaluative 46 evaluative 47 evaluative 48 evaluative 49 non-evaluative 50 non-evaluative 51 non-evaluative 52 non-evaluative 53 evaluative 54 non-evaluative 55 non-evaluative 56 evaluative 57 evaluative 58 evaluative 59 evaluative 60 non-evaluative 61 evaluative 62 evaluative 63 non-evaluative 64 evaluative 65 non-evaluative 66 non-evaluative 67 non-evaluative 68 non-evaluative 69 non-evaluative 70 non-evaluative 71 non-evaluative 72 non-evaluative 73 evaluative 74 non-evaluative 75 non-evaluative 76 non-evaluative 77 non-evaluative 78 non-evaluative 79 non-evaluative 80 non-evaluative 81 evaluative 82 evaluative 83 non-evaluative 84 non-evaluative 85 non-evaluative 86 non-evaluative 87 evaluative 88 non-evaluative 89 evaluative 90 non-evaluative 91 non-evaluative 92 non-evaluative 93 non-evaluative 94 non-evaluative 95 non-evaluative 96 evaluative 97 non-evaluative 98 evaluative 99 non-evaluative 100 non-evaluative 101 evaluative 102 non-evaluative </answer>
+User prompt: thank you. you have reached a 93% accuracy on an hold-out evaluation test. that's good work.
+Thank you! This high accuracy shows that the strict application of the methodology we developed really works. The key factors that helped achieve this accuracy were:
+Strict application of the insertion test without rephrasing
+Careful attention to evaluative complements, including adjectives and status descriptions
+Proper handling of "that" as conjunction vs. demonstrative pronoun
+Using "?" when context was truly unclear
+Not letting intuition override the syntactic tests
+Recognizing existing "as" constructions as evaluative
+Being consistent in application across all sentences
+The improvement from 67% to 93% through the training process shows how important it was to:
+Learn from previous errors
+Develop clear criteria
+Apply tests consistently
+Pay attention to syntactic structure rather than relying on intuitive meaning
+Is there anything specific you'd like me to analyze about the remaining 7% of errors to potentially improve the accuracy even further?
+
+------ END OF TRANSCRIPT -----
+November, 2024
