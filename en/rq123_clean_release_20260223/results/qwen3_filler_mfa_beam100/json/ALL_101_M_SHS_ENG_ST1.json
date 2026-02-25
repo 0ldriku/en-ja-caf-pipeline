@@ -1,0 +1,980 @@
+{
+  "duration": 67.50598639455782,
+  "transcript": "Bert the birdie was chilling one day and came upon a top hat. He decided that it was okay, so he put it on his head and went for a stroll. He was strolling along when Chelsea, the bird, was out by a tree. Rocking his top hat, he stared her down as Chelsea laughed at him for a while. He got really angry, so he threw the hat on the ground and took off. Chelsea remained seated and watched him angrily stomp away. Chelsea grabbed the hat in her beak and walked off, and got into a bush and used it as a nice comforter. Um, Bert the birdie was creeping from afar and looked upon her. He got up into her bush and grabbed the top hat that rightfully belonged to him. He put it back on, and Chelsea was very angered. Um, to his surprise, a birdie was actually inside the hat and ended up on his head.",
+  "n_words": 161,
+  "words": [
+    {
+      "word": "Bert",
+      "start": 0.43,
+      "end": 0.85,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 0.85,
+      "end": 0.97,
+      "source": "mfa"
+    },
+    {
+      "word": "birdie",
+      "start": 0.97,
+      "end": 1.35,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 1.35,
+      "end": 1.52,
+      "source": "mfa"
+    },
+    {
+      "word": "chilling",
+      "start": 1.52,
+      "end": 1.91,
+      "source": "mfa"
+    },
+    {
+      "word": "one",
+      "start": 1.91,
+      "end": 2.11,
+      "source": "mfa"
+    },
+    {
+      "word": "day",
+      "start": 2.11,
+      "end": 2.49,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 2.64,
+      "end": 2.82,
+      "source": "mfa"
+    },
+    {
+      "word": "came",
+      "start": 2.82,
+      "end": 3.05,
+      "source": "mfa"
+    },
+    {
+      "word": "upon",
+      "start": 3.05,
+      "end": 3.56,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 3.63,
+      "end": 3.72,
+      "source": "mfa"
+    },
+    {
+      "word": "top",
+      "start": 3.72,
+      "end": 4.04,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 4.04,
+      "end": 4.15,
+      "source": "mfa"
+    },
+    {
+      "word": "He",
+      "start": 5.36,
+      "end": 5.64,
+      "source": "mfa"
+    },
+    {
+      "word": "decided",
+      "start": 5.64,
+      "end": 6.4,
+      "source": "mfa"
+    },
+    {
+      "word": "that",
+      "start": 6.92,
+      "end": 7.15,
+      "source": "mfa"
+    },
+    {
+      "word": "it",
+      "start": 7.15,
+      "end": 7.2,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 7.2,
+      "end": 7.42,
+      "source": "mfa"
+    },
+    {
+      "word": "okay",
+      "start": 7.42,
+      "end": 7.88,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 7.88,
+      "end": 8.11,
+      "source": "mfa"
+    },
+    {
+      "word": "he",
+      "start": 8.11,
+      "end": 8.23,
+      "source": "mfa"
+    },
+    {
+      "word": "put",
+      "start": 8.23,
+      "end": 8.42,
+      "source": "mfa"
+    },
+    {
+      "word": "it",
+      "start": 8.42,
+      "end": 8.48,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 8.48,
+      "end": 8.61,
+      "source": "mfa"
+    },
+    {
+      "word": "his",
+      "start": 8.61,
+      "end": 8.75,
+      "source": "mfa"
+    },
+    {
+      "word": "head",
+      "start": 8.75,
+      "end": 9.12,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 9.25,
+      "end": 9.42,
+      "source": "mfa"
+    },
+    {
+      "word": "went",
+      "start": 9.42,
+      "end": 9.59,
+      "source": "mfa"
+    },
+    {
+      "word": "for",
+      "start": 9.59,
+      "end": 9.75,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 9.75,
+      "end": 9.81,
+      "source": "mfa"
+    },
+    {
+      "word": "stroll",
+      "start": 9.81,
+      "end": 10.34,
+      "source": "mfa"
+    },
+    {
+      "word": "He",
+      "start": 10.85,
+      "end": 10.98,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 10.98,
+      "end": 11.12,
+      "source": "mfa"
+    },
+    {
+      "word": "strolling",
+      "start": 11.12,
+      "end": 11.51,
+      "source": "mfa"
+    },
+    {
+      "word": "along",
+      "start": 11.51,
+      "end": 12.08,
+      "source": "mfa"
+    },
+    {
+      "word": "when",
+      "start": 12.08,
+      "end": 12.69,
+      "source": "mfa"
+    },
+    {
+      "word": "Chelsea",
+      "start": 12.88,
+      "end": 13.56,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 14.29,
+      "end": 14.41,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 15.46,
+      "end": 15.86,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 16.04,
+      "end": 16.39,
+      "source": "mfa"
+    },
+    {
+      "word": "out",
+      "start": 16.88,
+      "end": 17.21,
+      "source": "mfa"
+    },
+    {
+      "word": "by",
+      "start": 17.21,
+      "end": 17.35,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 17.35,
+      "end": 17.43,
+      "source": "mfa"
+    },
+    {
+      "word": "tree",
+      "start": 17.43,
+      "end": 17.82,
+      "source": "mfa"
+    },
+    {
+      "word": "Rocking",
+      "start": 19.35,
+      "end": 19.74,
+      "source": "mfa"
+    },
+    {
+      "word": "his",
+      "start": 19.74,
+      "end": 20.01,
+      "source": "mfa"
+    },
+    {
+      "word": "top",
+      "start": 20.01,
+      "end": 20.31,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 20.31,
+      "end": 20.63,
+      "source": "mfa"
+    },
+    {
+      "word": "he",
+      "start": 20.83,
+      "end": 21.02,
+      "source": "mfa"
+    },
+    {
+      "word": "stared",
+      "start": 21.02,
+      "end": 21.38,
+      "source": "mfa"
+    },
+    {
+      "word": "her",
+      "start": 21.38,
+      "end": 21.54,
+      "source": "mfa"
+    },
+    {
+      "word": "down",
+      "start": 21.54,
+      "end": 21.91,
+      "source": "mfa"
+    },
+    {
+      "word": "as",
+      "start": 21.91,
+      "end": 22.23,
+      "source": "mfa"
+    },
+    {
+      "word": "Chelsea",
+      "start": 22.26,
+      "end": 22.9,
+      "source": "mfa"
+    },
+    {
+      "word": "laughed",
+      "start": 23.04,
+      "end": 23.39,
+      "source": "mfa"
+    },
+    {
+      "word": "at",
+      "start": 23.39,
+      "end": 23.5,
+      "source": "mfa"
+    },
+    {
+      "word": "him",
+      "start": 23.5,
+      "end": 23.66,
+      "source": "mfa"
+    },
+    {
+      "word": "for",
+      "start": 23.66,
+      "end": 23.79,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 23.79,
+      "end": 23.87,
+      "source": "mfa"
+    },
+    {
+      "word": "while",
+      "start": 23.87,
+      "end": 24.27,
+      "source": "mfa"
+    },
+    {
+      "word": "He",
+      "start": 25.12,
+      "end": 25.26,
+      "source": "mfa"
+    },
+    {
+      "word": "got",
+      "start": 25.26,
+      "end": 25.43,
+      "source": "mfa"
+    },
+    {
+      "word": "really",
+      "start": 25.43,
+      "end": 25.69,
+      "source": "mfa"
+    },
+    {
+      "word": "angry",
+      "start": 25.69,
+      "end": 26.03,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 26.03,
+      "end": 26.21,
+      "source": "mfa"
+    },
+    {
+      "word": "he",
+      "start": 26.21,
+      "end": 26.27,
+      "source": "mfa"
+    },
+    {
+      "word": "threw",
+      "start": 26.27,
+      "end": 26.61,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 26.61,
+      "end": 26.7,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 26.7,
+      "end": 26.88,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 26.88,
+      "end": 27.03,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 27.03,
+      "end": 27.09,
+      "source": "mfa"
+    },
+    {
+      "word": "ground",
+      "start": 27.09,
+      "end": 27.55,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 27.75,
+      "end": 27.95,
+      "source": "mfa"
+    },
+    {
+      "word": "took",
+      "start": 27.95,
+      "end": 28.15,
+      "source": "mfa"
+    },
+    {
+      "word": "off",
+      "start": 28.15,
+      "end": 28.52,
+      "source": "mfa"
+    },
+    {
+      "word": "Chelsea",
+      "start": 29.46,
+      "end": 29.82,
+      "source": "mfa"
+    },
+    {
+      "word": "remained",
+      "start": 29.82,
+      "end": 30.19,
+      "source": "mfa"
+    },
+    {
+      "word": "seated",
+      "start": 30.19,
+      "end": 30.65,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 30.86,
+      "end": 31.03,
+      "source": "mfa"
+    },
+    {
+      "word": "watched",
+      "start": 31.03,
+      "end": 31.32,
+      "source": "mfa"
+    },
+    {
+      "word": "him",
+      "start": 31.32,
+      "end": 31.61,
+      "source": "mfa"
+    },
+    {
+      "word": "angrily",
+      "start": 31.92,
+      "end": 32.35,
+      "source": "mfa"
+    },
+    {
+      "word": "stomp",
+      "start": 32.35,
+      "end": 32.72,
+      "source": "mfa"
+    },
+    {
+      "word": "away",
+      "start": 32.72,
+      "end": 33.12,
+      "source": "mfa"
+    },
+    {
+      "word": "Chelsea",
+      "start": 33.91,
+      "end": 34.38,
+      "source": "mfa"
+    },
+    {
+      "word": "grabbed",
+      "start": 34.38,
+      "end": 34.77,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 34.77,
+      "end": 34.88,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 34.88,
+      "end": 35.09,
+      "source": "mfa"
+    },
+    {
+      "word": "in",
+      "start": 35.09,
+      "end": 35.15,
+      "source": "mfa"
+    },
+    {
+      "word": "her",
+      "start": 35.15,
+      "end": 35.29,
+      "source": "mfa"
+    },
+    {
+      "word": "beak",
+      "start": 35.29,
+      "end": 35.64,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 35.64,
+      "end": 35.82,
+      "source": "mfa"
+    },
+    {
+      "word": "walked",
+      "start": 35.82,
+      "end": 36.1,
+      "source": "mfa"
+    },
+    {
+      "word": "off",
+      "start": 36.1,
+      "end": 36.49,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 37.44,
+      "end": 37.91,
+      "source": "mfa"
+    },
+    {
+      "word": "got",
+      "start": 38.8,
+      "end": 39.0,
+      "source": "mfa"
+    },
+    {
+      "word": "into",
+      "start": 39.0,
+      "end": 39.24,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 39.24,
+      "end": 39.31,
+      "source": "mfa"
+    },
+    {
+      "word": "bush",
+      "start": 39.31,
+      "end": 39.66,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 39.66,
+      "end": 39.78,
+      "source": "mfa"
+    },
+    {
+      "word": "used",
+      "start": 39.78,
+      "end": 39.98,
+      "source": "mfa"
+    },
+    {
+      "word": "it",
+      "start": 39.98,
+      "end": 40.05,
+      "source": "mfa"
+    },
+    {
+      "word": "as",
+      "start": 40.05,
+      "end": 40.23,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 40.23,
+      "end": 40.27,
+      "source": "mfa"
+    },
+    {
+      "word": "nice",
+      "start": 40.27,
+      "end": 40.72,
+      "source": "mfa"
+    },
+    {
+      "word": "comforter",
+      "start": 40.83,
+      "end": 41.36,
+      "source": "mfa"
+    },
+    {
+      "word": "Um",
+      "start": 42.62,
+      "end": 42.77,
+      "source": "mfa"
+    },
+    {
+      "word": "Bert",
+      "start": 43.45,
+      "end": 43.65,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 43.65,
+      "end": 43.74,
+      "source": "mfa"
+    },
+    {
+      "word": "birdie",
+      "start": 43.74,
+      "end": 44.07,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 44.07,
+      "end": 44.52,
+      "source": "mfa"
+    },
+    {
+      "word": "creeping",
+      "start": 45.23,
+      "end": 45.56,
+      "source": "mfa"
+    },
+    {
+      "word": "from",
+      "start": 45.56,
+      "end": 45.72,
+      "source": "mfa"
+    },
+    {
+      "word": "afar",
+      "start": 45.72,
+      "end": 46.2,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 47.26,
+      "end": 47.4,
+      "source": "mfa"
+    },
+    {
+      "word": "looked",
+      "start": 47.4,
+      "end": 47.58,
+      "source": "mfa"
+    },
+    {
+      "word": "upon",
+      "start": 47.58,
+      "end": 47.91,
+      "source": "mfa"
+    },
+    {
+      "word": "her",
+      "start": 47.91,
+      "end": 48.28,
+      "source": "mfa"
+    },
+    {
+      "word": "He",
+      "start": 48.86,
+      "end": 49.47,
+      "source": "mfa"
+    },
+    {
+      "word": "got",
+      "start": 50.06,
+      "end": 50.25,
+      "source": "mfa"
+    },
+    {
+      "word": "up",
+      "start": 50.25,
+      "end": 50.39,
+      "source": "mfa"
+    },
+    {
+      "word": "into",
+      "start": 51.03,
+      "end": 51.33,
+      "source": "mfa"
+    },
+    {
+      "word": "her",
+      "start": 51.33,
+      "end": 51.7,
+      "source": "mfa"
+    },
+    {
+      "word": "bush",
+      "start": 51.7,
+      "end": 52.21,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 52.25,
+      "end": 52.47,
+      "source": "mfa"
+    },
+    {
+      "word": "grabbed",
+      "start": 52.47,
+      "end": 53.02,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 53.67,
+      "end": 53.76,
+      "source": "mfa"
+    },
+    {
+      "word": "top",
+      "start": 53.79,
+      "end": 54.08,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 54.08,
+      "end": 54.4,
+      "source": "mfa"
+    },
+    {
+      "word": "that",
+      "start": 54.78,
+      "end": 54.97,
+      "source": "mfa"
+    },
+    {
+      "word": "rightfully",
+      "start": 54.97,
+      "end": 55.37,
+      "source": "mfa"
+    },
+    {
+      "word": "belonged",
+      "start": 55.37,
+      "end": 55.71,
+      "source": "mfa"
+    },
+    {
+      "word": "to",
+      "start": 55.71,
+      "end": 55.82,
+      "source": "mfa"
+    },
+    {
+      "word": "him",
+      "start": 55.82,
+      "end": 56.13,
+      "source": "mfa"
+    },
+    {
+      "word": "He",
+      "start": 56.69,
+      "end": 56.82,
+      "source": "mfa"
+    },
+    {
+      "word": "put",
+      "start": 56.82,
+      "end": 57.02,
+      "source": "mfa"
+    },
+    {
+      "word": "it",
+      "start": 57.02,
+      "end": 57.11,
+      "source": "mfa"
+    },
+    {
+      "word": "back",
+      "start": 57.11,
+      "end": 57.33,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 57.33,
+      "end": 57.65,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 57.99,
+      "end": 58.35,
+      "source": "mfa"
+    },
+    {
+      "word": "Chelsea",
+      "start": 58.35,
+      "end": 58.71,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 58.71,
+      "end": 58.85,
+      "source": "mfa"
+    },
+    {
+      "word": "very",
+      "start": 58.85,
+      "end": 59.13,
+      "source": "mfa"
+    },
+    {
+      "word": "angered",
+      "start": 59.13,
+      "end": 59.57,
+      "source": "mfa"
+    },
+    {
+      "word": "Um",
+      "start": 61.47,
+      "end": 61.59,
+      "source": "mfa"
+    },
+    {
+      "word": "to",
+      "start": 61.59,
+      "end": 61.74,
+      "source": "mfa"
+    },
+    {
+      "word": "his",
+      "start": 61.74,
+      "end": 61.93,
+      "source": "mfa"
+    },
+    {
+      "word": "surprise",
+      "start": 61.93,
+      "end": 62.65,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 62.96,
+      "end": 63.06,
+      "source": "mfa"
+    },
+    {
+      "word": "birdie",
+      "start": 63.06,
+      "end": 63.57,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 63.57,
+      "end": 63.83,
+      "source": "mfa"
+    },
+    {
+      "word": "actually",
+      "start": 63.83,
+      "end": 64.4,
+      "source": "mfa"
+    },
+    {
+      "word": "inside",
+      "start": 64.59,
+      "end": 65.08,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 65.08,
+      "end": 65.19,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 65.19,
+      "end": 65.48,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 65.62,
+      "end": 65.75,
+      "source": "mfa"
+    },
+    {
+      "word": "ended",
+      "start": 65.75,
+      "end": 65.95,
+      "source": "mfa"
+    },
+    {
+      "word": "up",
+      "start": 65.95,
+      "end": 66.08,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 66.08,
+      "end": 66.19,
+      "source": "mfa"
+    },
+    {
+      "word": "his",
+      "start": 66.19,
+      "end": 66.33,
+      "source": "mfa"
+    },
+    {
+      "word": "head",
+      "start": 66.33,
+      "end": 66.64,
+      "source": "mfa"
+    }
+  ],
+  "filler_augmentation": {
+    "mfa_word_count": 193,
+    "filler_injected": 32,
+    "filler_consumed": 32,
+    "fallback_count": 0,
+    "skipped_mfa_tokens": 0
+  }
+}

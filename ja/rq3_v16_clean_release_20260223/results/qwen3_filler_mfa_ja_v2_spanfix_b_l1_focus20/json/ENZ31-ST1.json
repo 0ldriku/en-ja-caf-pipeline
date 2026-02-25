@@ -1,0 +1,706 @@
+{
+  "duration": 76.536,
+  "transcript": "E N Z 三十一ピクニック。朝、ケント・マリーはサンドイッチを作りました。楽しみにしていたピクニックの日なので、二人ともワクワクしてしながらサンドイッチを作りました。地図を見てる間、犬がバスケットに飛び込んでしまいました。それに気づかなかったケント・マリーはワクワクしてピクニックの場所へ行きました。しかし、ピクニックの場所についてバスケットを開けてみたら、犬が飛び出してしまった。中を見ると、犬はサンドイッチやリンゴなどを食べてしまいました。ピクニックはできなくなりました。残念です。",
+  "n_words": 115,
+  "words": [
+    {
+      "word": "E",
+      "start": 7.11,
+      "end": 7.42,
+      "source": "mfa"
+    },
+    {
+      "word": "N",
+      "start": 7.45,
+      "end": 7.79,
+      "source": "mfa"
+    },
+    {
+      "word": "Z",
+      "start": 7.79,
+      "end": 8.36,
+      "source": "mfa"
+    },
+    {
+      "word": "三十",
+      "start": 8.46,
+      "end": 8.9,
+      "source": "mfa"
+    },
+    {
+      "word": "一",
+      "start": 9.02,
+      "end": 9.29,
+      "source": "mfa"
+    },
+    {
+      "word": "ピクニック",
+      "start": 10.52,
+      "end": 10.96,
+      "source": "mfa"
+    },
+    {
+      "word": "朝",
+      "start": 12.5,
+      "end": 12.82,
+      "source": "mfa"
+    },
+    {
+      "word": "ケント",
+      "start": 13.74,
+      "end": 14.28,
+      "source": "mfa"
+    },
+    {
+      "word": "マリー",
+      "start": 14.28,
+      "end": 14.6,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 14.6,
+      "end": 14.84,
+      "source": "mfa"
+    },
+    {
+      "word": "サンドイッチ",
+      "start": 14.84,
+      "end": 15.52,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 15.52,
+      "end": 15.65,
+      "source": "mfa"
+    },
+    {
+      "word": "作り",
+      "start": 15.65,
+      "end": 16.06,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 16.06,
+      "end": 16.47,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 16.47,
+      "end": 16.69,
+      "source": "mfa"
+    },
+    {
+      "word": "楽しみ",
+      "start": 18.48,
+      "end": 19.03,
+      "source": "mfa"
+    },
+    {
+      "word": "に",
+      "start": 19.03,
+      "end": 19.2,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 19.2,
+      "end": 19.29,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 19.29,
+      "end": 19.47,
+      "source": "mfa"
+    },
+    {
+      "word": "い",
+      "start": 19.47,
+      "end": 19.55,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 19.55,
+      "end": 19.81,
+      "source": "mfa"
+    },
+    {
+      "word": "ピクニック",
+      "start": 19.9,
+      "end": 20.38,
+      "source": "mfa"
+    },
+    {
+      "word": "の",
+      "start": 20.38,
+      "end": 20.72,
+      "source": "mfa"
+    },
+    {
+      "word": "日",
+      "start": 20.72,
+      "end": 20.9,
+      "source": "mfa"
+    },
+    {
+      "word": "な",
+      "start": 20.9,
+      "end": 21.06,
+      "source": "mfa"
+    },
+    {
+      "word": "の",
+      "start": 21.06,
+      "end": 21.21,
+      "source": "mfa"
+    },
+    {
+      "word": "で",
+      "start": 21.21,
+      "end": 21.48,
+      "source": "mfa"
+    },
+    {
+      "word": "二人",
+      "start": 22.0,
+      "end": 22.33,
+      "source": "mfa"
+    },
+    {
+      "word": "とも",
+      "start": 22.33,
+      "end": 22.67,
+      "source": "mfa"
+    },
+    {
+      "word": "ワクワク",
+      "start": 22.67,
+      "end": 23.4,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 23.4,
+      "end": 23.57,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 23.57,
+      "end": 23.77,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 23.82,
+      "end": 23.98,
+      "source": "mfa"
+    },
+    {
+      "word": "ながら",
+      "start": 23.98,
+      "end": 24.56,
+      "source": "mfa"
+    },
+    {
+      "word": "サンドイッチ",
+      "start": 25.27,
+      "end": 25.85,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 25.85,
+      "end": 25.93,
+      "source": "mfa"
+    },
+    {
+      "word": "作り",
+      "start": 25.93,
+      "end": 26.24,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 27.22,
+      "end": 27.49,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 27.49,
+      "end": 27.7,
+      "source": "mfa"
+    },
+    {
+      "word": "地図",
+      "start": 30.24,
+      "end": 30.55,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 30.55,
+      "end": 30.65,
+      "source": "mfa"
+    },
+    {
+      "word": "見",
+      "start": 30.65,
+      "end": 30.83,
+      "source": "mfa"
+    },
+    {
+      "word": "てる",
+      "start": 30.83,
+      "end": 31.21,
+      "source": "mfa"
+    },
+    {
+      "word": "間",
+      "start": 31.21,
+      "end": 31.68,
+      "source": "mfa"
+    },
+    {
+      "word": "犬",
+      "start": 32.26,
+      "end": 32.5,
+      "source": "mfa"
+    },
+    {
+      "word": "が",
+      "start": 32.5,
+      "end": 32.77,
+      "source": "mfa"
+    },
+    {
+      "word": "バスケット",
+      "start": 34.07,
+      "end": 34.62,
+      "source": "mfa"
+    },
+    {
+      "word": "に",
+      "start": 34.62,
+      "end": 34.83,
+      "source": "mfa"
+    },
+    {
+      "word": "飛び込ん",
+      "start": 34.96,
+      "end": 35.42,
+      "source": "mfa"
+    },
+    {
+      "word": "で",
+      "start": 35.42,
+      "end": 35.56,
+      "source": "mfa"
+    },
+    {
+      "word": "しまい",
+      "start": 35.56,
+      "end": 35.95,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 35.95,
+      "end": 36.27,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 36.27,
+      "end": 36.36,
+      "source": "mfa"
+    },
+    {
+      "word": "それ",
+      "start": 38.01,
+      "end": 38.32,
+      "source": "mfa"
+    },
+    {
+      "word": "に",
+      "start": 38.32,
+      "end": 38.49,
+      "source": "mfa"
+    },
+    {
+      "word": "気づか",
+      "start": 38.49,
+      "end": 38.91,
+      "source": "mfa"
+    },
+    {
+      "word": "なかっ",
+      "start": 38.91,
+      "end": 39.7,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 39.7,
+      "end": 39.77,
+      "source": "mfa"
+    },
+    {
+      "word": "ケント",
+      "start": 39.77,
+      "end": 40.13,
+      "source": "mfa"
+    },
+    {
+      "word": "マリー",
+      "start": 40.13,
+      "end": 40.44,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 40.44,
+      "end": 40.67,
+      "source": "mfa"
+    },
+    {
+      "word": "ワクワク",
+      "start": 41.34,
+      "end": 41.96,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 41.96,
+      "end": 42.2,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 42.2,
+      "end": 42.35,
+      "source": "mfa"
+    },
+    {
+      "word": "ピクニック",
+      "start": 42.85,
+      "end": 43.36,
+      "source": "mfa"
+    },
+    {
+      "word": "の",
+      "start": 43.36,
+      "end": 43.45,
+      "source": "mfa"
+    },
+    {
+      "word": "場所",
+      "start": 44.0,
+      "end": 44.39,
+      "source": "mfa"
+    },
+    {
+      "word": "へ",
+      "start": 44.39,
+      "end": 44.59,
+      "source": "mfa"
+    },
+    {
+      "word": "行き",
+      "start": 44.76,
+      "end": 44.95,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 44.95,
+      "end": 45.28,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 45.28,
+      "end": 45.51,
+      "source": "mfa"
+    },
+    {
+      "word": "しかし",
+      "start": 47.4,
+      "end": 47.92,
+      "source": "mfa"
+    },
+    {
+      "word": "ピクニック",
+      "start": 49.24,
+      "end": 49.81,
+      "source": "mfa"
+    },
+    {
+      "word": "の",
+      "start": 49.81,
+      "end": 50.01,
+      "source": "mfa"
+    },
+    {
+      "word": "場所",
+      "start": 50.12,
+      "end": 50.4,
+      "source": "mfa"
+    },
+    {
+      "word": "に",
+      "start": 50.4,
+      "end": 50.57,
+      "source": "mfa"
+    },
+    {
+      "word": "つい",
+      "start": 50.57,
+      "end": 50.84,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 50.84,
+      "end": 51.22,
+      "source": "mfa"
+    },
+    {
+      "word": "バスケット",
+      "start": 51.75,
+      "end": 52.32,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 52.32,
+      "end": 52.47,
+      "source": "mfa"
+    },
+    {
+      "word": "開け",
+      "start": 52.47,
+      "end": 52.69,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 52.69,
+      "end": 52.86,
+      "source": "mfa"
+    },
+    {
+      "word": "み",
+      "start": 52.86,
+      "end": 53.0,
+      "source": "mfa"
+    },
+    {
+      "word": "たら",
+      "start": 53.0,
+      "end": 53.47,
+      "source": "mfa"
+    },
+    {
+      "word": "犬",
+      "start": 54.21,
+      "end": 54.47,
+      "source": "mfa"
+    },
+    {
+      "word": "が",
+      "start": 54.47,
+      "end": 54.65,
+      "source": "mfa"
+    },
+    {
+      "word": "飛び出し",
+      "start": 54.65,
+      "end": 55.19,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 55.19,
+      "end": 55.28,
+      "source": "mfa"
+    },
+    {
+      "word": "しまっ",
+      "start": 55.28,
+      "end": 55.68,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 55.68,
+      "end": 55.96,
+      "source": "mfa"
+    },
+    {
+      "word": "中",
+      "start": 58.13,
+      "end": 58.45,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 58.45,
+      "end": 58.5,
+      "source": "mfa"
+    },
+    {
+      "word": "見る",
+      "start": 58.5,
+      "end": 58.79,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 58.79,
+      "end": 59.04,
+      "source": "mfa"
+    },
+    {
+      "word": "犬",
+      "start": 59.51,
+      "end": 59.83,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 59.83,
+      "end": 60.12,
+      "source": "mfa"
+    },
+    {
+      "word": "サンドイッチ",
+      "start": 60.56,
+      "end": 61.38,
+      "source": "mfa"
+    },
+    {
+      "word": "や",
+      "start": 61.38,
+      "end": 61.63,
+      "source": "mfa"
+    },
+    {
+      "word": "リンゴ",
+      "start": 62.36,
+      "end": 62.67,
+      "source": "mfa"
+    },
+    {
+      "word": "など",
+      "start": 62.67,
+      "end": 63.05,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 63.05,
+      "end": 63.26,
+      "source": "mfa"
+    },
+    {
+      "word": "食べ",
+      "start": 63.53,
+      "end": 63.8,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 63.8,
+      "end": 63.97,
+      "source": "mfa"
+    },
+    {
+      "word": "しまい",
+      "start": 63.97,
+      "end": 64.35,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 64.35,
+      "end": 64.66,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 64.66,
+      "end": 64.83,
+      "source": "mfa"
+    },
+    {
+      "word": "ピクニック",
+      "start": 68.22,
+      "end": 68.79,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 68.79,
+      "end": 68.99,
+      "source": "mfa"
+    },
+    {
+      "word": "でき",
+      "start": 69.07,
+      "end": 69.33,
+      "source": "mfa"
+    },
+    {
+      "word": "なく",
+      "start": 69.33,
+      "end": 69.62,
+      "source": "mfa"
+    },
+    {
+      "word": "なり",
+      "start": 69.62,
+      "end": 69.88,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 69.88,
+      "end": 70.31,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 70.31,
+      "end": 70.42,
+      "source": "mfa"
+    },
+    {
+      "word": "残念",
+      "start": 71.12,
+      "end": 71.66,
+      "source": "mfa"
+    },
+    {
+      "word": "です",
+      "start": 71.66,
+      "end": 72.11,
+      "source": "mfa"
+    }
+  ],
+  "filler_augmentation": {
+    "mfa_word_count": 163,
+    "filler_injected": 48,
+    "filler_consumed": 48,
+    "fallback_count": 0,
+    "skipped_mfa_tokens": 0,
+    "filler_injected_leading": 3,
+    "filler_injected_trailing": 3
+  }
+}

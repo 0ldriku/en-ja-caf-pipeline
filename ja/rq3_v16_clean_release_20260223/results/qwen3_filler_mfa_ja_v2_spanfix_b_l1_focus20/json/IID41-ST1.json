@@ -1,0 +1,934 @@
+{
+  "duration": 153.864,
+  "transcript": "Hi ID 41.ピクニック。朝、ケンとマリはサンドイッチを作りました。そのサンドサンドイッチはバスケットにありました。そしてマリとケン、マリマリさんとケンさんはチーズをみます。マリとケンマリとケンはチーズを見るとき、犬は犬はバスケットにありました。ケンとマリはその犬その犬をはいると気が気が済みません。そしてそのバスケットはピクニックの場所へ持って行きました。それからバスケットをあけあけるとあけるとその犬は出てジャンプします。ジャンプします。ジャンプします。しました。ケンさんとマリさんはとてもびっくりびっくりしました。そのそのそのサンドイッチはそのサンドイッチと他のオーベンとはそのオーベンそのオーベンとは食べないになりました。",
+  "n_words": 153,
+  "words": [
+    {
+      "word": "Hi",
+      "start": 1.27,
+      "end": 1.6,
+      "source": "mfa"
+    },
+    {
+      "word": "ID",
+      "start": 1.64,
+      "end": 2.35,
+      "source": "mfa"
+    },
+    {
+      "word": "4",
+      "start": 2.35,
+      "end": 3.04,
+      "source": "mfa"
+    },
+    {
+      "word": "1",
+      "start": 3.04,
+      "end": 3.41,
+      "source": "mfa"
+    },
+    {
+      "word": "ピクニック",
+      "start": 6.52,
+      "end": 7.18,
+      "source": "mfa"
+    },
+    {
+      "word": "朝",
+      "start": 8.78,
+      "end": 9.22,
+      "source": "mfa"
+    },
+    {
+      "word": "ケン",
+      "start": 9.45,
+      "end": 9.72,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 9.72,
+      "end": 10.02,
+      "source": "mfa"
+    },
+    {
+      "word": "マリ",
+      "start": 10.05,
+      "end": 10.4,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 10.4,
+      "end": 10.61,
+      "source": "mfa"
+    },
+    {
+      "word": "サンドイッチ",
+      "start": 11.17,
+      "end": 11.99,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 11.99,
+      "end": 12.28,
+      "source": "mfa"
+    },
+    {
+      "word": "作り",
+      "start": 12.62,
+      "end": 12.93,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 12.93,
+      "end": 13.18,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 13.18,
+      "end": 13.34,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 16.69,
+      "end": 16.97,
+      "source": "mfa"
+    },
+    {
+      "word": "サンド",
+      "start": 16.97,
+      "end": 17.28,
+      "source": "mfa"
+    },
+    {
+      "word": "サンドイッチ",
+      "start": 17.57,
+      "end": 18.54,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 18.54,
+      "end": 18.7,
+      "source": "mfa"
+    },
+    {
+      "word": "バスケット",
+      "start": 20.77,
+      "end": 22.27,
+      "source": "mfa"
+    },
+    {
+      "word": "に",
+      "start": 22.27,
+      "end": 22.67,
+      "source": "mfa"
+    },
+    {
+      "word": "あり",
+      "start": 23.75,
+      "end": 23.99,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 23.99,
+      "end": 24.18,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 24.18,
+      "end": 24.46,
+      "source": "mfa"
+    },
+    {
+      "word": "そして",
+      "start": 27.83,
+      "end": 28.44,
+      "source": "mfa"
+    },
+    {
+      "word": "マリ",
+      "start": 29.26,
+      "end": 29.62,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 29.62,
+      "end": 29.98,
+      "source": "mfa"
+    },
+    {
+      "word": "ケン",
+      "start": 30.16,
+      "end": 30.4,
+      "source": "mfa"
+    },
+    {
+      "word": "マリ",
+      "start": 31.08,
+      "end": 31.4,
+      "source": "mfa"
+    },
+    {
+      "word": "マリ",
+      "start": 31.79,
+      "end": 32.08,
+      "source": "mfa"
+    },
+    {
+      "word": "さん",
+      "start": 32.08,
+      "end": 32.34,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 32.5,
+      "end": 32.75,
+      "source": "mfa"
+    },
+    {
+      "word": "ケン",
+      "start": 32.84,
+      "end": 33.27,
+      "source": "mfa"
+    },
+    {
+      "word": "さん",
+      "start": 33.27,
+      "end": 33.52,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 34.53,
+      "end": 34.76,
+      "source": "mfa"
+    },
+    {
+      "word": "チーズ",
+      "start": 36.14,
+      "end": 36.69,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 37.03,
+      "end": 37.12,
+      "source": "mfa"
+    },
+    {
+      "word": "み",
+      "start": 37.33,
+      "end": 37.47,
+      "source": "mfa"
+    },
+    {
+      "word": "ます",
+      "start": 37.47,
+      "end": 37.92,
+      "source": "mfa"
+    },
+    {
+      "word": "マリ",
+      "start": 40.0,
+      "end": 40.32,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 40.32,
+      "end": 40.71,
+      "source": "mfa"
+    },
+    {
+      "word": "ケン",
+      "start": 40.89,
+      "end": 41.5,
+      "source": "mfa"
+    },
+    {
+      "word": "マリ",
+      "start": 41.83,
+      "end": 42.09,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 42.09,
+      "end": 42.32,
+      "source": "mfa"
+    },
+    {
+      "word": "ケン",
+      "start": 42.32,
+      "end": 42.8,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 44.42,
+      "end": 44.62,
+      "source": "mfa"
+    },
+    {
+      "word": "チーズ",
+      "start": 45.38,
+      "end": 45.66,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 45.66,
+      "end": 45.93,
+      "source": "mfa"
+    },
+    {
+      "word": "見る",
+      "start": 46.18,
+      "end": 46.47,
+      "source": "mfa"
+    },
+    {
+      "word": "とき",
+      "start": 46.47,
+      "end": 47.06,
+      "source": "mfa"
+    },
+    {
+      "word": "犬",
+      "start": 47.87,
+      "end": 48.27,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 48.27,
+      "end": 48.39,
+      "source": "mfa"
+    },
+    {
+      "word": "犬",
+      "start": 50.01,
+      "end": 50.43,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 50.43,
+      "end": 50.63,
+      "source": "mfa"
+    },
+    {
+      "word": "バスケット",
+      "start": 52.2,
+      "end": 53.74,
+      "source": "mfa"
+    },
+    {
+      "word": "に",
+      "start": 54.86,
+      "end": 55.05,
+      "source": "mfa"
+    },
+    {
+      "word": "あり",
+      "start": 57.01,
+      "end": 57.24,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 57.24,
+      "end": 57.61,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 59.46,
+      "end": 59.52,
+      "source": "mfa"
+    },
+    {
+      "word": "ケン",
+      "start": 61.06,
+      "end": 61.44,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 61.44,
+      "end": 61.86,
+      "source": "mfa"
+    },
+    {
+      "word": "マリ",
+      "start": 62.28,
+      "end": 62.66,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 62.66,
+      "end": 62.81,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 64.63,
+      "end": 65.1,
+      "source": "mfa"
+    },
+    {
+      "word": "犬",
+      "start": 66.01,
+      "end": 66.64,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 67.0,
+      "end": 67.28,
+      "source": "mfa"
+    },
+    {
+      "word": "犬",
+      "start": 67.28,
+      "end": 67.55,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 67.55,
+      "end": 68.1,
+      "source": "mfa"
+    },
+    {
+      "word": "はいる",
+      "start": 68.35,
+      "end": 68.91,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 69.79,
+      "end": 69.97,
+      "source": "mfa"
+    },
+    {
+      "word": "気",
+      "start": 73.92,
+      "end": 74.4,
+      "source": "mfa"
+    },
+    {
+      "word": "が",
+      "start": 74.43,
+      "end": 74.61,
+      "source": "mfa"
+    },
+    {
+      "word": "気",
+      "start": 75.19,
+      "end": 75.44,
+      "source": "mfa"
+    },
+    {
+      "word": "が",
+      "start": 75.44,
+      "end": 75.54,
+      "source": "mfa"
+    },
+    {
+      "word": "済み",
+      "start": 75.85,
+      "end": 76.39,
+      "source": "mfa"
+    },
+    {
+      "word": "ませ",
+      "start": 76.39,
+      "end": 76.8,
+      "source": "mfa"
+    },
+    {
+      "word": "ん",
+      "start": 76.8,
+      "end": 76.91,
+      "source": "mfa"
+    },
+    {
+      "word": "そして",
+      "start": 78.91,
+      "end": 79.56,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 79.93,
+      "end": 80.6,
+      "source": "mfa"
+    },
+    {
+      "word": "バスケット",
+      "start": 81.33,
+      "end": 82.38,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 82.38,
+      "end": 82.59,
+      "source": "mfa"
+    },
+    {
+      "word": "ピクニック",
+      "start": 84.65,
+      "end": 85.72,
+      "source": "mfa"
+    },
+    {
+      "word": "の",
+      "start": 85.72,
+      "end": 85.91,
+      "source": "mfa"
+    },
+    {
+      "word": "場所",
+      "start": 85.91,
+      "end": 86.61,
+      "source": "mfa"
+    },
+    {
+      "word": "へ",
+      "start": 86.61,
+      "end": 86.82,
+      "source": "mfa"
+    },
+    {
+      "word": "持っ",
+      "start": 90.71,
+      "end": 90.83,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 91.17,
+      "end": 91.33,
+      "source": "mfa"
+    },
+    {
+      "word": "行き",
+      "start": 91.33,
+      "end": 91.9,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 91.9,
+      "end": 92.26,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 92.26,
+      "end": 92.32,
+      "source": "mfa"
+    },
+    {
+      "word": "それ",
+      "start": 93.62,
+      "end": 93.88,
+      "source": "mfa"
+    },
+    {
+      "word": "から",
+      "start": 93.88,
+      "end": 94.48,
+      "source": "mfa"
+    },
+    {
+      "word": "バスケット",
+      "start": 97.64,
+      "end": 98.54,
+      "source": "mfa"
+    },
+    {
+      "word": "を",
+      "start": 98.54,
+      "end": 98.73,
+      "source": "mfa"
+    },
+    {
+      "word": "あけ",
+      "start": 99.52,
+      "end": 99.95,
+      "source": "mfa"
+    },
+    {
+      "word": "あける",
+      "start": 100.41,
+      "end": 100.81,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 101.43,
+      "end": 101.72,
+      "source": "mfa"
+    },
+    {
+      "word": "あける",
+      "start": 102.61,
+      "end": 102.87,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 102.87,
+      "end": 103.04,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 104.32,
+      "end": 104.69,
+      "source": "mfa"
+    },
+    {
+      "word": "犬",
+      "start": 104.69,
+      "end": 105.01,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 105.01,
+      "end": 105.31,
+      "source": "mfa"
+    },
+    {
+      "word": "出",
+      "start": 107.44,
+      "end": 107.69,
+      "source": "mfa"
+    },
+    {
+      "word": "て",
+      "start": 107.87,
+      "end": 108.2,
+      "source": "mfa"
+    },
+    {
+      "word": "ジャンプ",
+      "start": 109.29,
+      "end": 109.74,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 109.74,
+      "end": 109.89,
+      "source": "mfa"
+    },
+    {
+      "word": "ます",
+      "start": 109.89,
+      "end": 110.46,
+      "source": "mfa"
+    },
+    {
+      "word": "ジャンプ",
+      "start": 111.01,
+      "end": 111.23,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 111.23,
+      "end": 111.36,
+      "source": "mfa"
+    },
+    {
+      "word": "ます",
+      "start": 111.36,
+      "end": 111.85,
+      "source": "mfa"
+    },
+    {
+      "word": "ジャンプ",
+      "start": 112.65,
+      "end": 112.98,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 112.98,
+      "end": 113.07,
+      "source": "mfa"
+    },
+    {
+      "word": "ます",
+      "start": 113.07,
+      "end": 113.46,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 113.46,
+      "end": 113.54,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 113.54,
+      "end": 114.0,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 114.0,
+      "end": 114.12,
+      "source": "mfa"
+    },
+    {
+      "word": "ケン",
+      "start": 115.36,
+      "end": 115.96,
+      "source": "mfa"
+    },
+    {
+      "word": "さん",
+      "start": 115.96,
+      "end": 116.27,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 116.27,
+      "end": 116.58,
+      "source": "mfa"
+    },
+    {
+      "word": "マリ",
+      "start": 116.61,
+      "end": 116.83,
+      "source": "mfa"
+    },
+    {
+      "word": "さん",
+      "start": 116.83,
+      "end": 117.14,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 117.14,
+      "end": 117.28,
+      "source": "mfa"
+    },
+    {
+      "word": "とても",
+      "start": 118.31,
+      "end": 118.95,
+      "source": "mfa"
+    },
+    {
+      "word": "びっくり",
+      "start": 118.95,
+      "end": 119.6,
+      "source": "mfa"
+    },
+    {
+      "word": "びっくり",
+      "start": 119.81,
+      "end": 120.24,
+      "source": "mfa"
+    },
+    {
+      "word": "し",
+      "start": 120.24,
+      "end": 120.34,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 120.34,
+      "end": 120.58,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 120.58,
+      "end": 120.76,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 125.87,
+      "end": 126.26,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 126.43,
+      "end": 126.98,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 127.01,
+      "end": 127.75,
+      "source": "mfa"
+    },
+    {
+      "word": "サンドイッチ",
+      "start": 127.75,
+      "end": 128.49,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 128.49,
+      "end": 128.87,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 128.98,
+      "end": 129.31,
+      "source": "mfa"
+    },
+    {
+      "word": "サンドイッチ",
+      "start": 129.31,
+      "end": 129.86,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 129.86,
+      "end": 130.31,
+      "source": "mfa"
+    },
+    {
+      "word": "他",
+      "start": 130.72,
+      "end": 131.41,
+      "source": "mfa"
+    },
+    {
+      "word": "の",
+      "start": 131.41,
+      "end": 131.7,
+      "source": "mfa"
+    },
+    {
+      "word": "オーベン",
+      "start": 131.7,
+      "end": 131.94,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 131.94,
+      "end": 132.14,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 132.14,
+      "end": 132.38,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 137.29,
+      "end": 138.57,
+      "source": "mfa"
+    },
+    {
+      "word": "オーベン",
+      "start": 141.78,
+      "end": 142.37,
+      "source": "mfa"
+    },
+    {
+      "word": "その",
+      "start": 142.66,
+      "end": 143.05,
+      "source": "mfa"
+    },
+    {
+      "word": "オーベン",
+      "start": 143.05,
+      "end": 143.31,
+      "source": "mfa"
+    },
+    {
+      "word": "と",
+      "start": 143.56,
+      "end": 143.77,
+      "source": "mfa"
+    },
+    {
+      "word": "は",
+      "start": 143.77,
+      "end": 144.13,
+      "source": "mfa"
+    },
+    {
+      "word": "食べ",
+      "start": 150.11,
+      "end": 150.41,
+      "source": "mfa"
+    },
+    {
+      "word": "ない",
+      "start": 150.46,
+      "end": 150.86,
+      "source": "mfa"
+    },
+    {
+      "word": "に",
+      "start": 151.18,
+      "end": 151.28,
+      "source": "mfa"
+    },
+    {
+      "word": "なり",
+      "start": 151.38,
+      "end": 151.58,
+      "source": "mfa"
+    },
+    {
+      "word": "まし",
+      "start": 151.58,
+      "end": 152.2,
+      "source": "mfa"
+    },
+    {
+      "word": "た",
+      "start": 152.2,
+      "end": 152.47,
+      "source": "mfa"
+    }
+  ],
+  "filler_augmentation": {
+    "mfa_word_count": 257,
+    "filler_injected": 104,
+    "filler_consumed": 104,
+    "fallback_count": 0,
+    "skipped_mfa_tokens": 0,
+    "filler_injected_leading": 0,
+    "filler_injected_trailing": 3
+  }
+}

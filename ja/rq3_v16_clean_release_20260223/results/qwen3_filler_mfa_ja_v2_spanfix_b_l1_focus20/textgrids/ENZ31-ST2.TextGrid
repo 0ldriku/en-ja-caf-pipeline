@@ -1,0 +1,1356 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0 
+xmax = 65.772 
+tiers? <exists> 
+size = 2 
+item []: 
+    item [1]:
+        class = "IntervalTier" 
+        name = "words" 
+        xmin = 0 
+        xmax = 65.772 
+        intervals: size = 167 
+        intervals [1]:
+            xmin = 0 
+            xmax = 4.43 
+            text = "" 
+        intervals [2]:
+            xmin = 4.43 
+            xmax = 4.73 
+            text = "P" 
+        intervals [3]:
+            xmin = 4.73 
+            xmax = 4.76 
+            text = "" 
+        intervals [4]:
+            xmin = 4.76 
+            xmax = 5.06 
+            text = "N" 
+        intervals [5]:
+            xmin = 5.06 
+            xmax = 5.58 
+            text = "Z" 
+        intervals [6]:
+            xmin = 5.58 
+            xmax = 5.7 
+            text = "" 
+        intervals [7]:
+            xmin = 5.7 
+            xmax = 6.13 
+            text = "三十" 
+        intervals [8]:
+            xmin = 6.13 
+            xmax = 6.55 
+            text = "一" 
+        intervals [9]:
+            xmin = 6.55 
+            xmax = 8.04 
+            text = "" 
+        intervals [10]:
+            xmin = 8.04 
+            xmax = 8.51 
+            text = "鍵" 
+        intervals [11]:
+            xmin = 8.51 
+            xmax = 9.87 
+            text = "" 
+        intervals [12]:
+            xmin = 9.87 
+            xmax = 10.17 
+            text = "ケン" 
+        intervals [13]:
+            xmin = 10.17 
+            xmax = 10.44 
+            text = "は" 
+        intervals [14]:
+            xmin = 10.44 
+            xmax = 10.47 
+            text = "" 
+        intervals [15]:
+            xmin = 10.47 
+            xmax = 10.74 
+            text = "家" 
+        intervals [16]:
+            xmin = 10.74 
+            xmax = 10.89 
+            text = "の" 
+        intervals [17]:
+            xmin = 10.89 
+            xmax = 11.25 
+            text = "鍵" 
+        intervals [18]:
+            xmin = 11.25 
+            xmax = 11.38 
+            text = "を" 
+        intervals [19]:
+            xmin = 11.38 
+            xmax = 11.55 
+            text = "持っ" 
+        intervals [20]:
+            xmin = 11.55 
+            xmax = 11.8 
+            text = "て" 
+        intervals [21]:
+            xmin = 11.8 
+            xmax = 11.89 
+            text = "い" 
+        intervals [22]:
+            xmin = 11.89 
+            xmax = 12.26 
+            text = "ませ" 
+        intervals [23]:
+            xmin = 12.26 
+            xmax = 12.37 
+            text = "ん" 
+        intervals [24]:
+            xmin = 12.37 
+            xmax = 12.71 
+            text = "でし" 
+        intervals [25]:
+            xmin = 12.71 
+            xmax = 12.93 
+            text = "た" 
+        intervals [26]:
+            xmin = 12.93 
+            xmax = 15.98 
+            text = "" 
+        intervals [27]:
+            xmin = 15.98 
+            xmax = 16.43 
+            text = "残業" 
+        intervals [28]:
+            xmin = 16.43 
+            xmax = 16.9 
+            text = "から" 
+        intervals [29]:
+            xmin = 16.9 
+            xmax = 17.11 
+            text = "帰っ" 
+        intervals [30]:
+            xmin = 17.11 
+            xmax = 17.28 
+            text = "て" 
+        intervals [31]:
+            xmin = 17.28 
+            xmax = 17.39 
+            text = "き" 
+        intervals [32]:
+            xmin = 17.39 
+            xmax = 17.54 
+            text = "た" 
+        intervals [33]:
+            xmin = 17.54 
+            xmax = 18.01 
+            text = "けど" 
+        intervals [34]:
+            xmin = 18.01 
+            xmax = 18.27 
+            text = "" 
+        intervals [35]:
+            xmin = 18.27 
+            xmax = 18.63 
+            text = "鍵" 
+        intervals [36]:
+            xmin = 18.63 
+            xmax = 18.7 
+            text = "を" 
+        intervals [37]:
+            xmin = 18.7 
+            xmax = 18.88 
+            text = "持っ" 
+        intervals [38]:
+            xmin = 18.88 
+            xmax = 19.18 
+            text = "て" 
+        intervals [39]:
+            xmin = 19.18 
+            xmax = 19.34 
+            text = "い" 
+        intervals [40]:
+            xmin = 19.34 
+            xmax = 19.6 
+            text = "ない" 
+        intervals [41]:
+            xmin = 19.6 
+            xmax = 19.76 
+            text = "の" 
+        intervals [42]:
+            xmin = 19.76 
+            xmax = 20.03 
+            text = "で" 
+        intervals [43]:
+            xmin = 20.03 
+            xmax = 20.1 
+            text = "" 
+        intervals [44]:
+            xmin = 20.1 
+            xmax = 20.34 
+            text = "家" 
+        intervals [45]:
+            xmin = 20.34 
+            xmax = 20.5 
+            text = "に" 
+        intervals [46]:
+            xmin = 20.5 
+            xmax = 20.58 
+            text = "" 
+        intervals [47]:
+            xmin = 20.58 
+            xmax = 20.84 
+            text = "入れ" 
+        intervals [48]:
+            xmin = 20.84 
+            xmax = 21.22 
+            text = "ませ" 
+        intervals [49]:
+            xmin = 21.22 
+            xmax = 21.26 
+            text = "ん" 
+        intervals [50]:
+            xmin = 21.26 
+            xmax = 22.86 
+            text = "" 
+        intervals [51]:
+            xmin = 22.86 
+            xmax = 23.15 
+            text = "マリ" 
+        intervals [52]:
+            xmin = 23.15 
+            xmax = 23.3 
+            text = "は" 
+        intervals [53]:
+            xmin = 23.3 
+            xmax = 23.53 
+            text = "もう" 
+        intervals [54]:
+            xmin = 23.53 
+            xmax = 23.69 
+            text = "寝" 
+        intervals [55]:
+            xmin = 23.69 
+            xmax = 23.88 
+            text = "て" 
+        intervals [56]:
+            xmin = 23.88 
+            xmax = 24.28 
+            text = "しまい" 
+        intervals [57]:
+            xmin = 24.28 
+            xmax = 24.63 
+            text = "まし" 
+        intervals [58]:
+            xmin = 24.63 
+            xmax = 24.77 
+            text = "た" 
+        intervals [59]:
+            xmin = 24.77 
+            xmax = 25.4 
+            text = "" 
+        intervals [60]:
+            xmin = 25.4 
+            xmax = 25.61 
+            text = "ケン" 
+        intervals [61]:
+            xmin = 25.61 
+            xmax = 25.8 
+            text = "は" 
+        intervals [62]:
+            xmin = 25.8 
+            xmax = 26.3 
+            text = "窓" 
+        intervals [63]:
+            xmin = 26.3 
+            xmax = 26.54 
+            text = "から" 
+        intervals [64]:
+            xmin = 26.54 
+            xmax = 27.13 
+            text = "呼びかけ" 
+        intervals [65]:
+            xmin = 27.13 
+            xmax = 27.28 
+            text = "て" 
+        intervals [66]:
+            xmin = 27.28 
+            xmax = 27.51 
+            text = "も" 
+        intervals [67]:
+            xmin = 27.51 
+            xmax = 27.6 
+            text = "" 
+        intervals [68]:
+            xmin = 27.6 
+            xmax = 27.99 
+            text = "聞こえ" 
+        intervals [69]:
+            xmin = 27.99 
+            xmax = 28.35 
+            text = "ませ" 
+        intervals [70]:
+            xmin = 28.35 
+            xmax = 28.38 
+            text = "ん" 
+        intervals [71]:
+            xmin = 28.38 
+            xmax = 30.08 
+            text = "" 
+        intervals [72]:
+            xmin = 30.08 
+            xmax = 30.32 
+            text = "ケン" 
+        intervals [73]:
+            xmin = 30.32 
+            xmax = 30.5 
+            text = "は" 
+        intervals [74]:
+            xmin = 30.5 
+            xmax = 30.98 
+            text = "仕方" 
+        intervals [75]:
+            xmin = 30.98 
+            xmax = 31.11 
+            text = "が" 
+        intervals [76]:
+            xmin = 31.11 
+            xmax = 31.57 
+            text = "なく" 
+        intervals [77]:
+            xmin = 31.57 
+            xmax = 31.99 
+            text = "" 
+        intervals [78]:
+            xmin = 31.99 
+            xmax = 32.55 
+            text = "梯子" 
+        intervals [79]:
+            xmin = 32.55 
+            xmax = 32.88 
+            text = "で" 
+        intervals [80]:
+            xmin = 32.88 
+            xmax = 33.23 
+            text = "" 
+        intervals [81]:
+            xmin = 33.23 
+            xmax = 33.34 
+            text = "2" 
+        intervals [82]:
+            xmin = 33.34 
+            xmax = 33.54 
+            text = "階" 
+        intervals [83]:
+            xmin = 33.54 
+            xmax = 33.72 
+            text = "ま" 
+        intervals [84]:
+            xmin = 33.72 
+            xmax = 33.96 
+            text = "で" 
+        intervals [85]:
+            xmin = 33.96 
+            xmax = 34.2 
+            text = "登っ" 
+        intervals [86]:
+            xmin = 34.2 
+            xmax = 34.35 
+            text = "て" 
+        intervals [87]:
+            xmin = 34.35 
+            xmax = 34.71 
+            text = "いこう" 
+        intervals [88]:
+            xmin = 34.71 
+            xmax = 34.92 
+            text = "と" 
+        intervals [89]:
+            xmin = 34.92 
+            xmax = 35.21 
+            text = "思い" 
+        intervals [90]:
+            xmin = 35.21 
+            xmax = 35.5 
+            text = "まし" 
+        intervals [91]:
+            xmin = 35.5 
+            xmax = 35.64 
+            text = "た" 
+        intervals [92]:
+            xmin = 35.64 
+            xmax = 35.76 
+            text = "が" 
+        intervals [93]:
+            xmin = 35.76 
+            xmax = 36.38 
+            text = "" 
+        intervals [94]:
+            xmin = 36.38 
+            xmax = 37.01 
+            text = "警官" 
+        intervals [95]:
+            xmin = 37.01 
+            xmax = 37.2 
+            text = "に" 
+        intervals [96]:
+            xmin = 37.2 
+            xmax = 37.23 
+            text = "" 
+        intervals [97]:
+            xmin = 37.23 
+            xmax = 37.33 
+            text = "見" 
+        intervals [98]:
+            xmin = 37.33 
+            xmax = 37.59 
+            text = "られ" 
+        intervals [99]:
+            xmin = 37.59 
+            xmax = 37.82 
+            text = "て" 
+        intervals [100]:
+            xmin = 37.82 
+            xmax = 38.2 
+            text = "しまい" 
+        intervals [101]:
+            xmin = 38.2 
+            xmax = 38.5 
+            text = "まし" 
+        intervals [102]:
+            xmin = 38.5 
+            xmax = 38.59 
+            text = "た" 
+        intervals [103]:
+            xmin = 38.59 
+            xmax = 40.14 
+            text = "" 
+        intervals [104]:
+            xmin = 40.14 
+            xmax = 40.72 
+            text = "警官" 
+        intervals [105]:
+            xmin = 40.72 
+            xmax = 40.89 
+            text = "は" 
+        intervals [106]:
+            xmin = 40.89 
+            xmax = 41.12 
+            text = "怒" 
+        intervals [107]:
+            xmin = 41.12 
+            xmax = 41.17 
+            text = "っ" 
+        intervals [108]:
+            xmin = 41.17 
+            xmax = 41.64 
+            text = "て" 
+        intervals [109]:
+            xmin = 41.64 
+            xmax = 42.11 
+            text = "" 
+        intervals [110]:
+            xmin = 42.11 
+            xmax = 42.35 
+            text = "ケン" 
+        intervals [111]:
+            xmin = 42.35 
+            xmax = 42.44 
+            text = "の" 
+        intervals [112]:
+            xmin = 42.44 
+            xmax = 42.8 
+            text = "こと" 
+        intervals [113]:
+            xmin = 42.8 
+            xmax = 43.4 
+            text = "泥棒" 
+        intervals [114]:
+            xmin = 43.4 
+            xmax = 43.71 
+            text = "と" 
+        intervals [115]:
+            xmin = 43.71 
+            xmax = 43.84 
+            text = "言っ" 
+        intervals [116]:
+            xmin = 43.84 
+            xmax = 44.04 
+            text = "て" 
+        intervals [117]:
+            xmin = 44.04 
+            xmax = 44.14 
+            text = "い" 
+        intervals [118]:
+            xmin = 44.14 
+            xmax = 44.42 
+            text = "まし" 
+        intervals [119]:
+            xmin = 44.42 
+            xmax = 44.55 
+            text = "た" 
+        intervals [120]:
+            xmin = 44.55 
+            xmax = 44.81 
+            text = "が" 
+        intervals [121]:
+            xmin = 44.81 
+            xmax = 45.63 
+            text = "" 
+        intervals [122]:
+            xmin = 45.63 
+            xmax = 46.11 
+            text = "それ" 
+        intervals [123]:
+            xmin = 46.11 
+            xmax = 46.74 
+            text = "" 
+        intervals [124]:
+            xmin = 46.74 
+            xmax = 47.04 
+            text = "それ" 
+        intervals [125]:
+            xmin = 47.04 
+            xmax = 47.14 
+            text = "" 
+        intervals [126]:
+            xmin = 47.14 
+            xmax = 47.22 
+            text = "を" 
+        intervals [127]:
+            xmin = 47.22 
+            xmax = 47.66 
+            text = "聞こえ" 
+        intervals [128]:
+            xmin = 47.66 
+            xmax = 47.84 
+            text = "た" 
+        intervals [129]:
+            xmin = 47.84 
+            xmax = 48.14 
+            text = "マリ" 
+        intervals [130]:
+            xmin = 48.14 
+            xmax = 48.36 
+            text = "が" 
+        intervals [131]:
+            xmin = 48.36 
+            xmax = 48.61 
+            text = "起き" 
+        intervals [132]:
+            xmin = 48.61 
+            xmax = 48.81 
+            text = "て" 
+        intervals [133]:
+            xmin = 48.81 
+            xmax = 50.05 
+            text = "" 
+        intervals [134]:
+            xmin = 50.05 
+            xmax = 50.32 
+            text = "ケン" 
+        intervals [135]:
+            xmin = 50.32 
+            xmax = 50.37 
+            text = "を" 
+        intervals [136]:
+            xmin = 50.37 
+            xmax = 50.51 
+            text = "見" 
+        intervals [137]:
+            xmin = 50.51 
+            xmax = 50.79 
+            text = "たら" 
+        intervals [138]:
+            xmin = 50.79 
+            xmax = 52.72 
+            text = "" 
+        intervals [139]:
+            xmin = 52.72 
+            xmax = 53.34 
+            text = "警察" 
+        intervals [140]:
+            xmin = 53.34 
+            xmax = 53.59 
+            text = "が" 
+        intervals [141]:
+            xmin = 53.59 
+            xmax = 54.56 
+            text = "" 
+        intervals [142]:
+            xmin = 54.56 
+            xmax = 54.94 
+            text = "事情" 
+        intervals [143]:
+            xmin = 54.94 
+            xmax = 55.12 
+            text = "が" 
+        intervals [144]:
+            xmin = 55.12 
+            xmax = 55.5 
+            text = "分かっ" 
+        intervals [145]:
+            xmin = 55.5 
+            xmax = 56.01 
+            text = "て" 
+        intervals [146]:
+            xmin = 56.01 
+            xmax = 56.14 
+            text = "" 
+        intervals [147]:
+            xmin = 56.14 
+            xmax = 56.66 
+            text = "謝り" 
+        intervals [148]:
+            xmin = 56.66 
+            xmax = 57.02 
+            text = "まし" 
+        intervals [149]:
+            xmin = 57.02 
+            xmax = 57.2 
+            text = "た" 
+        intervals [150]:
+            xmin = 57.2 
+            xmax = 58.09 
+            text = "" 
+        intervals [151]:
+            xmin = 58.09 
+            xmax = 58.32 
+            text = "ケン" 
+        intervals [152]:
+            xmin = 58.32 
+            xmax = 58.45 
+            text = "は" 
+        intervals [153]:
+            xmin = 58.45 
+            xmax = 59.04 
+            text = "やっと" 
+        intervals [154]:
+            xmin = 59.04 
+            xmax = 59.07 
+            text = "" 
+        intervals [155]:
+            xmin = 59.07 
+            xmax = 59.32 
+            text = "家" 
+        intervals [156]:
+            xmin = 59.32 
+            xmax = 59.5 
+            text = "に" 
+        intervals [157]:
+            xmin = 59.5 
+            xmax = 59.53 
+            text = "" 
+        intervals [158]:
+            xmin = 59.53 
+            xmax = 59.83 
+            text = "入れ" 
+        intervals [159]:
+            xmin = 59.83 
+            xmax = 60.23 
+            text = "て" 
+        intervals [160]:
+            xmin = 60.23 
+            xmax = 60.57 
+            text = "" 
+        intervals [161]:
+            xmin = 60.57 
+            xmax = 60.81 
+            text = "寝る" 
+        intervals [162]:
+            xmin = 60.81 
+            xmax = 61.13 
+            text = "こと" 
+        intervals [163]:
+            xmin = 61.13 
+            xmax = 61.26 
+            text = "が" 
+        intervals [164]:
+            xmin = 61.26 
+            xmax = 61.55 
+            text = "でき" 
+        intervals [165]:
+            xmin = 61.55 
+            xmax = 61.88 
+            text = "まし" 
+        intervals [166]:
+            xmin = 61.88 
+            xmax = 61.98 
+            text = "た" 
+        intervals [167]:
+            xmin = 61.98 
+            xmax = 65.772 
+            text = "" 
+    item [2]:
+        class = "IntervalTier" 
+        name = "pauses" 
+        xmin = 0 
+        xmax = 65.772 
+        intervals: size = 167 
+        intervals [1]:
+            xmin = 0 
+            xmax = 4.43 
+            text = "sp" 
+        intervals [2]:
+            xmin = 4.43 
+            xmax = 4.73 
+            text = "" 
+        intervals [3]:
+            xmin = 4.73 
+            xmax = 4.76 
+            text = "" 
+        intervals [4]:
+            xmin = 4.76 
+            xmax = 5.06 
+            text = "" 
+        intervals [5]:
+            xmin = 5.06 
+            xmax = 5.58 
+            text = "" 
+        intervals [6]:
+            xmin = 5.58 
+            xmax = 5.7 
+            text = "" 
+        intervals [7]:
+            xmin = 5.7 
+            xmax = 6.13 
+            text = "" 
+        intervals [8]:
+            xmin = 6.13 
+            xmax = 6.55 
+            text = "" 
+        intervals [9]:
+            xmin = 6.55 
+            xmax = 8.04 
+            text = "sp" 
+        intervals [10]:
+            xmin = 8.04 
+            xmax = 8.51 
+            text = "" 
+        intervals [11]:
+            xmin = 8.51 
+            xmax = 9.87 
+            text = "sp" 
+        intervals [12]:
+            xmin = 9.87 
+            xmax = 10.17 
+            text = "" 
+        intervals [13]:
+            xmin = 10.17 
+            xmax = 10.44 
+            text = "" 
+        intervals [14]:
+            xmin = 10.44 
+            xmax = 10.47 
+            text = "" 
+        intervals [15]:
+            xmin = 10.47 
+            xmax = 10.74 
+            text = "" 
+        intervals [16]:
+            xmin = 10.74 
+            xmax = 10.89 
+            text = "" 
+        intervals [17]:
+            xmin = 10.89 
+            xmax = 11.25 
+            text = "" 
+        intervals [18]:
+            xmin = 11.25 
+            xmax = 11.38 
+            text = "" 
+        intervals [19]:
+            xmin = 11.38 
+            xmax = 11.55 
+            text = "" 
+        intervals [20]:
+            xmin = 11.55 
+            xmax = 11.8 
+            text = "" 
+        intervals [21]:
+            xmin = 11.8 
+            xmax = 11.89 
+            text = "" 
+        intervals [22]:
+            xmin = 11.89 
+            xmax = 12.26 
+            text = "" 
+        intervals [23]:
+            xmin = 12.26 
+            xmax = 12.37 
+            text = "" 
+        intervals [24]:
+            xmin = 12.37 
+            xmax = 12.71 
+            text = "" 
+        intervals [25]:
+            xmin = 12.71 
+            xmax = 12.93 
+            text = "" 
+        intervals [26]:
+            xmin = 12.93 
+            xmax = 15.98 
+            text = "sp" 
+        intervals [27]:
+            xmin = 15.98 
+            xmax = 16.43 
+            text = "" 
+        intervals [28]:
+            xmin = 16.43 
+            xmax = 16.9 
+            text = "" 
+        intervals [29]:
+            xmin = 16.9 
+            xmax = 17.11 
+            text = "" 
+        intervals [30]:
+            xmin = 17.11 
+            xmax = 17.28 
+            text = "" 
+        intervals [31]:
+            xmin = 17.28 
+            xmax = 17.39 
+            text = "" 
+        intervals [32]:
+            xmin = 17.39 
+            xmax = 17.54 
+            text = "" 
+        intervals [33]:
+            xmin = 17.54 
+            xmax = 18.01 
+            text = "" 
+        intervals [34]:
+            xmin = 18.01 
+            xmax = 18.27 
+            text = "sp" 
+        intervals [35]:
+            xmin = 18.27 
+            xmax = 18.63 
+            text = "" 
+        intervals [36]:
+            xmin = 18.63 
+            xmax = 18.7 
+            text = "" 
+        intervals [37]:
+            xmin = 18.7 
+            xmax = 18.88 
+            text = "" 
+        intervals [38]:
+            xmin = 18.88 
+            xmax = 19.18 
+            text = "" 
+        intervals [39]:
+            xmin = 19.18 
+            xmax = 19.34 
+            text = "" 
+        intervals [40]:
+            xmin = 19.34 
+            xmax = 19.6 
+            text = "" 
+        intervals [41]:
+            xmin = 19.6 
+            xmax = 19.76 
+            text = "" 
+        intervals [42]:
+            xmin = 19.76 
+            xmax = 20.03 
+            text = "" 
+        intervals [43]:
+            xmin = 20.03 
+            xmax = 20.1 
+            text = "" 
+        intervals [44]:
+            xmin = 20.1 
+            xmax = 20.34 
+            text = "" 
+        intervals [45]:
+            xmin = 20.34 
+            xmax = 20.5 
+            text = "" 
+        intervals [46]:
+            xmin = 20.5 
+            xmax = 20.58 
+            text = "" 
+        intervals [47]:
+            xmin = 20.58 
+            xmax = 20.84 
+            text = "" 
+        intervals [48]:
+            xmin = 20.84 
+            xmax = 21.22 
+            text = "" 
+        intervals [49]:
+            xmin = 21.22 
+            xmax = 21.26 
+            text = "" 
+        intervals [50]:
+            xmin = 21.26 
+            xmax = 22.86 
+            text = "sp" 
+        intervals [51]:
+            xmin = 22.86 
+            xmax = 23.15 
+            text = "" 
+        intervals [52]:
+            xmin = 23.15 
+            xmax = 23.3 
+            text = "" 
+        intervals [53]:
+            xmin = 23.3 
+            xmax = 23.53 
+            text = "" 
+        intervals [54]:
+            xmin = 23.53 
+            xmax = 23.69 
+            text = "" 
+        intervals [55]:
+            xmin = 23.69 
+            xmax = 23.88 
+            text = "" 
+        intervals [56]:
+            xmin = 23.88 
+            xmax = 24.28 
+            text = "" 
+        intervals [57]:
+            xmin = 24.28 
+            xmax = 24.63 
+            text = "" 
+        intervals [58]:
+            xmin = 24.63 
+            xmax = 24.77 
+            text = "" 
+        intervals [59]:
+            xmin = 24.77 
+            xmax = 25.4 
+            text = "sp" 
+        intervals [60]:
+            xmin = 25.4 
+            xmax = 25.61 
+            text = "" 
+        intervals [61]:
+            xmin = 25.61 
+            xmax = 25.8 
+            text = "" 
+        intervals [62]:
+            xmin = 25.8 
+            xmax = 26.3 
+            text = "" 
+        intervals [63]:
+            xmin = 26.3 
+            xmax = 26.54 
+            text = "" 
+        intervals [64]:
+            xmin = 26.54 
+            xmax = 27.13 
+            text = "" 
+        intervals [65]:
+            xmin = 27.13 
+            xmax = 27.28 
+            text = "" 
+        intervals [66]:
+            xmin = 27.28 
+            xmax = 27.51 
+            text = "" 
+        intervals [67]:
+            xmin = 27.51 
+            xmax = 27.6 
+            text = "" 
+        intervals [68]:
+            xmin = 27.6 
+            xmax = 27.99 
+            text = "" 
+        intervals [69]:
+            xmin = 27.99 
+            xmax = 28.35 
+            text = "" 
+        intervals [70]:
+            xmin = 28.35 
+            xmax = 28.38 
+            text = "" 
+        intervals [71]:
+            xmin = 28.38 
+            xmax = 30.08 
+            text = "sp" 
+        intervals [72]:
+            xmin = 30.08 
+            xmax = 30.32 
+            text = "" 
+        intervals [73]:
+            xmin = 30.32 
+            xmax = 30.5 
+            text = "" 
+        intervals [74]:
+            xmin = 30.5 
+            xmax = 30.98 
+            text = "" 
+        intervals [75]:
+            xmin = 30.98 
+            xmax = 31.11 
+            text = "" 
+        intervals [76]:
+            xmin = 31.11 
+            xmax = 31.57 
+            text = "" 
+        intervals [77]:
+            xmin = 31.57 
+            xmax = 31.99 
+            text = "sp" 
+        intervals [78]:
+            xmin = 31.99 
+            xmax = 32.55 
+            text = "" 
+        intervals [79]:
+            xmin = 32.55 
+            xmax = 32.88 
+            text = "" 
+        intervals [80]:
+            xmin = 32.88 
+            xmax = 33.23 
+            text = "sp" 
+        intervals [81]:
+            xmin = 33.23 
+            xmax = 33.34 
+            text = "" 
+        intervals [82]:
+            xmin = 33.34 
+            xmax = 33.54 
+            text = "" 
+        intervals [83]:
+            xmin = 33.54 
+            xmax = 33.72 
+            text = "" 
+        intervals [84]:
+            xmin = 33.72 
+            xmax = 33.96 
+            text = "" 
+        intervals [85]:
+            xmin = 33.96 
+            xmax = 34.2 
+            text = "" 
+        intervals [86]:
+            xmin = 34.2 
+            xmax = 34.35 
+            text = "" 
+        intervals [87]:
+            xmin = 34.35 
+            xmax = 34.71 
+            text = "" 
+        intervals [88]:
+            xmin = 34.71 
+            xmax = 34.92 
+            text = "" 
+        intervals [89]:
+            xmin = 34.92 
+            xmax = 35.21 
+            text = "" 
+        intervals [90]:
+            xmin = 35.21 
+            xmax = 35.5 
+            text = "" 
+        intervals [91]:
+            xmin = 35.5 
+            xmax = 35.64 
+            text = "" 
+        intervals [92]:
+            xmin = 35.64 
+            xmax = 35.76 
+            text = "" 
+        intervals [93]:
+            xmin = 35.76 
+            xmax = 36.38 
+            text = "sp" 
+        intervals [94]:
+            xmin = 36.38 
+            xmax = 37.01 
+            text = "" 
+        intervals [95]:
+            xmin = 37.01 
+            xmax = 37.2 
+            text = "" 
+        intervals [96]:
+            xmin = 37.2 
+            xmax = 37.23 
+            text = "" 
+        intervals [97]:
+            xmin = 37.23 
+            xmax = 37.33 
+            text = "" 
+        intervals [98]:
+            xmin = 37.33 
+            xmax = 37.59 
+            text = "" 
+        intervals [99]:
+            xmin = 37.59 
+            xmax = 37.82 
+            text = "" 
+        intervals [100]:
+            xmin = 37.82 
+            xmax = 38.2 
+            text = "" 
+        intervals [101]:
+            xmin = 38.2 
+            xmax = 38.5 
+            text = "" 
+        intervals [102]:
+            xmin = 38.5 
+            xmax = 38.59 
+            text = "" 
+        intervals [103]:
+            xmin = 38.59 
+            xmax = 40.14 
+            text = "sp" 
+        intervals [104]:
+            xmin = 40.14 
+            xmax = 40.72 
+            text = "" 
+        intervals [105]:
+            xmin = 40.72 
+            xmax = 40.89 
+            text = "" 
+        intervals [106]:
+            xmin = 40.89 
+            xmax = 41.12 
+            text = "" 
+        intervals [107]:
+            xmin = 41.12 
+            xmax = 41.17 
+            text = "" 
+        intervals [108]:
+            xmin = 41.17 
+            xmax = 41.64 
+            text = "" 
+        intervals [109]:
+            xmin = 41.64 
+            xmax = 42.11 
+            text = "sp" 
+        intervals [110]:
+            xmin = 42.11 
+            xmax = 42.35 
+            text = "" 
+        intervals [111]:
+            xmin = 42.35 
+            xmax = 42.44 
+            text = "" 
+        intervals [112]:
+            xmin = 42.44 
+            xmax = 42.8 
+            text = "" 
+        intervals [113]:
+            xmin = 42.8 
+            xmax = 43.4 
+            text = "" 
+        intervals [114]:
+            xmin = 43.4 
+            xmax = 43.71 
+            text = "" 
+        intervals [115]:
+            xmin = 43.71 
+            xmax = 43.84 
+            text = "" 
+        intervals [116]:
+            xmin = 43.84 
+            xmax = 44.04 
+            text = "" 
+        intervals [117]:
+            xmin = 44.04 
+            xmax = 44.14 
+            text = "" 
+        intervals [118]:
+            xmin = 44.14 
+            xmax = 44.42 
+            text = "" 
+        intervals [119]:
+            xmin = 44.42 
+            xmax = 44.55 
+            text = "" 
+        intervals [120]:
+            xmin = 44.55 
+            xmax = 44.81 
+            text = "" 
+        intervals [121]:
+            xmin = 44.81 
+            xmax = 45.63 
+            text = "sp" 
+        intervals [122]:
+            xmin = 45.63 
+            xmax = 46.11 
+            text = "" 
+        intervals [123]:
+            xmin = 46.11 
+            xmax = 46.74 
+            text = "sp" 
+        intervals [124]:
+            xmin = 46.74 
+            xmax = 47.04 
+            text = "" 
+        intervals [125]:
+            xmin = 47.04 
+            xmax = 47.14 
+            text = "" 
+        intervals [126]:
+            xmin = 47.14 
+            xmax = 47.22 
+            text = "" 
+        intervals [127]:
+            xmin = 47.22 
+            xmax = 47.66 
+            text = "" 
+        intervals [128]:
+            xmin = 47.66 
+            xmax = 47.84 
+            text = "" 
+        intervals [129]:
+            xmin = 47.84 
+            xmax = 48.14 
+            text = "" 
+        intervals [130]:
+            xmin = 48.14 
+            xmax = 48.36 
+            text = "" 
+        intervals [131]:
+            xmin = 48.36 
+            xmax = 48.61 
+            text = "" 
+        intervals [132]:
+            xmin = 48.61 
+            xmax = 48.81 
+            text = "" 
+        intervals [133]:
+            xmin = 48.81 
+            xmax = 50.05 
+            text = "sp" 
+        intervals [134]:
+            xmin = 50.05 
+            xmax = 50.32 
+            text = "" 
+        intervals [135]:
+            xmin = 50.32 
+            xmax = 50.37 
+            text = "" 
+        intervals [136]:
+            xmin = 50.37 
+            xmax = 50.51 
+            text = "" 
+        intervals [137]:
+            xmin = 50.51 
+            xmax = 50.79 
+            text = "" 
+        intervals [138]:
+            xmin = 50.79 
+            xmax = 52.72 
+            text = "sp" 
+        intervals [139]:
+            xmin = 52.72 
+            xmax = 53.34 
+            text = "" 
+        intervals [140]:
+            xmin = 53.34 
+            xmax = 53.59 
+            text = "" 
+        intervals [141]:
+            xmin = 53.59 
+            xmax = 54.56 
+            text = "sp" 
+        intervals [142]:
+            xmin = 54.56 
+            xmax = 54.94 
+            text = "" 
+        intervals [143]:
+            xmin = 54.94 
+            xmax = 55.12 
+            text = "" 
+        intervals [144]:
+            xmin = 55.12 
+            xmax = 55.5 
+            text = "" 
+        intervals [145]:
+            xmin = 55.5 
+            xmax = 56.01 
+            text = "" 
+        intervals [146]:
+            xmin = 56.01 
+            xmax = 56.14 
+            text = "" 
+        intervals [147]:
+            xmin = 56.14 
+            xmax = 56.66 
+            text = "" 
+        intervals [148]:
+            xmin = 56.66 
+            xmax = 57.02 
+            text = "" 
+        intervals [149]:
+            xmin = 57.02 
+            xmax = 57.2 
+            text = "" 
+        intervals [150]:
+            xmin = 57.2 
+            xmax = 58.09 
+            text = "sp" 
+        intervals [151]:
+            xmin = 58.09 
+            xmax = 58.32 
+            text = "" 
+        intervals [152]:
+            xmin = 58.32 
+            xmax = 58.45 
+            text = "" 
+        intervals [153]:
+            xmin = 58.45 
+            xmax = 59.04 
+            text = "" 
+        intervals [154]:
+            xmin = 59.04 
+            xmax = 59.07 
+            text = "" 
+        intervals [155]:
+            xmin = 59.07 
+            xmax = 59.32 
+            text = "" 
+        intervals [156]:
+            xmin = 59.32 
+            xmax = 59.5 
+            text = "" 
+        intervals [157]:
+            xmin = 59.5 
+            xmax = 59.53 
+            text = "" 
+        intervals [158]:
+            xmin = 59.53 
+            xmax = 59.83 
+            text = "" 
+        intervals [159]:
+            xmin = 59.83 
+            xmax = 60.23 
+            text = "" 
+        intervals [160]:
+            xmin = 60.23 
+            xmax = 60.57 
+            text = "sp" 
+        intervals [161]:
+            xmin = 60.57 
+            xmax = 60.81 
+            text = "" 
+        intervals [162]:
+            xmin = 60.81 
+            xmax = 61.13 
+            text = "" 
+        intervals [163]:
+            xmin = 61.13 
+            xmax = 61.26 
+            text = "" 
+        intervals [164]:
+            xmin = 61.26 
+            xmax = 61.55 
+            text = "" 
+        intervals [165]:
+            xmin = 61.55 
+            xmax = 61.88 
+            text = "" 
+        intervals [166]:
+            xmin = 61.88 
+            xmax = 61.98 
+            text = "" 
+        intervals [167]:
+            xmin = 61.98 
+            xmax = 65.772 
+            text = "sp" 

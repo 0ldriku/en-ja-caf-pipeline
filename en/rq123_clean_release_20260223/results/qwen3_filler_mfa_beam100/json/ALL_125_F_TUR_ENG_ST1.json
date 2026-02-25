@@ -1,0 +1,956 @@
+{
+  "duration": 54.473015873015875,
+  "transcript": "One day a fluffy bird found a hat on the grass, and he grabbed the hat and put it on his head. The fluffy bird was walking with the hat on his head. Then he saw the not so fluffy bird. The not so fluffy bird was pointing the hat on the fluffy bird's head and making fun of him. So the fluffy bird threw away the hat, and thus leaving the hat for the not so fluffy bird. The not so fluffy bird took the hat and was playing with it. So the fluffy bird saw that actually the not so fluffy bird was wanting the hat. He came back and took the hat away from the hands of not so fluffy bird and put it on his head again. So at last there was a little bird on a fluffy bird's head and the hat was on the ground so nobody could take the hat.",
+  "n_words": 157,
+  "words": [
+    {
+      "word": "One",
+      "start": 0.19,
+      "end": 0.46,
+      "source": "mfa"
+    },
+    {
+      "word": "day",
+      "start": 0.46,
+      "end": 0.69,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 0.69,
+      "end": 0.77,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 0.77,
+      "end": 1.26,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 1.26,
+      "end": 1.58,
+      "source": "mfa"
+    },
+    {
+      "word": "found",
+      "start": 1.69,
+      "end": 2.03,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 2.03,
+      "end": 2.09,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 2.09,
+      "end": 2.41,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 2.41,
+      "end": 2.54,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 2.54,
+      "end": 2.61,
+      "source": "mfa"
+    },
+    {
+      "word": "grass",
+      "start": 2.61,
+      "end": 3.11,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 3.67,
+      "end": 3.85,
+      "source": "mfa"
+    },
+    {
+      "word": "he",
+      "start": 3.85,
+      "end": 3.95,
+      "source": "mfa"
+    },
+    {
+      "word": "grabbed",
+      "start": 3.95,
+      "end": 4.28,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 4.28,
+      "end": 4.38,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 4.38,
+      "end": 4.66,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 4.66,
+      "end": 4.95,
+      "source": "mfa"
+    },
+    {
+      "word": "put",
+      "start": 4.95,
+      "end": 5.14,
+      "source": "mfa"
+    },
+    {
+      "word": "it",
+      "start": 5.14,
+      "end": 5.29,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 5.32,
+      "end": 5.61,
+      "source": "mfa"
+    },
+    {
+      "word": "his",
+      "start": 5.79,
+      "end": 5.98,
+      "source": "mfa"
+    },
+    {
+      "word": "head",
+      "start": 5.98,
+      "end": 6.28,
+      "source": "mfa"
+    },
+    {
+      "word": "The",
+      "start": 6.92,
+      "end": 7.0,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 7.0,
+      "end": 7.48,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 7.48,
+      "end": 7.77,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 7.77,
+      "end": 8.09,
+      "source": "mfa"
+    },
+    {
+      "word": "walking",
+      "start": 8.29,
+      "end": 8.75,
+      "source": "mfa"
+    },
+    {
+      "word": "with",
+      "start": 8.75,
+      "end": 8.95,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 8.95,
+      "end": 9.05,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 9.05,
+      "end": 9.32,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 9.32,
+      "end": 9.46,
+      "source": "mfa"
+    },
+    {
+      "word": "his",
+      "start": 9.46,
+      "end": 9.62,
+      "source": "mfa"
+    },
+    {
+      "word": "head",
+      "start": 9.62,
+      "end": 9.89,
+      "source": "mfa"
+    },
+    {
+      "word": "Then",
+      "start": 10.33,
+      "end": 10.6,
+      "source": "mfa"
+    },
+    {
+      "word": "he",
+      "start": 10.6,
+      "end": 10.72,
+      "source": "mfa"
+    },
+    {
+      "word": "saw",
+      "start": 10.72,
+      "end": 10.97,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 10.97,
+      "end": 11.27,
+      "source": "mfa"
+    },
+    {
+      "word": "not",
+      "start": 11.32,
+      "end": 11.53,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 11.53,
+      "end": 11.72,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 11.72,
+      "end": 12.12,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 12.12,
+      "end": 12.4,
+      "source": "mfa"
+    },
+    {
+      "word": "The",
+      "start": 13.86,
+      "end": 13.99,
+      "source": "mfa"
+    },
+    {
+      "word": "not",
+      "start": 13.99,
+      "end": 14.2,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 14.2,
+      "end": 14.4,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 14.4,
+      "end": 14.81,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 14.81,
+      "end": 15.13,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 15.13,
+      "end": 15.38,
+      "source": "mfa"
+    },
+    {
+      "word": "pointing",
+      "start": 15.38,
+      "end": 16.01,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 16.13,
+      "end": 16.28,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 16.28,
+      "end": 16.59,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 16.59,
+      "end": 16.72,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 16.72,
+      "end": 16.8,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 16.8,
+      "end": 17.16,
+      "source": "mfa"
+    },
+    {
+      "word": "bird's",
+      "start": 17.16,
+      "end": 17.49,
+      "source": "mfa"
+    },
+    {
+      "word": "head",
+      "start": 17.49,
+      "end": 17.71,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 17.71,
+      "end": 17.87,
+      "source": "mfa"
+    },
+    {
+      "word": "making",
+      "start": 17.87,
+      "end": 18.16,
+      "source": "mfa"
+    },
+    {
+      "word": "fun",
+      "start": 18.16,
+      "end": 18.41,
+      "source": "mfa"
+    },
+    {
+      "word": "of",
+      "start": 18.41,
+      "end": 18.51,
+      "source": "mfa"
+    },
+    {
+      "word": "him",
+      "start": 18.51,
+      "end": 18.78,
+      "source": "mfa"
+    },
+    {
+      "word": "So",
+      "start": 19.36,
+      "end": 19.61,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 19.61,
+      "end": 19.73,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 19.73,
+      "end": 20.11,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 20.11,
+      "end": 20.44,
+      "source": "mfa"
+    },
+    {
+      "word": "threw",
+      "start": 20.44,
+      "end": 20.73,
+      "source": "mfa"
+    },
+    {
+      "word": "away",
+      "start": 20.73,
+      "end": 20.94,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 20.94,
+      "end": 21.06,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 21.06,
+      "end": 21.38,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 22.09,
+      "end": 22.49,
+      "source": "mfa"
+    },
+    {
+      "word": "thus",
+      "start": 22.56,
+      "end": 22.94,
+      "source": "mfa"
+    },
+    {
+      "word": "leaving",
+      "start": 22.94,
+      "end": 23.25,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 23.25,
+      "end": 23.36,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 23.36,
+      "end": 23.61,
+      "source": "mfa"
+    },
+    {
+      "word": "for",
+      "start": 23.61,
+      "end": 23.81,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 23.81,
+      "end": 23.89,
+      "source": "mfa"
+    },
+    {
+      "word": "not",
+      "start": 23.89,
+      "end": 24.08,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 24.08,
+      "end": 24.25,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 24.25,
+      "end": 24.61,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 24.61,
+      "end": 24.87,
+      "source": "mfa"
+    },
+    {
+      "word": "The",
+      "start": 25.66,
+      "end": 25.74,
+      "source": "mfa"
+    },
+    {
+      "word": "not",
+      "start": 25.74,
+      "end": 25.94,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 25.94,
+      "end": 26.12,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 26.12,
+      "end": 26.49,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 26.49,
+      "end": 26.77,
+      "source": "mfa"
+    },
+    {
+      "word": "took",
+      "start": 27.27,
+      "end": 27.48,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 27.48,
+      "end": 27.57,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 27.57,
+      "end": 27.98,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 28.19,
+      "end": 28.55,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 28.69,
+      "end": 28.92,
+      "source": "mfa"
+    },
+    {
+      "word": "playing",
+      "start": 28.92,
+      "end": 29.35,
+      "source": "mfa"
+    },
+    {
+      "word": "with",
+      "start": 29.35,
+      "end": 29.55,
+      "source": "mfa"
+    },
+    {
+      "word": "it",
+      "start": 29.55,
+      "end": 29.64,
+      "source": "mfa"
+    },
+    {
+      "word": "So",
+      "start": 30.5,
+      "end": 30.66,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 30.66,
+      "end": 30.77,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 30.77,
+      "end": 31.25,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 31.25,
+      "end": 31.54,
+      "source": "mfa"
+    },
+    {
+      "word": "saw",
+      "start": 31.71,
+      "end": 32.08,
+      "source": "mfa"
+    },
+    {
+      "word": "that",
+      "start": 32.08,
+      "end": 32.32,
+      "source": "mfa"
+    },
+    {
+      "word": "actually",
+      "start": 32.47,
+      "end": 32.93,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 32.93,
+      "end": 33.2,
+      "source": "mfa"
+    },
+    {
+      "word": "not",
+      "start": 33.2,
+      "end": 33.39,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 33.39,
+      "end": 33.57,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 33.57,
+      "end": 33.95,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 33.95,
+      "end": 34.27,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 34.27,
+      "end": 34.55,
+      "source": "mfa"
+    },
+    {
+      "word": "wanting",
+      "start": 34.55,
+      "end": 34.95,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 34.95,
+      "end": 35.05,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 35.05,
+      "end": 35.48,
+      "source": "mfa"
+    },
+    {
+      "word": "He",
+      "start": 36.13,
+      "end": 36.39,
+      "source": "mfa"
+    },
+    {
+      "word": "came",
+      "start": 37.72,
+      "end": 37.98,
+      "source": "mfa"
+    },
+    {
+      "word": "back",
+      "start": 37.98,
+      "end": 38.28,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 38.32,
+      "end": 38.67,
+      "source": "mfa"
+    },
+    {
+      "word": "took",
+      "start": 38.8,
+      "end": 38.94,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 39.05,
+      "end": 39.22,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 39.22,
+      "end": 39.44,
+      "source": "mfa"
+    },
+    {
+      "word": "away",
+      "start": 39.48,
+      "end": 39.79,
+      "source": "mfa"
+    },
+    {
+      "word": "from",
+      "start": 39.79,
+      "end": 40.1,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 40.1,
+      "end": 40.18,
+      "source": "mfa"
+    },
+    {
+      "word": "hands",
+      "start": 40.18,
+      "end": 40.46,
+      "source": "mfa"
+    },
+    {
+      "word": "of",
+      "start": 40.46,
+      "end": 40.64,
+      "source": "mfa"
+    },
+    {
+      "word": "not",
+      "start": 40.64,
+      "end": 40.81,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 40.81,
+      "end": 40.97,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 40.97,
+      "end": 41.36,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 41.36,
+      "end": 41.75,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 41.85,
+      "end": 42.23,
+      "source": "mfa"
+    },
+    {
+      "word": "put",
+      "start": 42.23,
+      "end": 42.42,
+      "source": "mfa"
+    },
+    {
+      "word": "it",
+      "start": 42.42,
+      "end": 42.52,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 42.65,
+      "end": 42.79,
+      "source": "mfa"
+    },
+    {
+      "word": "his",
+      "start": 42.79,
+      "end": 42.94,
+      "source": "mfa"
+    },
+    {
+      "word": "head",
+      "start": 42.94,
+      "end": 43.13,
+      "source": "mfa"
+    },
+    {
+      "word": "again",
+      "start": 43.13,
+      "end": 43.47,
+      "source": "mfa"
+    },
+    {
+      "word": "So",
+      "start": 44.18,
+      "end": 44.59,
+      "source": "mfa"
+    },
+    {
+      "word": "at",
+      "start": 44.78,
+      "end": 45.3,
+      "source": "mfa"
+    },
+    {
+      "word": "last",
+      "start": 45.34,
+      "end": 45.82,
+      "source": "mfa"
+    },
+    {
+      "word": "there",
+      "start": 46.4,
+      "end": 46.6,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 46.6,
+      "end": 46.87,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 46.9,
+      "end": 47.05,
+      "source": "mfa"
+    },
+    {
+      "word": "little",
+      "start": 47.05,
+      "end": 47.38,
+      "source": "mfa"
+    },
+    {
+      "word": "bird",
+      "start": 47.38,
+      "end": 47.68,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 47.68,
+      "end": 47.94,
+      "source": "mfa"
+    },
+    {
+      "word": "a",
+      "start": 48.19,
+      "end": 48.43,
+      "source": "mfa"
+    },
+    {
+      "word": "fluffy",
+      "start": 48.43,
+      "end": 48.89,
+      "source": "mfa"
+    },
+    {
+      "word": "bird's",
+      "start": 48.89,
+      "end": 49.4,
+      "source": "mfa"
+    },
+    {
+      "word": "head",
+      "start": 49.92,
+      "end": 50.27,
+      "source": "mfa"
+    },
+    {
+      "word": "and",
+      "start": 50.3,
+      "end": 50.78,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 50.78,
+      "end": 50.94,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 50.94,
+      "end": 51.22,
+      "source": "mfa"
+    },
+    {
+      "word": "was",
+      "start": 51.25,
+      "end": 51.42,
+      "source": "mfa"
+    },
+    {
+      "word": "on",
+      "start": 51.42,
+      "end": 51.57,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 51.57,
+      "end": 51.65,
+      "source": "mfa"
+    },
+    {
+      "word": "ground",
+      "start": 51.65,
+      "end": 52.07,
+      "source": "mfa"
+    },
+    {
+      "word": "so",
+      "start": 52.07,
+      "end": 52.29,
+      "source": "mfa"
+    },
+    {
+      "word": "nobody",
+      "start": 52.29,
+      "end": 52.68,
+      "source": "mfa"
+    },
+    {
+      "word": "could",
+      "start": 52.68,
+      "end": 52.89,
+      "source": "mfa"
+    },
+    {
+      "word": "take",
+      "start": 53.37,
+      "end": 53.63,
+      "source": "mfa"
+    },
+    {
+      "word": "the",
+      "start": 53.63,
+      "end": 53.72,
+      "source": "mfa"
+    },
+    {
+      "word": "hat",
+      "start": 53.72,
+      "end": 54.02,
+      "source": "mfa"
+    }
+  ],
+  "filler_augmentation": {
+    "mfa_word_count": 175,
+    "filler_injected": 18,
+    "filler_consumed": 18,
+    "fallback_count": 0,
+    "skipped_mfa_tokens": 0
+  }
+}
