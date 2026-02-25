@@ -9,7 +9,7 @@
 
 ## Environment
 - Clause/CAF/correlation runtime: `ja/.venv_electra310/Scripts/python.exe`
-- Upstream ASR runtime: `C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe`
+- Upstream ASR runtime: `envs/venv/Scripts/python.exe` (original: `C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe`)
 - Upstream MFA runtime: `C:\Users\riku\miniconda3\envs\mfa\python.exe`
 - Full dependency notes: `ENVIRONMENT.md`
 
@@ -67,7 +67,7 @@ ja/.venv_electra310/Scripts/python.exe ja/rq3_v16_clean_release_20260223/scripts
 
 7. Manual CAF and correlation
 - Manual CAF script: `ja/rq3_v16_clean_release_20260223/scripts/caf_calculator_ja.py`
-- Probe/correlation script: `ja/rq3_v16_clean_release_20260223/scripts/run_rq3_vad_classifier_probe_ja.py`
+- Correlation script: `ja/rq3_v16_clean_release_20260223/scripts/run_rq3_vad_classifier_correlation_ja.py`
 - Source summary CSV used by report:
   - `ja/rq3_v16_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary.csv`
 - Final taskwise exports:

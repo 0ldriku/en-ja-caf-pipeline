@@ -127,7 +127,7 @@ Six files achieved perfect accuracy (1.000). The lowest-accuracy file (ALL_102_M
 | 1. Clause segmentation | `scripts/textgrid_caf_segmenter_v3.py` | clause TextGrids |
 | 2. Gap-only filler scoring | `en/postprocess_vad_filler_classifier_en.py --gap-only --threshold 0.50` | candidate CSVs + updated review tiers |
 | 3. CAF computation | `scripts/caf_calculator_vad_classifier.py` | `auto_caf_gold40_gaponly_neural_t050.csv` |
-| 4. Correlation analysis | `scripts/run_rq3_vad_classifier_probe_en.py` | exported as `analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_all_subsets.csv` |
+| 4. Correlation analysis | `scripts/run_rq3_vad_classifier_correlation_en.py` | exported as `analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_all_subsets.csv` |
 
 - Cohort: **39 quality-filtered gold files** (`ST1=19`, `ST2=20`); excluded `ALL_139_M_PBR_ENG_ST1` (manual preamble mismatch)
 - Track reported below: `vad_classifier_gold40` with quality exclusion (`N=39`).
@@ -234,5 +234,5 @@ python analysis/rq1/run_rq1_gold.py
 python analysis/rq2/run_rq2_gold.py
 python ../postprocess_vad_filler_classifier_en.py --help
 python scripts/caf_calculator_vad_classifier.py --help
-python scripts/run_rq3_vad_classifier_probe_en.py --help
+python scripts/run_rq3_vad_classifier_correlation_en.py --help
 ```

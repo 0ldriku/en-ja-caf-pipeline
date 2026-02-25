@@ -25,7 +25,7 @@ This folder contains the English release artifacts used in the final fresh-run r
 - `scripts/textgrid_caf_segmenter_v3.py`
 - `scripts/caf_calculator.py`
 - `scripts/caf_calculator_vad_classifier.py`
-- `scripts/run_rq3_vad_classifier_probe_en.py`
+- `scripts/run_rq3_vad_classifier_correlation_en.py`
 - `../../postprocess_vad_filler_classifier_en.py`
 
 ## Reports

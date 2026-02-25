@@ -14,8 +14,8 @@ from pathlib import Path
 
 # ── configure ──────────────────────────────────────────────────────────────────
 RELEASE    = Path(__file__).parent.resolve()
-PYTHON_ASR = r"C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe"   # filler scoring
-PYTHON_JA  = str(RELEASE.parent / r"ja\.venv_electra310\Scripts\python.exe")  # clause/CAF
+PYTHON_ASR = str(RELEASE / "envs/venv/Scripts/python.exe")             # filler scoring
+PYTHON_JA  = str(RELEASE / "envs/venv_electra310/Scripts/python.exe") # clause/CAF
 JA         = "ja/rq3_v16_clean_release_20260223"
 OUT        = "validation_run/ja"
 # ───────────────────────────────────────────────────────────────────────────────
@@ -76,14 +76,10 @@ run([PYTHON_JA, f"{JA}/scripts/caf_calculator_ja.py",
      f"{JA}/results/manual_clauses_gold_v2",
      "--output", f"{OUT}/manual_caf.csv"])
 
-# Step 7b — Correlation / probe summary
-# --baseline-auto-csv and --vad-auto-csv: use the pre-existing baseline auto CAF
-run([PYTHON_JA, f"{JA}/scripts/run_rq3_vad_classifier_probe_ja.py",
-     "--baseline-auto-csv", f"{JA}/auto_caf_results.csv",
-     "--vad-auto-csv",      f"{JA}/auto_caf_results.csv",
-     "--clf-auto-csv",      f"{OUT}/auto_caf.csv",
-     "--manual-csv",        f"{OUT}/manual_caf.csv",
-     "--out-summary",       f"{OUT}/probe/probe_summary.csv",
-     "--out-mcpd-deltas",   f"{OUT}/probe/probe_mcpd_file_deltas.csv"])
+# Step 7b — Correlation summary
+run([PYTHON_JA, f"{JA}/scripts/run_rq3_vad_classifier_correlation_ja.py",
+     "--clf-auto-csv", f"{OUT}/auto_caf.csv",
+     "--manual-csv",   f"{OUT}/manual_caf.csv",
+     "--out-summary",  f"{OUT}/correlation/correlation_summary.csv"])
 
 print(f"\nDone. Outputs in: {RELEASE / OUT}")

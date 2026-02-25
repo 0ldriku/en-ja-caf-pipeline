@@ -42,9 +42,9 @@ This folder packages the current EN and JA production pipelines plus shared mode
    Script: `en/rq123_clean_release_20260223/scripts/caf_calculator.py`  
    Output: manual CAF CSV for correlation
 
-7. Correlation/probe summary  
-   Script: `en/rq123_clean_release_20260223/scripts/run_rq3_vad_classifier_probe_en.py`  
-   Output (source): `.../analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary_quality39.csv`  
+7. Correlation summary (VAD+classifier vs manual)
+   Script: `en/rq123_clean_release_20260223/scripts/run_rq3_vad_classifier_correlation_en.py`
+   Output (source): `.../analysis/rq3_gaponly_neural_t050_freshrun_20260224/correlation/rq3_vad_classifier_correlation_summary.csv`
    Final taskwise export: `analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_{overall,st1,st2}.csv`
 
 ### JA pipeline
@@ -73,11 +73,11 @@ This folder packages the current EN and JA production pipelines plus shared mode
    Script: `ja/rq3_v16_clean_release_20260223/scripts/caf_calculator_ja_gap_classifier.py`  
    Output: `.../analysis/rq3_gaponly_neural_t050_freshrun_20260224/auto_caf_gaponly_neural_t050.csv`
 
-7. Manual CAF + correlation  
-   Scripts:  
-   - `ja/rq3_v16_clean_release_20260223/scripts/caf_calculator_ja.py`  
-   - `ja/rq3_v16_clean_release_20260223/scripts/run_rq3_vad_classifier_probe_ja.py`  
-   Output (source): `ja/rq3_v16_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary.csv`  
+7. Manual CAF + correlation (VAD+classifier vs manual)
+   Scripts:
+   - `ja/rq3_v16_clean_release_20260223/scripts/caf_calculator_ja.py`
+   - `ja/rq3_v16_clean_release_20260223/scripts/run_rq3_vad_classifier_correlation_ja.py`
+   Output (source): `ja/rq3_v16_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/correlation/correlation_summary.csv`
    Final taskwise export: `analysis_final_taskwise_correlations_20260224/ja/ja_correlation_final_vad_classifier_{overall,st1,st2}.csv`
 
 ## Important note about Step 2 (manual-span blanking)
@@ -85,6 +85,24 @@ This folder packages the current EN and JA production pipelines plus shared mode
 - EN: not used.
 - JA: used only because this JA manual dataset has coverage-span mismatch between manual annotations and ASR TextGrid timeline.
 - General/real deployment: this is normally **not required**. Use it only when manual and ASR timeline coverage differ.
+
+## Environment setup
+
+Two virtual envs are required. Create them inside this folder before running the validate scripts:
+
+```powershell
+# 1) venv — used by all EN steps + JA filler scoring (step 5)
+python -m venv envs/venv
+envs/venv/Scripts/pip install torch==2.5.1+cu121 torchaudio==2.5.1+cu121 --extra-index-url https://download.pytorch.org/whl/cu121
+envs/venv/Scripts/pip install -r requirements_venv.txt
+
+# 2) venv_electra310 — used by JA clause segmentation, CAF, and correlation (steps 3, 6, 7)
+python -m venv envs/venv_electra310
+envs/venv_electra310/Scripts/pip install torch==2.10.0 --extra-index-url https://download.pytorch.org/whl/cpu
+envs/venv_electra310/Scripts/pip install -r requirements_venv_electra310.txt
+```
+
+The `envs/` folder is gitignored and must be created locally on each machine.
 
 ## Run logs and reproducibility
 

@@ -6,8 +6,9 @@ This file records the runtime environments used for the Japanese clean release.
 
 ### 1.1 ASR environment
 
-- Env name: `qwen3-asr` (conda)
-- Interpreter: `C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe`
+- Env name: `qwen3-asr` (conda, original run)
+- Interpreter (original): `C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe`
+- Portable venv: `envs/venv/` (see `requirements_venv.txt`)
 - Python: `3.12.12`
 
 Core packages (observed on this machine):

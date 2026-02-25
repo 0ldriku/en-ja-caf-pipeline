@@ -24,7 +24,7 @@ This folder contains the Japanese RQ3 release artifacts used in the final fresh-
 - `scripts/ja_clause_segmenter_v16.py`
 - `scripts/caf_calculator_ja.py`
 - `scripts/caf_calculator_ja_gap_classifier.py`
-- `scripts/run_rq3_vad_classifier_probe_ja.py`
+- `scripts/run_rq3_vad_classifier_correlation_ja.py`
 - `../../en/postprocess_vad_filler_classifier_en.py`
 
 ## Reports

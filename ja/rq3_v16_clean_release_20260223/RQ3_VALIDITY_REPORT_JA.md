@@ -17,7 +17,7 @@
 | 1. Clause segmentation | `ja_clause_segmenter_v16.py` | clause TextGrids |
 | 2. Gap-only filler scoring | `en/postprocess_vad_filler_classifier_en.py --gap-only --threshold 0.50` | candidate CSVs |
 | 3. CAF computation | `caf_calculator_ja_gap_classifier.py` | `auto_caf_gaponly_neural_t050.csv` |
-| 4. Correlation analysis | `run_rq3_vad_classifier_probe_ja.py` | exported as `analysis_final_taskwise_correlations_20260224/ja/ja_correlation_final_vad_classifier_all_subsets.csv` |
+| 4. Correlation analysis | `run_rq3_vad_classifier_correlation_ja.py` | exported as `analysis_final_taskwise_correlations_20260224/ja/ja_correlation_final_vad_classifier_all_subsets.csv` |
 
 - Track reported below: `vad_classifier`
 

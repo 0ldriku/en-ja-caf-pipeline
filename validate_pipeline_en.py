@@ -14,7 +14,7 @@ from pathlib import Path
 
 # ── configure ──────────────────────────────────────────────────────────────────
 RELEASE = Path(__file__).parent.resolve()
-PYTHON  = r"C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe"
+PYTHON  = str(RELEASE / "envs/venv/Scripts/python.exe")
 EN      = "en/rq123_clean_release_20260223"
 OUT     = "validation_run/en"
 # ───────────────────────────────────────────────────────────────────────────────
@@ -71,14 +71,12 @@ run([PYTHON, f"{EN}/scripts/caf_calculator.py",
      f"{EN}/results/manual_clauses_gold",
      "--output", f"{OUT}/manual_caf.csv"])
 
-# Step 7 — Correlation / probe summary
-# --auto-vad-csv: no separate VAD track; pass baseline as placeholder
+# Step 7 — Correlation summary
 # --exclude: quality-filter (manual preamble mismatch)
-run([PYTHON, f"{EN}/scripts/run_rq3_vad_classifier_probe_en.py",
-     "--auto-vad-csv", f"{EN}/results/qwen3_filler_mfa_beam100/caf_results_beam100.csv",
+run([PYTHON, f"{EN}/scripts/run_rq3_vad_classifier_correlation_en.py",
      "--auto-clf-csv", f"{OUT}/auto_caf.csv",
      "--manual-csv",   f"{OUT}/manual_caf.csv",
      "--exclude",      "ALL_139_M_PBR_ENG_ST1",
-     "--out-dir",      f"{OUT}/probe"])
+     "--out-dir",      f"{OUT}/correlation"])
 
 print(f"\nDone. Outputs in: {RELEASE / OUT}")

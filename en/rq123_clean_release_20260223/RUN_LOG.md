@@ -8,7 +8,7 @@
 - Legacy/test folders were removed; report inputs now point only to fresh-run outputs.
 
 ## Environment
-- ASR and analysis runtime: `C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe`
+- ASR and analysis runtime: `envs/venv/Scripts/python.exe` (original: `C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe`)
 - MFA runtime: `C:\Users\riku\miniconda3\envs\mfa\python.exe`
 - Full dependency notes: `ENVIRONMENT.md`
 

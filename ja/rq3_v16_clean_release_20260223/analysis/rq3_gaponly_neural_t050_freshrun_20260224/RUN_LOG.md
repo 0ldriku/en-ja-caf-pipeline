@@ -22,12 +22,10 @@ python ja/rq3_v16_clean_release_20260223/scripts/caf_calculator_ja_gap_classifie
   --file-list-key all_selected `
   --output ja/rq3_v16_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/auto_caf_gaponly_neural_t050.csv
 
-python ja/rq3_v16_clean_release_20260223/scripts/run_rq3_vad_classifier_probe_ja.py `
-  --baseline-auto-csv ja/rq3_v16_clean_release_20260223/auto_caf_results.csv `
+python ja/rq3_v16_clean_release_20260223/scripts/run_rq3_vad_classifier_correlation_ja.py `
   --clf-auto-csv ja/rq3_v16_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/auto_caf_gaponly_neural_t050.csv `
   --manual-csv ja/rq3_v16_clean_release_20260223/manual_caf_results.csv `
-  --out-summary ja/rq3_v16_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary.csv `
-  --out-mcpd-deltas ja/rq3_v16_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_mcpd_file_deltas.csv
+  --out-summary ja/rq3_v16_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary.csv
 ```
 
 ## Final reporting basis
