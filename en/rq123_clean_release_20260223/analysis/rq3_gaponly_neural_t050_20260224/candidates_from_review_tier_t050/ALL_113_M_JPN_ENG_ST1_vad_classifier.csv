@@ -1,3 +1,0 @@
-file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
-ALL_113_M_JPN_ENG_ST1,0,0,64.7,65.34,0.64,1.0,1,0.64,64.7,65.34,,1,manual_review
-ALL_113_M_JPN_ENG_ST1,1,0,83.67,84.17,0.5,1.0,1,0.5,83.67,84.17,,1,manual_review

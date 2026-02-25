@@ -1,75 +1,40 @@
-﻿# EN RQ1-RQ3 Clean Release
+﻿# EN RQ1-RQ3 Clean Release (Fresh-run only)
 
-This folder is a clean package of the English analysis pipeline assets used for RQ1-RQ3.
+This folder contains the English release artifacts used in the final fresh-run reporting.
 
-## Folder
+## Scope
 
-- `en/rq123_clean_release_20260223`
+- RQ1/RQ2 gold evaluation outputs
+- RQ3 final fresh-run outputs (quality-filtered Gold-39)
+- Scripts used for ASR, clause segmentation, CAF, and correlation
 
-## Included Scripts
+## Canonical RQ3 outputs
+
+- Fresh-run folder:
+  - `analysis/rq3_gaponly_neural_t050_freshrun_20260224/`
+- Final source summary (quality-filtered):
+  - `analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary_quality39.csv`
+- Final taskwise exports:
+  - `../../analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_overall.csv`
+  - `../../analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_st1.csv`
+  - `../../analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_st2.csv`
+
+## Scripts used
 
 - `asr_qwen3_mfa_en.py`
 - `scripts/textgrid_caf_segmenter_v3.py`
 - `scripts/caf_calculator.py`
-- `../../shared/filler_classifier/candidate_review_textgrids.py` (candidate CSV <-> review TextGrid bridge for manual revision)
-- `../../shared/filler_classifier/train_podcastfillers_neural_classifier.py` (neural filler model training script)
-- `analysis/rq1/run_rq1_gold.py`
-- `analysis/rq2/run_rq2_gold.py`
-- `analysis/rq3/run_rq3_validity.py`
+- `scripts/caf_calculator_vad_classifier.py`
+- `scripts/run_rq3_vad_classifier_probe_en.py`
+- `../../postprocess_vad_filler_classifier_en.py`
 
-## Included Inputs
+## Reports
 
-- `results/qwen3_filler_mfa_beam100/textgrids_clean/` (190)
-- `results/qwen3_filler_mfa_beam100/clauses/` (190 TextGrids + clause log)
-- `results/qwen3_filler_mfa_beam100/caf_results_beam100.csv`
-- `results/manual_260212/clauses/` (190 TextGrids + clause log)
-- `results/manual_260212/caf_results_manual.csv`
-- `annotation/selected_files.json`
-- `annotation/transcripts/`
-- `annotation/boundary_agreement_260213/final_correct_segments/`
-- `annotation/llm_output/production_30/`
-
-## Included Outputs
-
-- `analysis/rq1/rq1_clause_boundary_gold.csv`
-- `analysis/rq2/rq2_pause_location_gold.csv`
-- `analysis/rq3/rq3_concurrent_validity.csv`
-- `analysis/rq3/rq3_file_level.csv`
-
-## Included Documentation
-
-- `docs/PIPELINE_OVERVIEW.md`
-- `docs/ANALYSIS_README.md`
 - `RQ1_RQ2_REPORT.md`
+- `RUN_LOG.md`
 - `ENVIRONMENT.md`
-- `results/qwen3_filler_mfa_beam100/RUN_LOG.md`
-- `results/manual_260212/RUN_LOG.md`
-
-## Environment
-
-- Exact conda/venv + dependency notes are in:
-  - `en/rq123_clean_release_20260223/ENVIRONMENT.md`
-
-## Re-run (from repo root)
-
-Use UTF-8 stdout on Windows to avoid console encoding errors from Greek/special symbols in script prints.
-
-```powershell
-$env:PYTHONIOENCODING='utf-8'
-& "C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe" "en/rq123_clean_release_20260223/analysis/rq1/run_rq1_gold.py"
-& "C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe" "en/rq123_clean_release_20260223/analysis/rq2/run_rq2_gold.py"
-& "C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe" "en/rq123_clean_release_20260223/analysis/rq3/run_rq3_validity.py"
-```
 
 ## Notes
 
-- RQ scripts resolve paths relative to this release root, so they run without editing paths.
-- The disfluency model is not duplicated in this folder; scripts auto-discover:
-  - `shared/disfluency_detector/model_v2/final` (preferred canonical path)
-  - `en/disfluency_test/l2_disfluency_detector/model_v2/final` (legacy fallback)
-- Filler model used by EN/JA gap-only fresh reruns: `../../shared/filler_classifier/model_podcastfillers_neural_v1_full/model.pt`.
-- Neural model training/reference details: `../../shared/filler_classifier/README.md`.
-- Gap/classifier candidate manual-review workflow:
-  - `analysis/rq3_gaponly_neural_t050_20260224/review_textgrids/`
-  - `analysis/rq3_gaponly_neural_t050_20260224/candidates_from_review_tier_t050/`
-  - `analysis/rq3_gaponly_neural_t050_20260224/REVIEW_WORKFLOW.md`
+- EN RQ3 final cohort is quality-filtered Gold-39 (`ST1=19`, `ST2=20`), excluding `ALL_139_M_PBR_ENG_ST1`.
+- Legacy test/probe folders were removed from this release bundle.

@@ -1,3 +1,0 @@
-file_id,gap_index,island_index,gap_start,gap_end,gap_duration,vad_occupancy,n_voiced_islands,island_duration,candidate_start,candidate_end,prob_filler,pred_filler,skip_reason
-IID22-ST2,0,0,68.75,69.39,0.64,1.0,1,0.64,68.75,69.39,,1,manual_review
-IID22-ST2,1,0,128.14,128.93,0.79,1.0,1,0.79,128.14,128.93,,1,manual_review

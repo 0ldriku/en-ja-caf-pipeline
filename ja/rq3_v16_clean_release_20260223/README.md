@@ -1,69 +1,39 @@
-# JA RQ3 Clean Release (v16)
+﻿# JA RQ3 Clean Release (Fresh-run only)
 
-This folder is a clean package of the files used for the Japanese RQ3 validity run.
+This folder contains the Japanese RQ3 release artifacts used in the final fresh-run reporting.
 
-## Contents
+## Scope
 
-- `scripts/`
-  - `ja_clause_segmenter_v16.py` (release copy includes robust auto-discovery of disfluency model path)
-  - `caf_calculator_ja.py`
-  - `correlation_from_caf_ja.py`
-  - `apply_gold_v2_fixes.py`
-  - `../../shared/filler_classifier/candidate_review_textgrids.py` (candidate CSV <-> review TextGrid bridge for manual revision)
-  - `../../shared/filler_classifier/train_podcastfillers_neural_classifier.py` (neural filler model training script)
-  - `asr/`
-    - `asr_qwen3_mfa_ja_v2_spanfix_test_b.py` (ASR+MFA script used for `spanfix_b` source TextGrids)
-    - `asr_qwen3_mfa_ja_v2.py` (baseline ASR+MFA script)
-    - `make_beginning_removed_by_manual.py` (post-process to blank ASR leading labels using manual onset)
+- Final manual gold reference (`manual_clauses_gold_v2`)
+- Final fresh-run RQ3 outputs (40 files: ST1=20, ST2=20)
+- Scripts used for clause segmentation, CAF, and correlation
 
-- `inputs/asr_word_textgrids/`
-  - ASR word-level TextGrids used as segmentation input.
+## Canonical RQ3 outputs
 
-- `inputs/manual_word_textgrids/`
-  - Manual word-level TextGrids used as segmentation input.
+- Fresh-run folder:
+  - `analysis/rq3_gaponly_neural_t050_freshrun_20260224/`
+- Final source summary:
+  - `analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary.csv`
+- Final taskwise exports:
+  - `../../analysis_final_taskwise_correlations_20260224/ja/ja_correlation_final_vad_classifier_overall.csv`
+  - `../../analysis_final_taskwise_correlations_20260224/ja/ja_correlation_final_vad_classifier_st1.csv`
+  - `../../analysis_final_taskwise_correlations_20260224/ja/ja_correlation_final_vad_classifier_st2.csv`
 
-- `auto_clauses/`
-  - v16 clause-segmented ASR TextGrids.
-- `manual_clauses/`
-  - Manual clause TextGrids produced by v16.
-- `manual_clauses_gold_v2/`
-  - Final manually corrected gold clauses used as reference.
-  - Includes `clause_log.txt` when available.
-- Note:
-  - `manual_clauses_gold_v1` was a transient pre-fix backup in the original run and is intentionally omitted in this cleaned release.
-- `GOLD_V2_FIX_REPORT.md`
-  - Manual gold v2 fix notes.
+## Scripts used
 
-- `auto_caf_results.csv`
-- `manual_caf_results.csv`
-- `rq3_concurrent_validity_ja.csv`
-- `rq3_file_level_ja.csv`
+- `scripts/ja_clause_segmenter_v16.py`
+- `scripts/caf_calculator_ja.py`
+- `scripts/caf_calculator_ja_gap_classifier.py`
+- `scripts/run_rq3_vad_classifier_probe_ja.py`
+- `../../en/postprocess_vad_filler_classifier_en.py`
 
-- `RUN_LOG.md`
-  - Reproducible command log for this package.
+## Reports
+
 - `RQ3_VALIDITY_REPORT_JA.md`
-  - Final report for this package.
+- `RUN_LOG.md`
 - `ENVIRONMENT.md`
-  - Exact conda/venv + dependency notes used for ASR and RQ3 stages.
-- `analysis/rq3_gaponly_neural_t050_20260224/REVIEW_WORKFLOW.md`
-  - Manual-review workflow from candidate CSVs to review TextGrids and back to CAF-ready candidate CSVs.
-- Filler model used by EN/JA gap-only runs:
-  - `../../shared/filler_classifier/model_podcastfillers_neural_v1_full/model.pt`
-- Neural model training/reference details:
-  - `../../shared/filler_classifier/README.md`
 
-## Expected Counts
+## Notes
 
-- `inputs/asr_word_textgrids/*.TextGrid`: 40
-- `inputs/manual_word_textgrids/*.TextGrid`: 40
-- `auto_clauses/*.TextGrid`: 40
-- `manual_clauses/*.TextGrid`: 40
-- `manual_clauses_gold_v2/*.TextGrid`: 40
-
-## ASR Provenance
-
-- ASR input used in this package (`inputs/asr_word_textgrids/*.TextGrid`) was sourced from:
-  - `ja/results/qwen3_filler_mfa_ja_v2_spanfix_b_l1_focus20/textgrids_clean_beginning_removed_by_manual`
-- Upstream generation flow:
-  1. Run `scripts/asr/asr_qwen3_mfa_ja_v2_spanfix_test_b.py` on selected audio to produce `textgrids_clean`.
-  2. Run `scripts/asr/make_beginning_removed_by_manual.py` with manual TextGrids to create leading-blanked ASR TextGrids in the same style as `textgrids_clean_beginning_removed_by_manual`.
+- `manual_clauses_gold_v2/` is the final gold standard used for JA reporting.
+- Legacy test/probe folders were removed from this release bundle.

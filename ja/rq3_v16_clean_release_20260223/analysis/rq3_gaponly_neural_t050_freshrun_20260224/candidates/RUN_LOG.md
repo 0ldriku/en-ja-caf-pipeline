@@ -1,7 +1,7 @@
 # VAD + Filler Classifier Postprocess Run Log
 
 ## Inputs
-- file_list_json: `ja\rq3_v16_clean_release_20260223\analysis\rq3_gapclf_probe_ja\file_list_40.json`
+- file_list_json: `ja\rq3_v16_clean_release_20260223\analysis\rq3_gaponly_neural_t050_freshrun_20260224\file_list_40.json`
 - file_list_key: `all_selected`
 - audio_dir: `ja\results\manual20_0220_2`
 - asr_json_dir: `ja\results\qwen3_filler_mfa_ja_v2_spanfix_b_l1_focus20\json`

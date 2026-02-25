@@ -1,89 +1,71 @@
-﻿# RUN_LOG
+﻿# RUN_LOG (Fresh-run canonical)
 
 ## Date
-- 2026-02-23
+- 2026-02-24
 
-## Goal
-Create a single clean English package (scripts + data + outputs) for RQ1-RQ3, similar to the Japanese clean package.
+## Scope
+- This log tracks the final EN release pipeline used for reporting in this bundle.
+- Legacy/test folders were removed; report inputs now point only to fresh-run outputs.
 
-## Clean Package
-- `en/rq123_clean_release_20260223`
+## Environment
+- ASR and analysis runtime: `C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe`
+- MFA runtime: `C:\Users\riku\miniconda3\envs\mfa\python.exe`
+- Full dependency notes: `ENVIRONMENT.md`
 
-## Environment and Dependencies
+## Final RQ3 pipeline used
+1. ASR word-level TextGrid generation (already available in release input set)
+- Script: `en/rq123_clean_release_20260223/asr_qwen3_mfa_en.py`
+- Input audio: `en/data/allsstar_full_manual/wav`
+- Output used: `en/results/qwen3_filler_mfa_beam100/textgrids_clean/` and `en/results/qwen3_filler_mfa_beam100/json/`
 
-- Full pinned environment notes:
-  - `en/rq123_clean_release_20260223/ENVIRONMENT.md`
-- Primary runtime for EN analysis scripts:
-  - `C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe` (Python 3.12.12)
-- MFA runtime used by ASR stage:
-  - `C:\Users\riku\miniconda3\envs\mfa\python.exe` (Python 3.10.19)
+2. Manual-span blanking
+- Not used for EN.
 
-## Sources Copied
+3. Clause segmentation (already available in release input set)
+- Script: `en/rq123_clean_release_20260223/scripts/textgrid_caf_segmenter_v3.py`
+- Output used:
+  - Auto clauses: `en/results/qwen3_filler_mfa_beam100/clauses/`
+  - Manual clauses: `en/results/manual_260212/clauses/`
 
-### Scripts
-- `en/asr_qwen3_mfa_en.py`
-- `en/scripts/textgrid_caf_segmenter_v3.py`
-- `en/scripts/caf_calculator.py`
-- `en/analysis/rq1/run_rq1_gold.py`
-- `en/analysis/rq2/run_rq2_gold.py`
-- `en/analysis/rq3/run_rq3_validity.py`
-
-### Inputs
-- `en/results/qwen3_filler_mfa_beam100/textgrids_clean/`
-- `en/results/qwen3_filler_mfa_beam100/clauses/`
-- `en/results/qwen3_filler_mfa_beam100/caf_results_beam100.csv`
-- `en/results/manual_260212/clauses/`
-- `en/results/manual_260212/caf_results_manual.csv`
-- `en/annotation/selected_files.json`
-- `en/annotation/transcripts/`
-- `en/annotation/boundary_agreement_260213/final_correct_segments/`
-- `en/annotation/llm_output/production_30/`
-
-### Existing Outputs + Docs
-- `en/analysis/rq1/rq1_clause_boundary_gold.csv`
-- `en/analysis/rq2/rq2_pause_location_gold.csv`
-- `en/analysis/rq3/rq3_concurrent_validity.csv`
-- `en/analysis/rq3/rq3_file_level.csv`
-- `en/analysis/PIPELINE_OVERVIEW.md`
-- `en/analysis/README.md`
-- `en/analysis/RQ1_RQ2_REPORT.md`
-- `en/results/qwen3_filler_mfa_beam100/RUN_LOG.md`
-- `en/results/manual_260212/RUN_LOG.md`
-
-## Validation Commands Executed
-
+4. Gap-only neural filler candidate scoring
 ```powershell
-$env:PYTHONIOENCODING='utf-8'
-& "C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe" "en/rq123_clean_release_20260223/analysis/rq1/run_rq1_gold.py"
-& "C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe" "en/rq123_clean_release_20260223/analysis/rq2/run_rq2_gold.py"
-& "C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe" "en/rq123_clean_release_20260223/analysis/rq3/run_rq3_validity.py"
-& "C:\Users\riku\miniconda3\envs\qwen3-asr\python.exe" "en/rq123_clean_release_20260223/analysis/rq3/run_rq3_validity_dualtrack.py"
+python en/postprocess_vad_filler_classifier_en.py `
+  --file-list-json en/rq123_clean_release_20260223/annotation/selected_files.json `
+  --file-list-key all_selected `
+  --audio-dir en/data/allsstar_full_manual/wav `
+  --asr-json-dir en/results/qwen3_filler_mfa_beam100/json `
+  --model-path shared/filler_classifier/model_podcastfillers_neural_v1_full/model.pt `
+  --threshold 0.50 `
+  --gap-only `
+  --out-dir en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/candidates
 ```
 
-## Validation Result
-- All 4 scripts completed successfully in the release folder.
-- RQ1 summary reproduced: micro F1=0.845, kappa=0.816.
-- RQ2 summary reproduced: kappa=0.840, accuracy=0.921.
-- RQ3 summary reproduced: Pearson r range 0.888-0.985, ICC range 0.863-0.980.
-- RQ3 dual-track summary produced:
-  - `full_quality_174`: Pearson r range 0.888-0.985, ICC range 0.863-0.980
-  - `gold40_raw`: Pearson r range 0.816-0.987, ICC range 0.788-0.985
-  - `gold40_quality_39`: Pearson r range 0.820-0.988, ICC range 0.796-0.984
+5. Auto CAF with candidate fillers
+```powershell
+python en/rq123_clean_release_20260223/scripts/caf_calculator_vad_classifier.py `
+  en/results/qwen3_filler_mfa_beam100/clauses `
+  --candidate-dir en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/candidates/per_file `
+  --file-list-json en/rq123_clean_release_20260223/annotation/selected_files.json `
+  --file-list-key all_selected `
+  --output en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/auto_caf_gold40_gaponly_neural_t050.csv
+```
 
-## Data Integrity Check
-- Compared release outputs vs original outputs:
-  - `rq1_clause_boundary_gold.csv`: numerically identical.
-  - `rq2_pause_location_gold.csv`: numerically identical.
-  - `rq3_file_level.csv`: numerically identical.
-  - `rq3_concurrent_validity.csv`: numerically identical except negligible floating-point serialization difference in one p-value field.
-  - New dual-track outputs generated in release folder:
-    - `analysis/rq3/rq3_dualtrack_summary.csv`
-    - `analysis/rq3/rq3_dualtrack_file_membership.csv`
+6. Manual CAF reference
+- Script: `en/rq123_clean_release_20260223/scripts/caf_calculator.py`
+- Output used: `en/results/manual_260212/caf_results_manual.csv`
 
-## Counts in Release
-- `results/qwen3_filler_mfa_beam100/textgrids_clean`: 190 files
-- `results/qwen3_filler_mfa_beam100/clauses`: 191 files (190 TextGrids + log)
-- `results/manual_260212/clauses`: 191 files (190 TextGrids + log)
-- `annotation/transcripts`: 41 files
-- `annotation/boundary_agreement_260213/final_correct_segments`: 10 files
-- `annotation/llm_output/production_30`: 30 files
+7. Correlation summary used by the report
+- Source summary CSV:
+  - `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/probe/rq3_gaponly_neural_t050_probe_summary_quality39.csv`
+- Quality filter applied:
+  - Excluded `ALL_139_M_PBR_ENG_ST1`
+  - Final cohort: `n=39` (`ST1=19`, `ST2=20`)
+- Final taskwise exports:
+  - `analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_overall.csv`
+  - `analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_st1.csv`
+  - `analysis_final_taskwise_correlations_20260224/en/en_correlation_quality39_st2.csv`
+
+## Report files tied to this run
+- `en/rq123_clean_release_20260223/RQ1_RQ2_REPORT.md`
+- `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/RUN_LOG.md`
+- `en/rq123_clean_release_20260223/analysis/rq3_gaponly_neural_t050_freshrun_20260224/DATA_PROVENANCE.md`
