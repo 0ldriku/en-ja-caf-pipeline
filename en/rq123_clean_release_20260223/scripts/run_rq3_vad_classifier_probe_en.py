@@ -25,7 +25,6 @@ RESULTS = BASE / "results"
 ANNOT = BASE / "annotation"
 
 BASELINE_AUTO = RESULTS / "qwen3_filler_mfa_beam100" / "caf_results_beam100.csv"
-MANUAL = RESULTS / "manual_260212" / "caf_results_manual.csv"
 SELECTED = ANNOT / "selected_files.json"
 
 CAF_MEASURES = ["AR", "SR", "MLR", "MCPR", "ECPR", "PR", "MCPD", "ECPD", "MPD"]
@@ -99,6 +98,8 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--auto-vad-csv", required=True, help="Previous VAD-refined auto CAF CSV")
     ap.add_argument("--auto-clf-csv", required=True, help="New classifier-guided auto CAF CSV")
+    ap.add_argument("--manual-csv", required=True, help="Manual CAF reference CSV")
+    ap.add_argument("--exclude", nargs="*", default=[], help="File IDs to exclude from correlation")
     ap.add_argument("--out-dir", default=str(Path(__file__).resolve().parent))
     args = ap.parse_args()
 
@@ -106,12 +107,12 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     selected = json.loads(SELECTED.read_text(encoding="utf-8"))
-    gold40 = set(selected["all_selected"])
+    gold40 = set(selected["all_selected"]) - set(args.exclude)
 
     auto_base = with_file_id(pd.read_csv(BASELINE_AUTO))
     auto_vad = with_file_id(pd.read_csv(args.auto_vad_csv))
     auto_clf = with_file_id(pd.read_csv(args.auto_clf_csv))
-    manual = with_file_id(pd.read_csv(MANUAL))
+    manual = with_file_id(pd.read_csv(args.manual_csv))
 
     manual_gold = manual[manual["file_id"].isin(gold40)].copy()
     base_gold = auto_base[auto_base["file_id"].isin(gold40)].copy()
