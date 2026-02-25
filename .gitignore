@@ -8,3 +8,5 @@ en/data/**/*.wav
 ja/data/**/*.wav
 ja/data/**/*.mp3
 validation_run/
+*.tmp.*
+validation_test/
