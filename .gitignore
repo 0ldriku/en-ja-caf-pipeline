@@ -11,3 +11,4 @@ ja/data/**/*.mp3
 validation_run/
 *.tmp.*
 validation_test/
+shared/disfluency_detector/model_v2/final/model.safetensors

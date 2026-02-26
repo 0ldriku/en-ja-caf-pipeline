@@ -17,8 +17,8 @@
 
 \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
 
-\title{Validating a Cross-Lingual Pipeline for Automatic Clause-Based Fluency Annotation:\\
-Evidence from English and Japanese L2 Speech}
+\title{A Shared English--Japanese Pipeline for Automatic Clause-Based Fluency Annotation:\\
+Staged Validation and Preliminary Evidence for Cross-Lingual Transportability}
 \author{Author names and affiliations to be inserted}
 \date{Draft dated February 26, 2026}
 
@@ -29,10 +29,10 @@ Evidence from English and Japanese L2 Speech}
 %% ABSTRACT
 %% ====================================================================
 \begin{abstract}
-Automatic annotation of temporal speech features promises to scale second-language (L2) fluency research, yet the validity of such systems must be established at component and measure levels across languages and tasks. We developed and validated a shared English--Japanese pipeline that computes nine clause-based utterance fluency measures from audio via ASR, disfluency-aware clause segmentation, and neural filler scoring. Evaluation followed a staged design: component-level agreement for clause boundaries and pause-location classification, followed by measure-level concurrent validity. For English ($N=40$), automatic clause boundaries showed almost perfect agreement with gold references (micro $F1=.845$, $\kappa=.816$), and automatic MCP/ECP pause-location labels agreed almost perfectly with gold labels ($\kappa=.840$, accuracy $=.921$). Concurrent validity was strong across all nine measures for both English ($N=39$; mean Pearson $r=.936$) and Japanese ($N=40$; mean Pearson $r=.953$). These results demonstrate the feasibility of a cross-lingual, clause-based automatic fluency annotation pipeline that substantially exceeds prior benchmark agreement levels, while identifying pause-duration measures as the most sensitive to pipeline error.
+Automatic annotation of temporal speech features can scale second-language (L2) fluency research, but validity must be demonstrated at both component and measure levels. We developed a shared English--Japanese pipeline that computes nine clause-based utterance fluency measures from audio through five stages: ASR, filler-augmented forced alignment, disfluency detection, clause segmentation, and CAF computation. Evaluation followed the same staged design in both languages. In this release, English has full staged validation (RQ1 component-level agreement, RQ2 pause-location agreement, and RQ3 concurrent validity), while Japanese validation is currently limited to measure-level concurrent validity (RQ3 only); Japanese component-level analyses (RQ1 and RQ2) are pending completion under the same protocol, and the cross-lingual component-level validation is therefore partial in this release. In English ($N=40$), automatic clause boundaries showed almost perfect agreement with gold references (micro $F1=.845$, $\kappa=.816$), and automatic MCP/ECP pause-location labels also showed almost perfect agreement with gold labels ($\kappa=.840$, accuracy $=.921$). Automatic measures correlated strongly with manual references for English ($N=39$; mean Pearson $r=.936$, 95\% CI $[.878, .965]$), supported by component-level agreement, and Japanese measure-level correlations were similarly high ($N=40$; mean Pearson $r=.953$, 95\% CI $[.916, .975]$), though Japanese component-level confirmation is pending. Relative to previously reported monologic L2 English systems, English component-level point estimates are numerically higher, though cross-study differences in corpora, gold standards, and evaluation methods preclude direct comparison. Across both languages, pause-duration measures were the most sensitive to residual pipeline error.
 \end{abstract}
 
-\noindent\textbf{Keywords:} L2 speech, utterance fluency, automatic annotation, clause segmentation, ASR, cross-lingual validation, English, Japanese
+\noindent\textbf{Keywords:} L2 speech, utterance fluency, automatic annotation, clause segmentation, ASR, cross-lingual concurrent validity, English, Japanese
 
 %% ====================================================================
 %% 1. INTRODUCTION
@@ -41,39 +41,39 @@ Automatic annotation of temporal speech features promises to scale second-langua
 
 \subsection{Objective measurement of L2 oral fluency}
 
-Objective fluency measurement is central to second language (L2) speech research and assessment. Utterance fluency (UF) --- the temporal characteristics of speech production --- is conventionally decomposed into three dimensions: speed fluency (SF), breakdown fluency (BDF), and repair fluency (RF) \citep{TavakoliSkehan2005}. SF reflects the pace and density of information delivery and is closely related to cognitive processing speed \citep{SuzukiKormos2023}. BDF captures pausing behavior and reflects disruptions in speech production processing; crucially, mid-clause pauses (MCPs) and end-clause pauses (ECPs) carry distinct psycholinguistic significance, as MCPs more strongly predict listener-based fluency judgments than ECPs \citep{deJong2016, SuzukiEtAl2021}. RF is associated with disfluency phenomena such as repetitions, self-corrections, and false starts \citep{Kormos2006}.
+Objective fluency measurement is central to second language (L2) speech research and assessment. Utterance fluency (UF), the temporal characteristics of speech production, is conventionally decomposed into three dimensions: speed fluency (SF), breakdown fluency (BDF), and repair fluency (RF) \citep{TavakoliSkehan2005}. SF reflects the pace and density of information delivery and is closely related to cognitive processing speed \citep{SuzukiKormos2023}. BDF captures pausing behavior and reflects disruptions in speech production processing; crucially, mid-clause pauses (MCPs) and end-clause pauses (ECPs) carry distinct psycholinguistic significance, as MCPs more strongly predict listener-based fluency judgments than ECPs \citep{deJong2016, SuzukiEtAl2021}. RF is associated with disfluency phenomena such as repetitions, self-corrections, and false starts \citep{Kormos2006}.
 
-A recent meta-analysis of the relationship between UF measures and perceived fluency (PF) ratings confirmed that speed and composite measures are most strongly associated with fluency judgments ($r = |.62$--$.76|$), followed by pause frequency ($r = .59$) and pause duration ($r = .46$), while RF measures show a weaker but significant association ($r = .20$) \citep{SuzukiEtAl2021}. Furthermore, the relationship is moderated by pause location: MCPs contribute more strongly to perceived fluency prediction ($r = .72$) than ECPs ($r = .48$). These findings underscore the importance of computing a comprehensive set of clause-based UF measures --- including location-specific pause metrics --- rather than relying on global temporal indicators alone.
+A recent meta-analysis of the relationship between UF measures and perceived fluency (PF) ratings confirmed that speed and composite measures are most strongly associated with fluency judgments ($r = |.62$--$.76|$), followed by pause frequency ($r = .59$) and pause duration ($r = .46$), while RF measures show a weaker but significant association ($r = .20$) \citep{SuzukiEtAl2021}. Furthermore, the relationship is moderated by pause location: MCPs contribute more strongly to perceived fluency prediction ($r = .72$) than ECPs ($r = .48$). These findings underscore the importance of computing a comprehensive set of clause-based UF measures, including location-specific pause metrics, rather than relying on global temporal indicators alone.
 
 A persistent methodological challenge concerns the unit of analysis for BDF. The clause is the standard unit for classifying pause location \citep{FosterEtAl2000}, yet operational definitions vary considerably across studies. \citet{VercellottiHall2024} argued for a broader clause framework in L2 research that encompasses not only finite clauses but also coordinated verb phrases with complements, nonfinite clauses with overt elements, and copula-less predicates. Their ``verb + element'' principle provides a principled and replicable standard: a verbal construction reaches clause status when the verb has a complement or adjunct. The present pipeline operationalizes this framework explicitly.
 
 \subsection{Automatic annotation of temporal features}
 
-Despite the usefulness of objective UF measures, manual annotation of temporal features --- pauses, disfluency words, clause boundaries --- is highly labor-intensive, which limits the scalability of fluency research \citep{deJongWempe2009}. Acoustic processing approaches can detect syllable nuclei and silent pauses automatically \citep{deJongWempe2009, deJongEtAl2021}, and recent work has extended these to filled pause detection with acceptable accuracy \citep{deJongEtAl2021, Rose2020}. However, purely acoustic approaches cannot determine pause location relative to clause boundaries and cannot compute RF measures, both of which require written transcriptions and syntactic analysis.
+Although objective UF measures are informative, producing them by hand requires substantial annotator time for pauses, disfluency words, and boundary coding, which constrains dataset size in practice. Early automation therefore focused on acoustic processing. \citet{deJongWempe2009} developed a Praat-based approach for detecting syllable nuclei and silent pauses, and \citet{deJongEtAl2021} extended this line to filled-pause processing. Their approach relies on acoustic signatures such as segment duration and pitch/formant behavior, and reported English-corpus filled-pause detection accuracy in the mid-.80 range. Related acoustic systems have also been proposed for real-time fluency feedback \citep{Rose2020}.
 
-Machine learning (ML) techniques have therefore been incorporated into temporal feature annotation systems. \citet{ChenYoon2011} proposed an NLP-based method to detect clause boundaries and disfluency onsets, achieving $F1 = .690$ for clause boundary detection using ASR transcriptions. \citet{Matsuura2022} refined the cascade approach by integrating BERT-based disfluency detection with dependency parsing for clause boundary annotation and pause-location classification, reporting $\kappa = .674$ and $\kappa = .613$ for these two tasks respectively. More recently, \citet{Matsuura2025} validated the robustness of their system across speaking tasks and proficiency levels, finding substantial agreement for monologic tasks ($\kappa = .635$--$.749$ for pause location) but lower accuracy in dialogic settings. These studies demonstrate the potential of cascaded ML systems while highlighting persistent challenges: task sensitivity, error propagation across modules, and the predominance of English-only validation.
+These acoustic approaches are useful for detecting pause and filler events, but they are limited for clause-based fluency analysis. Without transcript-linked syntactic structure, they cannot reliably assign pause location relative to clause boundaries (e.g., MCP vs.\ ECP), and they cannot directly represent repair phenomena needed for RF metrics. This limitation motivated transcription-aware ML pipelines. \citet{ChenYoon2011} proposed NLP-based structural event detection, and a follow-up ASR-output evaluation reported clause-boundary detection at $F1 = .690$ \citep{ChenYoon2012}. \citet{Matsuura2022} further combined BERT-based disfluency pruning with dependency parsing, reporting substantial agreement for disfluency detection and pause-location classification ($\kappa = .674$ and $\kappa = .613$).
 
-Error propagation is a fundamental concern in cascaded annotation systems. ASR errors can disrupt syntactic structure, which subsequently lowers clause boundary accuracy \citep{KnillEtAl2018, KnillEtAl2019}. \citet{KnillEtAl2019} showed that lower-proficiency L2 learners produce more grammatical errors, increasing ASR word error rates (A1 level: WER $= 39.0\%$; C level: WER $= 21.0\%$), with downstream effects on grammatical error detection. Annotation systems should therefore be evaluated under realistic error propagation conditions --- testing component-level agreement alongside measure-level correlation --- rather than validating only end-to-end correlations.
+A remaining challenge is robustness across tasks and proficiency profiles. ASR and downstream NLP modules are sensitive to train-test mismatch, and errors can propagate across pipeline stages \citep{KnillEtAl2018, KnillEtAl2019}. In task-generalization work, \citet{SkidmoreMoore2023} showed that BERT-based disfluency detection remained effective on an unseen learner corpus but declined from in-domain to cross-corpus testing ($F1 = 92.8$ on NICT-JLE test vs.\ $82.2$ on KISTEC), with lower scores for less constrained activity types. \citet{Matsuura2025} likewise showed modality-conditioned variation, with generally stronger results in monologic than dialogic conditions and non-uniform agreement across measures and fluency bands (pause-location $\kappa$ ranging from .596 to .749 across subsets). These findings motivate validation designs that report component-level and measure-level outcomes separately and stratify results by task and speaker profile.
 
 \subsection{Gaps and motivation}
 
-Three gaps motivate the present study. First, no validated cross-lingual pipeline exists for clause-based fluency annotation. Existing systems have been developed and tested exclusively in English, leaving open whether a shared processing architecture can produce valid measures across typologically different languages. English and Japanese present contrasting challenges: different word orders (SVO vs.\ SOV), subject expression (overt vs.\ pro-drop), and clause-chaining structures (coordination vs.\ te-form chains), all of which bear on clause segmentation.
+Three gaps motivate the present study. First, cross-lingual validation evidence for clause-based fluency annotation remains limited. Existing systems have been developed and tested mainly in English, leaving open whether a shared processing architecture can produce valid measures across typologically different languages. English and Japanese present contrasting challenges: different word orders (SVO vs.\ SOV), subject expression (overt vs.\ pro-drop), and clause-chaining structures (coordination vs.\ te-form chains), all of which bear on clause segmentation.
 
-Second, prior validation studies have typically reported measure-level correlations without component-level checks on intermediate outputs. High end-to-end correlations can mask weak boundary or pause-label agreement, especially if errors cancel in aggregation. A staged evaluation design --- from component-level agreement to measure-level validity --- provides more diagnostic evidence for system quality.
+Second, prior validation studies have typically reported measure-level correlations without component-level checks on intermediate outputs. High end-to-end correlations can mask weak boundary or pause-label agreement, especially if errors cancel in aggregation. A staged evaluation design, from component-level agreement to measure-level validity, provides more diagnostic evidence for system quality.
 
 Third, operational clause definitions in automated systems remain under-specified. Prior work has relied on implicit parser decisions or corpus-specific rules without explicit reference to a theoretical framework. The present pipeline operationalizes the Vercellotti \& Hall clause framework at the script level, making clause-coding decisions inspectable and replicable.
 
 \subsection{The current study}
 
-To address these gaps, we developed a shared English--Japanese pipeline for automatic clause-based fluency annotation and evaluated it with a staged design. For each language, we address three research questions:
+To address these gaps, we developed a shared English--Japanese pipeline for automatic clause-based fluency annotation and evaluated it with a staged design. We define three research questions:
 
 \begin{description}[leftmargin=2.2cm]
-\item[RQ1] \textit{Pause-location agreement}: To what extent do MCP/ECP pause labels from the automatic pipeline agree with gold-standard labels?
-\item[RQ2] \textit{Clause-segmentation agreement}: To what extent do automatically generated clause boundaries agree with human-annotated clause boundaries?
-\item[RQ3] \textit{Concurrent validity}: To what extent do automatically computed CAF measures correlate with manually referenced CAF measures?
+\item[RQ1] Clause-segmentation agreement: To what extent do automatically generated clause boundaries agree with human-annotated clause boundaries?
+\item[RQ2] Pause-location agreement: To what extent do MCP/ECP pause labels from the automatic pipeline agree with gold-standard labels?
+\item[RQ3] Concurrent validity: To what extent do automatically computed CAF measures correlate with manually referenced CAF measures?
 \end{description}
 
-In this release, all three English questions and Japanese RQ3 are complete. Japanese RQ1 and RQ2 analyses are currently in progress and will be reported in the final version. Table~\ref{tab:rq_status} summarizes the completion status.
+In the current report, all three English questions and Japanese RQ3 are complete. Japanese RQ1 and RQ2 use the same analysis framework but are pending completion for this release and will be reported in the final version. Table~\ref{tab:rq_status} summarizes the completion status.
 
 \begin{table}[ht]
 \centering
@@ -81,11 +81,11 @@ In this release, all three English questions and Japanese RQ3 are complete. Japa
 \toprule
 Language & Question & Status \\
 \midrule
-English & RQ1 (pause-location agreement) & Complete \\
-English & RQ2 (clause-segmentation agreement) & Complete \\
+English & RQ1 (clause-segmentation agreement) & Complete \\
+English & RQ2 (pause-location agreement) & Complete \\
 English & RQ3 (concurrent validity) & Complete \\
-Japanese & RQ1 (pause-location agreement) & In progress \\
-Japanese & RQ2 (clause-segmentation agreement) & In progress \\
+Japanese & RQ1 (clause-segmentation agreement) & Pending \\
+Japanese & RQ2 (pause-location agreement) & Pending \\
 Japanese & RQ3 (concurrent validity) & Complete \\
 \bottomrule
 \end{tabular}
@@ -122,7 +122,7 @@ Gold-standard clause boundary annotations for the English corpus were constructe
 \item The model annotated 30 production files, and outputs were manually reviewed and accepted as gold by the first author.
 \end{enumerate}
 
-This yielded 40 gold files (20 ST1, 20 ST2). For RQ3 concurrent validity, one file (\texttt{ALL\_139\_M\_PBR\_ENG\_ST1}) was excluded due to a manual preamble mismatch, yielding a quality-filtered cohort of $N = 39$ (ST1 = 19, ST2 = 20).
+Because 30 of the 40 gold files were initially annotated by an LLM and reviewed by a single author, shared systematic biases between the LLM-generated annotations and the NLP-based pipeline cannot be fully excluded; the resulting inter-rater reliability ($\kappa = .816$) should therefore be interpreted as an upper-bound estimate relative to a fully independent human gold standard. This yielded 40 gold files (20 ST1, 20 ST2). For RQ3 concurrent validity, one file (\texttt{ALL\_139\_M\_PBR\_ENG\_ST1}) was excluded due to a manual preamble mismatch, yielding a quality-filtered cohort of $N = 39$ (ST1 = 19, ST2 = 20).
 
 \subsection{Pipeline architecture}
 
@@ -138,7 +138,7 @@ Both languages follow the same high-level architecture, with language-specific a
 
 We employ Qwen3-ASR (1.7B parameters) as the open-source multilingual ASR front end, paired with Qwen3 Forced Aligner (0.6B parameters) for rough word-level timestamps. ASR is run with a disfluency-preserving prompt that encourages the model to transcribe fillers and hesitations rather than suppressing them, since accurate filler capture is critical for downstream pause metrics. To improve timestamp precision, we subsequently apply Montreal Forced Aligner (MFA) with high beam settings (beam $= 100$, retry beam $= 400$).
 
-A key technical innovation is \textit{filler-augmented alignment}: placeholder filler tokens (e.g., ``uh'' for English) are injected into inter-word gaps exceeding 400 ms before MFA runs. The number of injected fillers is determined by $k = \lfloor(\mathit{gap} - 0.35) / 0.55\rfloor + 1$, capped at 3 per gap. These placeholders are absorbed during forced alignment and discarded in the map-back step. This technique prevents MFA from distributing gap durations across adjacent word boundaries, which would otherwise compress pause onset/offset times and distort downstream pause measures. For English, the \texttt{english\_us\_arpa} acoustic model is used; for Japanese, the \texttt{japanese\_mfa} model with deterministic filler token pools of varying length (short, medium, long Japanese fillers).
+A key technical innovation is filler-augmented alignment: placeholder filler tokens (e.g., ``uh'' for English) are injected into inter-word gaps exceeding 400 ms before MFA runs. The number of injected fillers is determined by $k = \lfloor(\mathit{gap} - 0.35) / 0.55\rfloor + 1$, capped at 3 per gap. These placeholders are absorbed during forced alignment and discarded in the map-back step. This technique prevents MFA from distributing gap durations across adjacent word boundaries, which would otherwise compress pause onset and offset times and distort downstream pause measures. For English, the \texttt{english\_us\_arpa} acoustic model is used; for Japanese, the \texttt{japanese\_mfa} model with deterministic filler token pools of varying length (short, medium, long Japanese fillers).
 
 Japanese ASR includes an additional MeCab re-tokenization step (via \texttt{fugashi}) before MFA to split merged tokens and stabilize downstream token mapping.
 
@@ -156,18 +156,18 @@ Both segmenters first apply sentence segmentation using wtpsplit (Segment any Te
 The English segmenter applies a rule layer over spaCy dependency parses (transformer model), explicitly operationalizing the ``verb + element'' clause logic of \citet{VercellottiHall2024}. A token is considered a potential clause head if it carries a verb-like POS tag (VB*, VERB, AUX) and a clausal dependency relation. The ``verb + element'' check tests whether the verb has at least one qualifying dependent among complements (\texttt{obj}, \texttt{iobj}, \texttt{ccomp}, \texttt{xcomp}, \texttt{attr}), oblique arguments (\texttt{obl}), and adjuncts (\texttt{advmod}, \texttt{prep}). The segmenter classifies the following constructions:
 
 \begin{itemize}[leftmargin=*, nosep]
-\item \textit{Independent clauses:} ROOT-level finite verbs.
-\item \textit{Subordinate clauses:} \texttt{advcl}, \texttt{ccomp}, \texttt{acl}, \texttt{acl:relcl}, \texttt{csubj} relations.
-\item \textit{Coordinated VPs:} \texttt{conj} of a verb, but only if the conjunct has its own complement or adjunct (stricter than Vercellotti's inclusive approach for shared complements).
-\item \textit{Nonfinite clauses:} \texttt{xcomp} and participial constructions, with Vercellotti's ``verb + element'' requirement.
-\item \textit{Minor clauses:} Stance verbs (e.g., \textit{I think}, \textit{I believe}) taking a complement clause, tagged separately for analysis.
-\item \textit{Copula-less predicates:} ROOT-level ADJ/NOUN without overt copula (common in L2 speech).
+\item Independent clauses: ROOT-level finite verbs.
+\item Subordinate clauses: \texttt{advcl}, \texttt{ccomp}, \texttt{acl}, \texttt{acl:relcl}, \texttt{csubj} relations.
+\item Coordinated VPs: \texttt{conj} of a verb, but only if the conjunct has its own complement or adjunct (stricter than Vercellotti's inclusive approach for shared complements).
+\item Nonfinite clauses: \texttt{xcomp} and participial constructions, with Vercellotti's ``verb + element'' requirement.
+\item Minor clauses: stance verbs (e.g., ``I think'', ``I believe'') taking a complement clause, tagged separately for analysis.
+\item Copula-less predicates: ROOT-level ADJ/NOUN without overt copula (common in L2 speech).
 \end{itemize}
 
 Clause spans are collected via subtree traversal (excluding other clause-head subtrees) and aligned back to TextGrid word intervals for timing.
 
 \paragraph{Japanese.}
-The Japanese segmenter uses GiNZA (\texttt{ja\_ginza\_electra}) with a Japanese Universal Dependencies rule layer adapted to the same theoretical principle. Predicate detection includes VERB, ADJ, and NOUN tokens; misparsed proper nouns tagged as verbs are filtered. A key language-specific adaptation concerns \textit{te}-form verb chains, which are pervasive in Japanese speech. Following the Vercellotti ``verb + element'' rule, a \textit{te}-form verb receives clause status only if it has its own complement or adjunct; bare \textit{te}-forms are merged with the following clause. The complement check uses a strict set (\texttt{obj}, \texttt{iobj}, \texttt{obl}, \texttt{advmod}, \texttt{nmod}), deliberately excluding \texttt{nsubj} because shared and implied subjects are common in Japanese. The segmenter also handles explicit subordinators (\textit{kara} `because', \textit{kedo} `although', \textit{node} `because', \textit{ba} `if'), \textit{tari}-form chains, and the clausal subject (\texttt{csubj}) construction.
+The Japanese segmenter uses GiNZA (\texttt{ja\_ginza\_electra}) with a Japanese Universal Dependencies rule layer adapted to the same theoretical principle. Predicate detection includes VERB, ADJ, and NOUN tokens; misparsed proper nouns tagged as verbs are filtered. A key language-specific adaptation concerns te-form verb chains, which are pervasive in Japanese speech. Following the Vercellotti ``verb + element'' rule, a te-form verb receives clause status only if it has its own complement or adjunct; bare te-forms are merged with the following clause. The complement check uses a strict set (\texttt{obj}, \texttt{iobj}, \texttt{obl}, \texttt{advmod}, \texttt{nmod}), deliberately excluding \texttt{nsubj} because shared and implied subjects are common in Japanese. The segmenter also handles explicit subordinators (``kara'' `because', ``kedo'' `although', ``node'' `because', ``ba'' `if'), tari-form chains, and the clausal subject (\texttt{csubj}) construction.
 
 \paragraph{Why explicit rules?}
 Prior L2 fluency studies often under-specify operational clause decisions, making downstream pause and CAF measures difficult to compare across studies. We therefore expose all clause-coding decisions in inspectable, script-level rules grounded in \citet{VercellottiHall2024}, improving reproducibility and enabling principled cross-lingual comparison.
@@ -211,7 +211,7 @@ Composite & SR & Speech rate: syllables (morae) per total speech time \\
 
 \subsection{Evaluation methods}
 
-\subsubsection{RQ2: Clause-segmentation agreement}
+\subsubsection{RQ1: Clause-segmentation agreement}
 
 Clause agreement was evaluated as per-word binary boundary classification after minimum-edit-distance alignment between canonical (manual transcript) and ASR token sequences, replicating the alignment logic of NIST's SCTK tool \citep{ChenYoon2012}. At each alignment position:
 
@@ -223,9 +223,9 @@ Clause agreement was evaluated as per-word binary boundary classification after 
 
 This follows the strict speech-evaluation alignment logic of \citet{ChenYoon2012} rather than longest-common-subsequence matching, which can produce optimistically inflated agreement by skipping substitution sites. Metrics include micro and macro precision, recall, $F1$, and Cohen's $\kappa$ \citep{LandisKoch1977}.
 
-\subsubsection{RQ1: Pause-location agreement}
+\subsubsection{RQ2: Pause-location agreement}
 
-For each silent pause $\geq 250$ ms in the automatic words tier, two MCP/ECP labels were obtained: (a) the automatic label from auto clause intervals, and (b) a gold label derived by projecting gold clause boundaries onto auto word timing via the edit-distance alignment from RQ2. A pause was classified as ECP if its onset fell within 150 ms of any clause offset; otherwise MCP. Metrics include Cohen's $\kappa$, accuracy, and per-class precision, recall, and $F1$.
+For each silent pause $\geq 250$ ms in the automatic words tier, two MCP/ECP labels were obtained: (a) the automatic label from auto clause intervals, and (b) a gold label derived by projecting gold clause boundaries onto auto word timing via the edit-distance alignment from RQ1. A pause was classified as ECP if its onset fell within 150 ms of any clause offset; otherwise MCP. Metrics include Cohen's $\kappa$, accuracy, and per-class precision, recall, and $F1$.
 
 The strength of agreement in terms of Cohen's $\kappa$ was interpreted following \citet{LandisKoch1977}: $< .20$ slight, $.21$--$.40$ fair, $.41$--$.60$ moderate, $.61$--$.80$ substantial, $> .80$ almost perfect.
 
@@ -235,16 +235,16 @@ For each of the nine CAF measures, we computed Pearson $r$, Spearman $\rho$, ICC
 
 \subsubsection{Sample size considerations}
 
-For RQ1 and RQ2, the units of analysis are individual pause events ($N = 1{,}902$) and boundary positions ($N = 1{,}131$), respectively. According to power analyses for Cohen's $\kappa$, the minimum sample sizes to detect substantial agreement ($\kappa > .61$) with power $\beta = .80$ are 151 for binary annotation tasks and 67 for two-category classification \citep{DonnerEliasziw1987}. Both RQ1 and RQ2 substantially exceed these thresholds. For RQ3 concurrent validity, the unit of analysis is the speech file ($N = 39$ for English, $N = 40$ for Japanese). Using standard power tables for bivariate correlations (two-tailed $\alpha = .05$, $\beta = .80$), the minimum sample size to detect a large correlation ($r \geq .60$; \citealp{PlonskyOswald2014}) is approximately $N = 19$. Both cohorts exceed this threshold.
+For RQ1 and RQ2, the units of analysis are boundary positions ($N = 1{,}131$) and individual pause events ($N = 1{,}902$), respectively. According to power analyses for Cohen's $\kappa$, the minimum sample sizes to detect substantial agreement ($\kappa > .61$) with power $=.80$ ($1-\beta$) are 151 for binary annotation tasks and 67 for two-category classification \citep{DonnerEliasziw1987}. Both RQ1 and RQ2 exceed these thresholds. For RQ3 concurrent validity, the unit of analysis is the speech file ($N = 39$ for English, $N = 40$ for Japanese). Using standard power tables for bivariate correlations (two-tailed $\alpha = .05$, power $=.80$), the minimum sample size to detect a large correlation ($r \geq .60$; \citealp{PlonskyOswald2014}) is approximately $N = 19$. Both cohorts exceed this threshold.
 
 %% ====================================================================
 %% 3. RESULTS
 %% ====================================================================
 \section{Results}
 
-\subsection{English RQ2: Clause-segmentation agreement}
+\subsection{English RQ1: Clause-segmentation agreement}
 
-Table~\ref{tab:en_rq2} presents clause boundary agreement between automatic and gold-standard annotations across the 40 English files.
+Table~\ref{tab:en_rq1} presents clause boundary agreement between automatic and gold-standard annotations across the 40 English files.
 
 \begin{table}[ht]
 \centering
@@ -258,16 +258,16 @@ ST2 & 20 & 635 & .822 & .830 & .826 & .795 \\
 \bottomrule
 \end{tabular}
 \caption{English clause-boundary agreement (automatic vs.\ gold).}
-\label{tab:en_rq2}
+\label{tab:en_rq1}
 \end{table}
 
 Overall $\kappa = .816$ indicates almost perfect agreement \citep{LandisKoch1977}. Macro means were $F1 = .846$ ($SD = .093$) and $\kappa = .819$ ($SD = .102$). Per-file $F1$ ranged from .618 to 1.000 (median .859). Mean alignment WER between canonical and ASR clause text was .121 (12.1\%). Precision and recall were well balanced, indicating no systematic over- or under-segmentation.
 
 ST1 (picture narrative) yielded slightly higher agreement than ST2 (argumentative), consistent with lower ASR error rates on structured narrative speech \citep{KnillEtAl2018}. The two files with lowest per-file agreement ($\kappa < .65$) both had WER $> .19$, confirming that ASR errors propagate to downstream clause boundary detection.
 
-\subsection{English RQ1: Pause-location agreement}
+\subsection{English RQ2: Pause-location agreement}
 
-Table~\ref{tab:en_rq1} presents pause-location classification agreement.
+Table~\ref{tab:en_rq2} presents pause-location classification agreement.
 
 \begin{table}[ht]
 \centering
@@ -281,12 +281,12 @@ ST2 & 20 & 1{,}080 & .815 & .909 & .920 & .894 \\
 \bottomrule
 \end{tabular}
 \caption{English pause-location agreement (automatic vs.\ gold MCP/ECP labels).}
-\label{tab:en_rq1}
+\label{tab:en_rq2}
 \end{table}
 
 Overall $\kappa = .840$ indicates almost perfect agreement. MCP classification ($F1 = .929$) slightly outperformed ECP ($F1 = .912$), as expected: mid-clause pauses are more clearly positioned within clause boundaries, while end-clause pauses near clause offsets are sensitive to boundary placement. Per-file accuracy ranged from .789 to 1.000 (median .927, $SD = .052$); six files achieved perfect accuracy.
 
-The pattern across tasks parallels RQ2: ST1 accuracy exceeds ST2. Notably, the file with lowest RQ1 accuracy (.789) also had the lowest RQ2 agreement ($\kappa = .578$), confirming the error propagation chain from ASR errors through clause boundaries to pause classification --- the fundamental cascading concern identified by \citet{KnillEtAl2018, KnillEtAl2019}.
+The pattern across tasks parallels RQ1: ST1 accuracy exceeds ST2. Notably, the file with the lowest RQ2 accuracy (.789) also had the lowest RQ1 agreement ($\kappa = .578$), confirming the error propagation chain from ASR errors through clause boundaries to pause classification, the fundamental cascading concern identified by \citet{KnillEtAl2018, KnillEtAl2019}.
 
 \subsection{English RQ3: Concurrent validity ($N = 39$)}
 
@@ -314,9 +314,9 @@ MPD & .957 & .908 & .944 & 0.074 \\
 \label{tab:en_rq3}
 \end{table}
 
-Overall English correlations span $.821$--$.988$ (mean $r = .936$). All nine Pearson correlations are large ($r > .60$; \citealp{PlonskyOswald2014}), and all ICC values exceed .79, indicating good to excellent absolute agreement.
+Overall English correlations span $.821$--$.988$ (mean $r = .936$; 95\% CI for the mean $r$ via Fisher $Z$-transformation: $[.878, .965]$). All nine Pearson correlations are large ($r > .60$; \citealp{PlonskyOswald2014}), and all ICC values exceed .79, indicating good to excellent absolute agreement. Confidence intervals for individual measures and ICC values are not reported here but should be considered when interpreting per-measure point estimates, particularly for task-level cells where $N = 19$--$20$ yields wide intervals.
 
-By task, the picture narrative (ST1, $N = 19$) is most challenging for MCPD ($r = .713$, ICC $= .669$, MAE $= 0.097$), while the argumentative task (ST2, $N = 20$) remains strong across all measures (minimum $r = .910$ for MCPD). ST1 also shows relatively lower ECPR agreement ($r = .774$, ICC $= .775$). ST2 is uniformly strong, with the weakest measure being ECPR ($r = .935$). Table~\ref{tab:en_rq3_tasks} presents the task-level breakdown.
+By task, the picture narrative (ST1, $N = 19$) is most challenging for MCPD ($r = .713$, ICC $= .669$, MAE $= 0.097$), while the argumentative task (ST2, $N = 20$) remains strong across all measures (minimum $r = .910$ for MCPD). ST1 also shows relatively lower ECPR agreement ($r = .774$, ICC $= .775$). ST2 is uniformly strong, with the weakest measure being ECPR ($r = .935$). Per-task correlations should be interpreted with caution given limited per-cell sample sizes ($N = 19$--$20$); for instance, a Fisher $Z$-derived 95\% CI for MCPD ST1 $r = .713$ is approximately $[.380, .882]$, and ICC values at these sample sizes carry similarly wide intervals. Table~\ref{tab:en_rq3_tasks} presents the task-level breakdown.
 
 \begin{table}[ht]
 \centering
@@ -368,7 +368,7 @@ MPD & .948 & .876 & .880 & 0.184 \\
 \label{tab:ja_rq3}
 \end{table}
 
-Japanese overall correlations span $.903$--$.992$ (mean $r = .953$), slightly exceeding the English mean. All nine measures show large positive correlations, confirming strong concurrent validity for the Japanese pipeline.
+Japanese overall correlations span $.903$--$.992$ (mean $r = .953$; 95\% CI $[.916, .975]$), slightly exceeding the English mean. All nine measures show large positive correlations. However, in the absence of Japanese component-level agreement data (RQ1 and RQ2, pending), the possibility that error cancellation contributes to these high correlations cannot be excluded.
 
 By task, both ST1 and ST2 show consistently strong correlations (Table~\ref{tab:ja_rq3_tasks}). The weakest task-specific value is ECPR in ST1 ($r = .872$), still well above the large-effect threshold. Unlike the English results, Japanese MCPD is uniformly strong across tasks ($r = .959$ in ST1, $r = .953$ in ST2), suggesting that the Japanese corpus may have a more stable MCP distribution.
 
@@ -396,9 +396,9 @@ MPD  & .957 & .913 & .889 & 0.174 & .940 & .872 & .875 & 0.195 \\
 \label{tab:ja_rq3_tasks}
 \end{table}
 
-\subsection{Japanese RQ1 and RQ2 (in progress)}
+\subsection{Japanese RQ1 and RQ2 (pending completion)}
 
-Japanese pause-location and clause-boundary agreement analyses are currently in progress using the same metric suites as English. These will be reported with full task-level breakdowns in the final manuscript version.
+Japanese clause-boundary and pause-location agreement analyses follow the same metric suites as English but are pending completion in this release. These outcomes will be reported with full task-level breakdowns in the final manuscript version.
 
 \subsection{Comparison with prior systems}
 
@@ -411,26 +411,26 @@ Table~\ref{tab:comparison} places the current English results alongside publishe
 \toprule
 System & Task & Pause loc.\ $\kappa$ & Clause $F1$ \\
 \midrule
-\citet{ChenYoon2011} & Monologue (L2 EN) & --- & .690 \\
-\citet{Matsuura2025} & Monologue (L2 EN) & .613--.749 & --- \\
-\citet{Matsuura2025} & Dialogue (L2 EN) & .596--.672 & --- \\
+\citet{ChenYoon2012} & Monologue (L2 EN) & N/A & .690 \\
+\citet{Matsuura2025} & Monologue (L2 EN) & .626--.749 & N/A \\
+\citet{Matsuura2025} & Dialogue (L2 EN) & .596 & N/A \\
 \textbf{Current pipeline} & \textbf{Monologue (L2 EN)} & \textbf{.840} & \textbf{.845} \\
 \bottomrule
 \end{tabular}
-\caption{Comparison with prior automatic annotation systems. Direct comparison should be interpreted with caution due to differences in corpora, L1 backgrounds, proficiency levels, and gold-standard construction.}
+\caption{Comparison with prior automatic annotation systems. These values are not directly comparable: cross-study comparisons are limited by differences in speaker populations, task types, L1 backgrounds, proficiency distributions, gold-standard construction methods (LLM-assisted vs.\ human-only), clause definitions, and segmentation conventions, and should be treated as indicative context rather than evidence of relative system quality.}
 \label{tab:comparison}
 \end{table}
 
-The current pipeline substantially exceeds the pause-location agreement reported by \citet{Matsuura2025} ($\kappa = .840$ vs.\ $.613$--$.749$) and the clause boundary detection accuracy of \citet{ChenYoon2011} ($F1 = .845$ vs.\ $.690$). These improvements likely reflect advances in ASR quality (Qwen3 vs.\ Rev.ai/Wav2Vec2 forced alignment), MFA-based timestamp refinement, a modern dependency parser (spaCy transformer), and the filler-augmented alignment technique. However, corpus, population, and gold-standard differences preclude strong causal claims about any single component.
+While keeping in mind that cross-study comparison is constrained by methodological differences, the current pipeline shows numerically higher pause-location agreement than \citet{Matsuura2025} ($\kappa = .840$ vs.\ $.626$--$.749$ in their substantial-agreement subsets) and numerically higher clause boundary detection accuracy than \citet{ChenYoon2012} ($F1 = .845$ vs.\ $.690$). These are descriptive cross-study comparisons based on published summary metrics, not statistical tests on harmonized raw data. Given at least five dimensions of non-equivalence (corpus, proficiency distribution, L1 background, gold-standard method, and clause definition breadth), these cross-study contrasts should be treated as context-setting rather than evidence of relative system quality. The observed numerical differences may reflect advances in ASR quality (Qwen3 vs.\ Rev.ai/Wav2Vec2 forced alignment), MFA-based timestamp refinement, a modern dependency parser (spaCy transformer), and the filler-augmented alignment technique, but they could equally reflect differences in data difficulty or gold-standard construction.
 
 %% ====================================================================
 %% 4. DISCUSSION
 %% ====================================================================
 \section{Discussion}
 
-\subsection{Component-level agreement exceeds prior benchmarks}
+\subsection{English component-level agreement in relation to prior benchmarks}
 
-English clause boundary agreement ($\kappa = .816$, $F1 = .845$) reached the ``almost perfect'' range \citep{LandisKoch1977} and substantially exceeded the clause boundary $F1$ reported by \citet{ChenYoon2011} ($F1 = .690$). Pause-location classification ($\kappa = .840$) likewise surpassed the $.613$--$.749$ range reported for monologic L2 English by \citet{Matsuura2025}. These results are noteworthy because the current evaluation uses a stricter alignment method (edit-distance rather than longest-common-subsequence) and a broader clause definition \citep{VercellottiHall2024} that includes more boundary types than traditional definitions.
+English clause boundary agreement ($\kappa = .816$, $F1 = .845$) reached the ``almost perfect'' range \citep{LandisKoch1977} and was numerically higher than the clause boundary $F1$ reported by \citet{ChenYoon2012} ($F1 = .690$). Pause-location classification ($\kappa = .840$) was also numerically higher than the $.626$--$.749$ range reported for most L2 English subsets by \citet{Matsuura2025}. While direct comparison is limited by methodological differences, these should be interpreted as descriptive cross-study comparisons because prior reports provide summary outputs from different datasets, not harmonized raw annotations for unified testing. Additional caution is required because the current evaluation uses a stricter alignment method (edit-distance rather than longest-common-subsequence) and a broader clause definition \citep{VercellottiHall2024} that includes more boundary types than traditional definitions.
 
 The component-level results also provide an important diagnostic that end-to-end correlations alone cannot offer. High measure-level correlations can arise even when intermediate boundary or pause-label agreement is moderate, if errors cancel in aggregation. By demonstrating strong agreement at both the boundary and pause-label levels, the present analysis reduces the risk that the strong RQ3 correlations are artifacts of error cancellation rather than genuine annotation quality.
 
@@ -440,41 +440,44 @@ A clear error propagation chain was observed across pipeline stages. Files with 
 
 Task type moderated agreement levels, with ST1 (picture narrative) consistently outperforming ST2 (argumentative) across both RQ1 and RQ2. This aligns with the expectation that structured narrative tasks produce more regular speech with lower ASR error rates, while argumentative speech introduces more complex syntax, longer utterances, and repair sequences that challenge both ASR and clause segmentation. \citet{Matsuura2025} similarly found weaker disfluency detection and pause-location agreement in their dialogic task compared to monologic tasks, attributing this to co-constructive discourse features. The present ST1/ST2 contrast, although less extreme (both tasks are monologic), follows the same pattern on the dimension of cognitive demand \citep{SuzukiKormos2023}.
 
-\subsection{Concurrent validity is strong across languages and measures}
+\subsection{Concurrent validity across languages and measures}
 
-Concurrent validity was strong in both languages: mean Pearson $r = .936$ for English and $.953$ for Japanese. Across both languages, speed and composite measures (SR, MLR, AR) and pause-frequency measures (MCPR, ECPR, PR) were the most stable, while pause-duration measures (MCPD, ECPD, MPD) were comparatively more sensitive. This pattern mirrors the general finding in the literature that composite and speed measures correlate most strongly between automatic and manual systems \citep{Matsuura2025, deJongEtAl2021}.
+Concurrent validity was strong in both languages: mean Pearson $r = .936$ for English and $.953$ for Japanese. Across both languages, speed and composite measures (SR, MLR, AR) and pause-frequency measures (MCPR, ECPR, PR) were the most stable, while pause-duration measures (MCPD, ECPD, MPD) were comparatively more sensitive. This pattern is consistent with prior reports that composite and speed measures correlate most strongly between automatic and manual systems \citep{Matsuura2025, deJongEtAl2021}.
 
-The relative weakness of MCPD, particularly in English ST1 ($r = .713$, ICC $= .669$), deserves interpretation. MCPD is computed as the \textit{mean} duration of mid-clause pauses; in files with few MCPs, a single falsely detected or misaligned pause can substantially shift the mean. The low frequency of MCPs in fluent speakers' speech makes this measure inherently more vulnerable to individual annotation errors --- an observation also noted by \citet{Matsuura2025}, who found that MCPD correlations varied across proficiency levels, with weaker agreement in high-fluency groups where MCP counts are smallest.
+The relative weakness of MCPD, particularly in English ST1 ($r = .713$, ICC $= .669$), deserves interpretation. MCPD is computed as the mean duration of mid-clause pauses; in files with few MCPs, a single falsely detected or misaligned pause can substantially shift the mean. Mid-clause pauses are relatively rare events in picture-narrative speech (sparse counts), which may make mean duration estimates unstable in shorter speech samples and render MCPD more vulnerable to individual annotation errors. This explanation is consistent with the observation of \citet{Matsuura2025}, who found that MCPD correlations varied across proficiency levels, with weaker agreement in high-fluency groups where MCP counts are smallest. However, the per-file MCP count distribution is not reported in the current study, and an alternative explanation---that systematic timing errors in MCP onset/offset detection drive the lower agreement---cannot be excluded. Quantifying the relationship between per-file MCP count and MCPD agreement is a direction for future investigation.
 
 Interestingly, Japanese MCPD showed uniformly strong correlations ($r = .959$ and $.953$ for ST1 and ST2), unlike the English pattern. This may reflect differences in pausing behavior between the two language cohorts, or alternatively, may result from the Japanese corpus having a more stable MCP distribution. Cross-lingual differences in MCP--ECPD sensitivity warrant further investigation with matched proficiency samples.
 
 \subsection{Cross-lingual transportability of the pipeline}
 
-The shared architecture produces valid results in both English and Japanese, demonstrating cross-lingual transportability with explicit language-specific adaptations. Three adaptations deserve highlighting. First, mora-based normalization in Japanese replaces syllable-based normalization in English, reflecting the fundamental prosodic unit difference. Second, the Japanese clause segmenter adapts the Vercellotti ``verb + element'' framework to handle te-form chains --- a construction without English parallel --- by granting clause status only to te-form verbs with their own complement or adjunct. Third, the Japanese pipeline includes MeCab re-tokenization and a robust map-back algorithm to handle tokenization mismatches between ASR and MFA, a challenge less prominent in English.
+The shared architecture yields strong concurrent-validity results in both English and Japanese, providing preliminary evidence for cross-lingual transportability with explicit language-specific adaptations. Three adaptations deserve highlighting. First, mora-based normalization in Japanese replaces syllable-based normalization in English, reflecting the fundamental prosodic unit difference. Second, the Japanese clause segmenter adapts the Vercellotti ``verb + element'' framework to handle te-form chains, a construction without an English parallel, by granting clause status only to te-form verbs with their own complement or adjunct. Third, the Japanese pipeline includes MeCab re-tokenization and a robust map-back algorithm to handle tokenization mismatches between ASR and MFA, a challenge less prominent in English.
 
-Despite these adaptations, the core architecture remains shared: the same ASR model, the same disfluency detector, the same filler classifier, and the same clause-coding principle. The strong Japanese RQ3 results suggest that this shared-architecture approach is viable for cross-lingual deployment, at least for the English--Japanese pair evaluated here.
+Despite these adaptations, the core architecture remains shared: the same ASR model, the same disfluency detector, the same filler classifier, and the same clause-coding principle. The Japanese RQ3 results indicate that this shared-architecture approach is promising for cross-lingual deployment, at least for the English--Japanese pair evaluated here. However, the cross-lingual transportability claim currently rests on measure-level evidence for both languages but component-level evidence for English only. Until Japanese RQ1 and RQ2 are complete, it remains possible that the Japanese pipeline achieves high measure-level correlations through different pathways than the English pipeline, including potential error cancellation. The staged evaluation design will become fully cross-lingual only with the completion of all six research questions.
 
 \subsection{Three key innovations}
 
 Beyond the quantitative results, three design innovations underlying the pipeline deserve emphasis, as they address structural weaknesses in prior cascaded annotation systems.
 
-\textit{Precise word-level timestamps via forced alignment.} In a cascaded pipeline, all downstream annotations --- clause boundaries, pause locations, CAF measures --- depend on accurate word-level timing. If timestamps are imprecise, errors propagate through every subsequent stage (garbage in, garbage out). Prior systems relied on ASR-internal timestamps or simple Wav2Vec2 forced alignment, which can be imprecise for L2 speech with long pauses and varied pronunciation. We address this by applying Montreal Forced Aligner with high beam settings after Qwen3-ASR, combined with a filler-augmented alignment technique that injects placeholder tokens into gaps before alignment. This prevents the aligner from distributing pause durations across adjacent word boundaries, yielding more accurate pause onset and offset times. The improvement in boundary and pause-location agreement over prior benchmarks (Table~\ref{tab:comparison}) likely reflects, in part, this timestamp quality improvement.
+\paragraph{Precise word-level timestamps via forced alignment.}
+In a cascaded pipeline, all downstream annotations (clause boundaries, pause locations, and CAF measures) depend on accurate word-level timing. If timestamps are imprecise, errors propagate through every subsequent stage. Prior systems relied on ASR-internal timestamps or simple Wav2Vec2 forced alignment, which can be imprecise for L2 speech with long pauses and varied pronunciation. We address this by applying Montreal Forced Aligner with high beam settings after Qwen3-ASR, combined with filler-augmented alignment that injects placeholder tokens into gaps before alignment. This prevents the aligner from distributing pause durations across adjacent word boundaries, yielding more accurate pause onset and offset times. The improvement in boundary and pause-location agreement over prior benchmarks (Table~\ref{tab:comparison}) likely reflects, in part, this timestamp quality improvement.
 
-\textit{Dual filler handling.} Modern large-vocabulary ASR models (including Qwen3-ASR) tend to produce clean transcripts by suppressing fillers and hesitations. This is desirable for transcription accuracy but problematic for fluency annotation: unrecognized fillers result in their speech intervals being counted as silent pauses, inflating pause metrics. We address this at two levels. First, at the ASR stage, a disfluency-preserving prompt encourages the model to retain fillers in the transcript. Second, a post-ASR neural filler classifier (trained on the PodcastFillers dataset) scores candidate speech regions within ASR-detected gaps, suppressing or splitting pause intervals where filler speech is detected. This dual approach reduces the systematic over-counting of pauses that would otherwise bias breakdown fluency measures.
+\paragraph{Dual filler handling.}
+Modern large-vocabulary ASR models (including Qwen3-ASR) tend to produce clean transcripts by suppressing fillers and hesitations. This is desirable for transcription accuracy but problematic for fluency annotation: unrecognized fillers result in their speech intervals being counted as silent pauses, inflating pause metrics. We address this at two levels. First, at the ASR stage, a disfluency-preserving prompt encourages the model to retain fillers in the transcript. Second, a post-ASR neural filler classifier (trained on the PodcastFillers dataset) scores candidate speech regions within ASR-detected gaps, suppressing or splitting pause intervals where filler speech is detected. This dual approach reduces the systematic over-counting of pauses that would otherwise bias breakdown fluency measures.
 
-\textit{Zero-shot cross-lingual disfluency detection.} Disfluency-annotated speech corpora are concentrated in English (e.g., Switchboard), while Japanese and other languages lack comparable resources. We address this data scarcity by training the disfluency detector on a combination of real English data and synthetic disfluency data generated for both English and Japanese, following the data augmentation approach of \citet{Kundu2022}. Since the underlying model (XLM-RoBERTa) supports 100+ languages, this approach is potentially extensible to other languages without requiring language-specific annotated corpora --- a practical advantage for scaling the pipeline beyond the English--Japanese pair validated here.
+\paragraph{Zero-shot cross-lingual disfluency detection.}
+Disfluency-annotated speech corpora are concentrated in English (e.g., Switchboard), while Japanese and other languages lack comparable resources. We address this data scarcity by training the disfluency detector on a combination of real English data and synthetic disfluency data generated for both English and Japanese, following the data augmentation approach of \citet{Kundu2022}. Since the underlying model (XLM-RoBERTa) supports more than 100 languages, this approach is potentially extensible to other languages without requiring language-specific annotated corpora, a practical advantage for scaling the pipeline beyond the English--Japanese pair validated here.
 
 \subsection{Implications for fluency research and assessment}
 
-The present pipeline can reduce annotation cost while preserving strong agreement and correlation on the evaluated cohorts. Practically, this makes clause-based CAF analyses feasible at larger scales and supports transparent hybrid workflows where automatic annotation is combined with targeted manual checking. The staged evaluation design --- component-level agreement followed by measure-level validity --- provides a template that future automatic annotation studies should adopt, in line with recommendations to test systems under realistic error propagation constraints \citep{KnillEtAl2018, KnillEtAl2019}.
+The present pipeline can reduce annotation cost while preserving strong agreement and correlation on the evaluated cohorts. Practically, this makes clause-based CAF analyses feasible at larger scales and supports transparent hybrid workflows where automatic annotation is combined with targeted manual checking. The staged evaluation design, component-level agreement followed by measure-level validity, provides a template that future automatic annotation studies can adopt, in line with recommendations to test systems under realistic error propagation constraints \citep{KnillEtAl2018, KnillEtAl2019}.
 
-Methodologically, the explicit operationalization of the Vercellotti \& Hall clause framework \citep{VercellottiHall2024} addresses a longstanding comparability problem in L2 fluency research. By making clause-coding rules inspectable at the script level, researchers can evaluate whether observed differences across studies reflect genuine linguistic phenomena or artifacts of inconsistent clause definitions. The cross-lingual adaptation of this framework --- particularly the principled treatment of Japanese te-form chains --- demonstrates that the ``verb + element'' principle can extend beyond English.
+Methodologically, the explicit operationalization of the Vercellotti \& Hall clause framework \citep{VercellottiHall2024} helps address a longstanding comparability problem in L2 fluency research. By making clause-coding rules inspectable at the script level, researchers can evaluate whether observed differences across studies reflect genuine linguistic phenomena or artifacts of inconsistent clause definitions. The cross-lingual adaptation of this framework, particularly the principled treatment of Japanese te-form chains, indicates that the ``verb + element'' principle can extend beyond English.
 
 For language assessment contexts, the strong correlations observed for SR, MLR, and PR (the measures most strongly associated with perceived fluency ratings; \citealp{SuzukiEtAl2021}) suggest potential applicability in automated scoring systems. However, the sensitivity of MCPD under certain conditions implies that assessments relying heavily on pause-duration measures should incorporate manual checking, at least until larger validation studies establish robustness across broader populations.
 
 \subsection{Future directions}
 
-Several directions merit investigation. First, the current clause segmenters use explicit, rule-based implementations of the Vercellotti \& Hall framework. While this approach maximizes transparency and interpretability --- every boundary decision traces to an identifiable rule --- it may fail on syntactically unusual L2 constructions that the rule set does not anticipate. A model-based approach (e.g., fine-tuning a sequence labeler on gold clause boundaries) could improve robustness to such cases, at the cost of reduced interpretability and the need for substantial annotated training data per language. Comparing rule-based and model-based clause segmentation on the same gold standard would clarify this trade-off.
+Several directions merit investigation. First, the current clause segmenters use explicit, rule-based implementations of the Vercellotti \& Hall framework. While this approach maximizes transparency and interpretability, because every boundary decision traces to an identifiable rule, it may fail on syntactically unusual L2 constructions that the rule set does not anticipate. A model-based approach (e.g., fine-tuning a sequence labeler on gold clause boundaries) could improve robustness to such cases, at the cost of reduced interpretability and the need for substantial annotated training data per language. Comparing rule-based and model-based clause segmentation on the same gold standard would clarify this trade-off.
 
 Second, external-corpus validation is needed to establish generalizability beyond the cohorts and task types evaluated here. In particular, testing on dialogic speech, lower-proficiency learners, and L1 backgrounds beyond those in the current corpora would strengthen validity claims.
 
@@ -485,20 +488,28 @@ Third, the present study does not include perceived fluency (PF) ratings. Future
 %% ====================================================================
 \section{Limitations}
 
-Six limitations should guide interpretation.
+Ten limitations should guide interpretation.
 
 \begin{enumerate}[leftmargin=*]
-\item Japanese RQ1 (pause-location agreement) and RQ2 (clause-boundary agreement) are in progress at this release stage. The complete six-question analysis will be reported in the final manuscript version.
+\item Japanese RQ1 (clause-boundary agreement) and RQ2 (pause-location agreement) are pending completion in this release. The complete six-question analysis will be reported in the final manuscript version.
 
-\item Cohort sizes remain moderate (EN $N = 39$ for RQ3; JA $N = 40$), limiting subgroup precision and restricting the power of task-level comparisons. Following \citet{DonnerEliasziw1987}, the minimum sample size to detect substantial agreement ($\kappa > .61$) with $\beta = .8$ varies by base rate, and some per-task cells may be underpowered for detecting moderate agreement differences.
+\item Cohort sizes remain moderate (EN $N = 39$ for RQ3; JA $N = 40$), limiting subgroup precision and restricting the power of task-level comparisons. Following \citet{DonnerEliasziw1987}, the minimum sample size to detect substantial agreement ($\kappa > .61$) with power $=.80$ ($1-\beta$) varies by base rate, and some per-task cells may be underpowered for detecting moderate agreement differences.
 
-\item English gold boundaries were constructed using an LLM-assisted stage (validated on locked test files at micro $F1 = .929$, $\kappa = .914$, then manually reviewed by the first author). Although this level of LLM accuracy is high and the workflow follows the methods-grade standard of \citet{MorinLarsson2025}, residual model-shaped annotation bias relative to fully independent double-human coding remains possible.
+\item English gold boundaries were constructed using an LLM-assisted stage (validated on locked test files at micro $F1 = .929$, $\kappa = .914$, then manually reviewed by the first author). Although this level of LLM accuracy is high and the workflow follows the methods-grade standard of \citet{MorinLarsson2025}, residual model-shaped annotation bias relative to fully independent double-human coding remains possible. Because the manual review was conducted by a single author, anchoring bias (tendency to accept existing annotations) cannot be excluded, and the resulting inter-rater reliability may be inflated relative to a fully independent human gold standard. The Japanese gold standard was constructed through independent human annotation, meaning English and Japanese gold standards differ in construction method; cross-lingual comparisons of annotation quality are therefore not straightforward.
 
 \item External-corpus generalization is not yet established. Current validity claims are specific to the corpora and cohorts evaluated; the pipeline has not been tested on other L1 backgrounds, proficiency levels, or task types (e.g., dialogic tasks, read-aloud conditions).
 
 \item Unlike \citet{Matsuura2025}, the present study does not include perceived fluency (PF) ratings. We therefore cannot evaluate the predictive power of automatic measures for listener-based fluency judgments, which is a complementary dimension of construct validity.
 
 \item The disfluency detector was trained primarily on synthetic and Switchboard data. Although it serves a pruning function rather than producing a reported measure, its errors may still propagate to clause segmentation quality. A comprehensive real-speech disfluency evaluation, particularly for Japanese, remains limited.
+
+\item Cross-language differences were described descriptively (e.g., mean $r$ and task-level patterns) without formal between-language significance testing. In addition, benchmark comparisons rely on published summary metrics from different datasets rather than harmonized raw annotations. Claims about English--Japanese differences and cross-study superiority should therefore be interpreted as exploratory.
+
+\item Learner demographic information (L1 background distribution, proficiency levels, age, and recording conditions) is not reported in detail for either corpus, limiting assessment of population representativeness and generalizability.
+
+\item The MFA acoustic models (\texttt{english\_us\_arpa} and \texttt{japanese\_mfa}) were trained on native speech. Their coverage of L2-accented speech is unvalidated; forced alignment errors in non-native productions, particularly for heavily accented speech, may propagate to pause duration estimates.
+
+\item Word error rate (WER) was reported as an overall mean but was not stratified by proficiency level or L1 background. The relationship between ASR quality and CAF measurement validity at different proficiency levels therefore remains unquantified.
 \end{enumerate}
 
 %% ====================================================================
@@ -506,11 +517,11 @@ Six limitations should guide interpretation.
 %% ====================================================================
 \section{Conclusion}
 
-This study developed and validated a shared English--Japanese pipeline for automatic clause-based fluency annotation, evaluated through a staged design from component-level agreement to measure-level concurrent validity. The English pipeline achieved almost perfect agreement on clause boundaries ($\kappa = .816$) and pause-location classification ($\kappa = .840$), substantially exceeding prior benchmarks. Concurrent validity was strong across all nine CAF measures in both English (mean $r = .936$) and Japanese (mean $r = .953$), with speed and composite measures showing the highest stability and pause-duration measures showing the greatest sensitivity to pipeline error.
+This study developed and evaluated a shared English--Japanese pipeline for automatic clause-based fluency annotation, using a staged design from component-level agreement to measure-level concurrent validity. In the current report, English component-level agreement reached almost perfect levels for both clause boundaries ($\kappa = .816$) and pause-location classification ($\kappa = .840$), with point estimates numerically above previously reported monologic L2 English values, although these cross-study contrasts are descriptive only and cannot establish relative superiority. Concurrent validity was strong across all nine measures for English (mean $r = .936$, 95\% CI $[.878, .965]$), supported by full staged validation, and Japanese measure-level correlations were similarly high (mean $r = .953$, 95\% CI $[.916, .975]$), providing preliminary evidence for cross-lingual transportability. Speed and composite measures showed the highest stability, while pause-duration measures showed the greatest sensitivity to pipeline error. Japanese component-level analyses (RQ1 and RQ2) remain pending; English and Japanese thus differ in validation completeness, and the cross-lingual validity argument will be complete only when Japanese component-level analyses confirm the staged pattern observed in English.
 
-Three technical contributions underlie these results. First, filler-augmented forced alignment produces precise word-level timestamps that serve as the foundation for all downstream annotations --- addressing the fundamental garbage-in-garbage-out problem in cascaded systems. Second, dual filler handling at both the ASR and post-ASR stages compensates for the tendency of modern ASR models to suppress fillers, preventing systematic over-counting of silent pauses. Third, zero-shot cross-lingual disfluency detection, trained on synthetic data augmentation, addresses the scarcity of annotated disfluency data in non-English languages.
+Three technical contributions underlie these results. First, filler-augmented forced alignment produces precise word-level timestamps that serve as the foundation for all downstream annotations and directly addresses error amplification in cascaded systems. Second, dual filler handling at both the ASR and post-ASR stages compensates for the tendency of modern ASR models to suppress fillers, preventing systematic over-counting of silent pauses. Third, zero-shot cross-lingual disfluency detection, trained on synthetic data augmentation, addresses the scarcity of annotated disfluency data in non-English languages.
 
-Beyond these technical contributions, the pipeline advances L2 fluency methodology by providing the first validated cross-lingual architecture for clause-based annotation, demonstrating a staged evaluation design that diagnostically strengthens measure-level validity evidence, and explicitly operationalizing the Vercellotti \& Hall clause framework for transparent and replicable clause coding. All pipeline code, trained models, and analysis scripts are openly available (\texttt{[URL\_TO\_BE\_INSERTED]}) to support replication and extension. The immediate next step is completion of Japanese RQ1--RQ2, which will enable a full six-question cross-lingual analysis.
+Beyond these technical contributions, the pipeline advances L2 fluency methodology by providing a preliminary cross-lingual architecture for clause-based annotation, demonstrating a staged evaluation design that strengthens measure-level validity evidence, and explicitly operationalizing the Vercellotti \& Hall clause framework for transparent and replicable clause coding. All pipeline code, trained models, and analysis scripts are openly available (\texttt{[URL\_TO\_BE\_INSERTED]}) to support replication and extension. The immediate next step is completion of Japanese RQ1--RQ2, which will enable a full six-question cross-lingual analysis.
 
 %% ====================================================================
 %% REFERENCES
@@ -585,7 +596,7 @@ Lawrence Erlbaum Associates.
 \bibitem[Kundu et~al.(2022)]{Kundu2022}
 Kundu, R., P. Jyothi, and P. Bhattacharyya. 2022.
 Zero-shot disfluency detection for Indian languages.
-In \textit{Proceedings of the 29th International Conference on Computational Linguistics}, 4442--4453.
+In \textit{Proceedings of the 29th International Conference on Computational Linguistics}, 4442--4454.
 
 \bibitem[Landis and Koch(1977)]{LandisKoch1977}
 Landis, J. R., and G. G. Koch. 1977.
@@ -640,7 +651,7 @@ The multidimensionality of second language oral fluency: Interfacing cognitive f
 \bibitem[Suzuki and R\'{e}v\'{e}sz(2023)]{SuzukiRevesz2023}
 Suzuki, S., and A. R\'{e}v\'{e}sz. 2023.
 Measuring speaking and writing fluency: A methodological synthesis focusing on automaticity.
-In Y. Suzuki (Ed.), \textit{Practice and Automatization in Second Language Research} (pp.\ 247--266). Routledge.
+In Y. Suzuki (Ed.), \textit{Practice and Automatization in Second Language Research} (pp.\ 235--264). Routledge.
 
 \bibitem[Suzuki et~al.(2021)]{SuzukiEtAl2021}
 Suzuki, S., J. Kormos, and T. Uchihara. 2021.
@@ -675,7 +686,7 @@ In \textit{Proceedings of Interspeech 2019}, 3088--3092.
 \bibitem[Zhu et~al.(2022)]{ZhuEtAl2022}
 Zhu, G., J.-P. Caceres, and J. Salamon. 2022.
 Filler word detection and classification: A dataset and benchmark.
-In \textit{Proceedings of ICASSP 2022}, 2202--2206.
+In \textit{Proceedings of Interspeech 2022}, 3769--3773.
 
 \end{thebibliography}
 
